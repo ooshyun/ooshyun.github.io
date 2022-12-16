@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : Seunghyun Oh
   url       : https://ooshyun.github.io
-  avatar    : assets/favicon-32x32.png # path or url of avatar image (square)
+  avatar    : assets/favicon_package/favicon-32x32.png # path or url of avatar image (square)
   bio       : I am digital signal processing engineer
   email     : daniel.ohsj@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
