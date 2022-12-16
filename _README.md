@@ -64,7 +64,7 @@
                 ---
 
 * Change logo
-    Change _include/svg.logl.svg
+    Change _include/svg/logo.svg
 
 * Change favicon
     After getting the resource from https://realfavicongenerator.net/
@@ -152,7 +152,7 @@
 - _sass/_header.scss: the style of contents related w/ header
 - _include/home.html: when url at first, it shows
 - custom style: _sass/custom.scss
-- header style: _sass/_header.scss
+- header style: _sass/components/_header.scss
 - photo style: _sass/additional/_photo-frame.scss
 - Reference for link in markdown and html: https://jekyllrb.com/docs/liquid/tags/#links
 
