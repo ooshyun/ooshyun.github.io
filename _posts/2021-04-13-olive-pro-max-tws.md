@@ -8,7 +8,7 @@ tags: Projects
 %}
 </div> -->
 <p>
-    <img src="/assets/images/project/img_olivepro.png"> 
+    <img src="/assets/images/project/img_olivepro.jpeg"> 
     <p align="center">
     <em> The product, Olive Pro </em>
     </p>

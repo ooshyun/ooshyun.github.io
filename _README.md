@@ -81,6 +81,7 @@
 
 * Issue
     - _project.md cannot build in Jeklly
+    - header icon is red!!!
 
 - 목표
     - [V] My awesome websites 밑에 문구 넣기 + size up logo 
