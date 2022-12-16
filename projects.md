@@ -32,7 +32,7 @@ key: page-about
       title="Olive Pro and Olive Max, Earbuds for hearing aid" 
       description="Shipping product for real-time and speech amplifcation"
       date="Apr 13, 2020, Audio, Programming, Embedded System"
-      link="https://ooshyun.github.io/2021/04/13/olive-pro-max-tws.html"
+      link="/project/2021/04/13/olive-pro-max-tws.html"
 %}
 </div>
 <!-- link="_posts/projects/2021-04-13-olive-pro-max-tws.md" -->
@@ -42,7 +42,7 @@ key: page-about
       title="Speech Enhancement with ML for Edge devices" 
       description="Implementation to STM32F746"
       date="Nov 13, 2020, Audio, Programming, Embedded System"
-      link="https://ooshyun.github.io/2022/11/13/speech-enhancement.html"
+      link="/project/2022/11/13/speech-enhancement.html"
 %}
 </div>
 <!-- link="_posts/projects/2022-11-13-speech-enhancement.md" -->
@@ -52,7 +52,7 @@ key: page-about
       title="Digital Filter for Music Equalizer" 
       description="Equalizer with Parallel and Cascades form and examples"
       date="Dec 20, 2021, Audio, Programming, Embedded System"
-      link="https://ooshyun.github.io/2021/12/20/equalizer.html"
+      link="/project/2021/12/20/equalizer.html"
 %}
 <!-- link="_posts/projects/2021-12-20-equalizer.md" -->
 
@@ -63,7 +63,7 @@ key: page-about
       title="Delay Locked Loop for DDR3 and LPDDR3" 
       description="Design the analog circuit for the sychronization between CPU and Memory"
       date="Sep 19, 2019, Analog Circuit Design"
-      link="https://ooshyun.github.io/2019/09/19/delay-locked-loop.html"
+      link="/project/2019/09/19/delay-locked-loop.html"
 %}
 </div>
 <!-- link="_posts/projects/2019-09-19-delay-locked-loop.md" -->
@@ -74,7 +74,7 @@ key: page-about
       title="PHY Interface for DDR3 and LPDDR3" 
       description="Design the analog circuit for the interface between CPU and Memory"
       date="Sep 10, 2018, Analog Circuit Design"
-      link="https://ooshyun.github.io/2018/09/10/phy-interface.html"
+      link="/project/2018/09/10/phy-interface.html"
 %}
 </div>
 <!-- link="_posts/projects/2018-09-10-phy-interface.md" -->
