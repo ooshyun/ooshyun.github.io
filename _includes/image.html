@@ -6,7 +6,7 @@
         <div class="projects__img">
         {%- endif -%}
         {%- if include.description -%}
-            <a href="{% link {{ include.link }} %}">    
+            <a href="{{ site.baseurl }}{% link {{ include.link }} %}">    
                 <img src="{{ include.url }}" 
                     alt="{{ include.title }}
                         {{ include.description }}
