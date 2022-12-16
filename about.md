@@ -113,14 +113,14 @@ key: page-about
   <div class="project__font">
     Speech Enhancement using LSTM <br>
     <div class="duration__font">
-      Spring 2022 to Spring 2023, Expected, <a href="https://github.com/ooshyun/cnn-audio-denoiser-voicebank">[Code]</a>, <a href="{% link _site/2022/11/13/speech-enhancement.html %}">Read more</a> <br> 
+      Spring 2022 to Spring 2023, Expected, <a href="https://github.com/ooshyun/cnn-audio-denoiser-voicebank">[Code]</a>, <a href="{% link https://ooshyun.github.io/2022/11/13/speech-enhancement.html %}">Read more</a> <br> 
     </div>
   </div>
   <br>
   <div class="project__font">
     Olive Max, true wireless earbuds as hearing aid for severe hearing loss <br>
     <div class="duration__font">
-      Spring 2022 to Spring 2023, Expected, <a href="{% link _site/2021/04/13/olive-pro-max-tws.html %}">Read more</a>
+      Spring 2022 to Spring 2023, Expected, <a href="{% link https://ooshyun.github.io/2021/04/13/olive-pro-max-tws.html %}">Read more</a>
       <br>
     </div>
   </div>
@@ -128,28 +128,28 @@ key: page-about
   <div class="project__font">
     Design Equalizer with cascasde and parallel biquid filter <br>
     <div class="duration__font">
-      Fall 2021, <a href="https://github.com/ooshyun/FilterDesign">[Code]</a>, <a href="{% link _site/2021/12/20/equalizer.html %}">Read more</a> <br>
+      Fall 2021, <a href="https://github.com/ooshyun/FilterDesign">[Code]</a>, <a href="{% link https://ooshyun.github.io/2021/12/20/equalizer.html %}">Read more</a> <br>
     </div> 
   </div>  
   <br>
   <div class="project__font">
     Olive Pro, true wireless earbuds for hearing aid <br>
     <div class="duration__font">
-      Spring 2020 to Spring 2021, <a href="{% link _site/2021/04/13/olive-pro-max-tws.html %}">Read more</a> <br>
+      Spring 2020 to Spring 2021, <a href="{% link https://ooshyun.github.io/2021/04/13/olive-pro-max-tws.html %}">Read more</a> <br>
     </div>
   </div>  
   <br>
   <div class="project__font">
     Delay Locked Loop for DDR3 and LPDDR3 <br>
     <div class="duration__font">
-      Fall 2018 to Fall 2019, <a href="{% link _site/2019/09/19/delay-locked-loop.html %}">Read more</a> <br>
+      Fall 2018 to Fall 2019, <a href="{% link https://ooshyun.github.io/2019/09/19/delay-locked-loop.html %}">Read more</a> <br>
     </div>
   </div>
   <br>
   <div class="project__font">
     PHY Interface for DDR3 and LPDDR3 <br>
     <div class="duration__font">
-      Spring 2018 to Spring 2019, <a href="{% link _site/2018/09/10/phy-interface.html %}">Read more</a> <br>
+      Spring 2018 to Spring 2019, <a href="{% link https://ooshyun.github.io/2018/09/10/phy-interface.html %}">Read more</a> <br>
     </div>
   </div>
 </div>
