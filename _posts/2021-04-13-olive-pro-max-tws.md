@@ -4,11 +4,11 @@ key: 20210413
 tags: Projects
 ---
 <!-- <div class="projects__article__right">
-{% include image.html url="/assets/images/project/img_olivepro.jpeg"  
+{% include image.html url="/assets/images/project/img_olivepro.jpg"  
 %}
 </div> -->
 <p>
-    <img src="/assets/images/project/img_olivepro.jpeg"> 
+    <img src="/assets/images/project/img_olivepro.jpg"> 
     <p align="center">
     <em> The product, Olive Pro </em>
     </p>
