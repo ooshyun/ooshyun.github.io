@@ -3,11 +3,16 @@ title: Olive Pro and Olive Max, Earbuds for hearing aid
 key: 20210413
 tags: Projects
 ---
-<div class="projects__article__right">
+<!-- <div class="projects__article__right">
 {% include image.html url="/assets/images/project/img_olivepro.jpeg"  
 %}
-</div>
-
+</div> -->
+<p>
+    <img src="/assets/images/project/dll-img_olivepro.png"> 
+    <p align="center">
+    <em> The product, Olive Pro </em>
+    </p>
+</p>
 Joining Olive Union, which design, manufacture, and service the application for hearing aid, I contributed to the product <a href="https://www.indiegogo.com/projects/olive-pro-2-in-1-hearing-aids-bluetooth-earbuds#/">Olive Pro</a> and <a href="https://www.indiegogo.com/projects/olivemax-3-in-1-hearing-aid-earbud-tinnitus-app#/">Olive Max</a> as digital signal processing engineer in embedded systems. 
 <br><br>
 In the hearing aid open-source platform, <a href="https://github.com/claritychallenge/clarity">the clarity challenge</a> is continuing to research for enhancing speech clarity even if it amplifies most of the sounds. Referring to this platform, I was trying to contribute to exploring the products and algorithms of hearing aid.

@@ -3,10 +3,16 @@ title: Speech Enhancement with ML for Edge devices
 key: 20221113
 tags: Projects
 ---
-<div class="projects__article__right">
+<!-- <div class="projects__article__right">
 {% include image.html url="/assets/images/project/speech-enhancement.png"  
 %}
-</div>
+</div> -->
+<p>
+    <img src="/assets/images/project/speech-enhancement.png"> 
+    <p align="center">
+    <em> A result of Speech Enhancement </em>
+    </p>
+</p>
 This project focuses on speech enhancement with machine learning, and implementation to embedded devices, explicitly targeting STM32F746. And its repository will guide the sequence to make the tiny machine enhance streaming quality.
 <br><br>
 On an embedded device for generating speech from the microphone, the most important point is its clarity. The speech enhancement can be improved previously based on <a href="https://www.routledge.com/Speech-Enhancement-Theory-and-Practice-Second-Edition/Loizou/p/book/9781138075573">Speech Enhancement book</a> written by Philipos C. Loizou. Still, the improvement had a limitation whose method removed most noise and parts of speech. This method can use for a hearing-aid since the loudness is already too high, but the limitation is still the same. At this time, two studies indicate the effect of implementing machine learning on a tiny device. <a href="https://arxiv.org/abs/2005.11138">[1]</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3498361.3538933?casa_token=-H4OyZuv9LMAAAAA:EAgY2h20z3T2QFuBhOdgsaocD2bjzwkpne16rPAxiWFxr7oIOvt_g0hguJ68plC3jdfLcYyE4Kcn">[2]</a>

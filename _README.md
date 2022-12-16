@@ -79,6 +79,9 @@
 * Add Caption in markdown
     https://geniewishescometrue.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EA%B4%80%EB%A0%A8-%ED%8C%81-%EA%B8%80-%EC%83%89%EC%83%81-%ED%98%95%EA%B4%91%ED%8E%9C
 
+* Issue
+    - _project.md cannot build in Jeklly
+
 - 목표
     - [V] My awesome websites 밑에 문구 넣기 + size up logo 
     - [V] about: [TODO] 소개 문구 추가 수정
@@ -155,19 +158,3 @@
 - good example
 - https://www.christiansteinmetz.com/projects
 - https://minalee.info/
-
-
-Dear Graduate Admission
-
-
-My name is Seunghyun Oh, and I am applying to the Electrical Engineering Ph.D. program this Autumn 2023 Semester.
-
-
-The reason for sending this email is the question; Can the graduate admission admit TOEFL Best Score as an English proficiency score? Could you answer this question?
-
-
-Thank you very much for reading this email.
-
-Sincerely,
-
-Seunghyun Oh

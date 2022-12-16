@@ -5,10 +5,16 @@ tags: Projects
 ---
 This project started from the need to design the interface circuit between the CPU and Memory. Since not only two components but also every hardware had its clock rate, the independent circuit for synchronization is necessary. For this reason, the independent circuit for receiving and transceiving the amount of data between CPU and Memory is essential, named the PHY interface. 
 <br>
-{% include image.html 
+<!-- {% include image.html 
 url="/assets/images/project/phyinterface-procedure.png" 
 custom__conf="projects__img__center"
-%}
+%} -->
+<p>
+    <img src="/assets/images/project/phyinterface-procedure.png"> 
+    <p align="center">
+    <em> The procedure of PHY Interface </em>
+    </p>
+</p>
 <br>
 The design procedure includes specifications, circuit design, verification with PVT(Process, Voltage, and Temperature) variation, Layout, and design/estimate PCB board. Specifically, it targeted DDR3 and LPDDR3 memory specifications referred to as JEDEC Standard. The component constituted the list as below.
 
