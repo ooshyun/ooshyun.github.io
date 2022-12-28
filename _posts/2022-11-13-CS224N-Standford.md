@@ -22,6 +22,8 @@ First of all, This writing consists of cource Standford CS224n: Natural Language
 4. Week 4 Machine Translation, Sequence-to-Sequence, And Attention
 5. Week 5 Self-Attention and Transformers
 <br>
+3. Week 3 How-to-struct-the-Dependency-Parsing-and-the-Problem-solved-by-RNN-Bi-RNN-GRU-LTSM?
+4. Week 4 Machine-Translation-Sequence-to-Sequence-And-Attention
 
 After week 5, lectures explain, <br>
 - (Week 5-6) QA<br>
