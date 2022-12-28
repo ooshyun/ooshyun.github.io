@@ -1,5 +1,5 @@
 ---
-title: W3
+title: Machine Translation Sequence to Sequence And Attention
 sidebar:
     nav: cs224n-eng
 aside:

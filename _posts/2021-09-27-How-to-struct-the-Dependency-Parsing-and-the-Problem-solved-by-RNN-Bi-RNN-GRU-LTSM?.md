@@ -1,5 +1,5 @@
 ---
-title: W3
+title: RNN, Bi-RNN, GRU, and LTSM in dependency parsing
 sidebar:
     nav: cs224n-eng
 aside:

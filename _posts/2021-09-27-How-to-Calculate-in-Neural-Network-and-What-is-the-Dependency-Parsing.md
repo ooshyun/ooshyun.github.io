@@ -1,5 +1,5 @@
 ---
-title: W2
+title: Neural Network and What is the Dependency Parsing
 sidebar:
     nav: cs224n-eng
 aside:

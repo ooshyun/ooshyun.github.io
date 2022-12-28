@@ -1,5 +1,5 @@
 ---
-title: W3
+title: Self attention and Transformer
 sidebar:
     nav: cs224n-eng
 aside:
