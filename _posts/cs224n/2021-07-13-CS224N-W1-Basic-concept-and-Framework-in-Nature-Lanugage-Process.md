@@ -1,5 +1,5 @@
 ---
-title: Basic concept and Framework in Nature Lanugage Process
+title: CS224N W1. Basic concept and Framework in Nature Lanugage Process
 sidebar:
     nav: cs224n-eng
 aside:

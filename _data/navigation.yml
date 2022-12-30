@@ -122,12 +122,12 @@ cs224n-eng:
       - title:  Intro
         url:    /2022/11/13/CS224N-Standford.html
       - title:  W1 What is the basic concept and Framework in NLP?
-        url:    /2021/07/13/What-is-the-basic-concept-and-Framework-in-Nature-Lanugage-Process?.html
+        url:    /2021/07/13/CS224N-W1-Basic-concept-and-Framework-in-Nature-Lanugage-Process.html
       - title:  W2 How to Calculate in Neural Network and What is the Dependency Parsing?
-        url:    /2021/09/27/How-to-Calculate-in-Neural-Network-and-What-is-the-Dependency-Parsing.html
+        url:    /2021/09/27/CS224N-W2-Neural-Network-and-What-is-the-Dependency-Parsing.html
       - title:  W3 How to struct the Dependency Parsing and the Problem solved by RNN, Bi-RNN, GRU, LTSM?
-        url:    /2021/09/27/How-to-struct-the-Dependency-Parsing-and-the-Problem-solved-by-RNN-Bi-RNN-GRU-LTSM?.html
+        url:    /2021/09/27/CS224N-W3-RNN-Bi-RNN-GRU-and-LTSM-in-dependency-parsing.html
       - title:  W4 Machine Translation, Sequence-to-Sequence, And Attention
-        url:    /2021/09/27/Machine-Translation-Sequence-to-Sequence-And-Attention.html
+        url:    /2021/09/27/CS224N-W4-Machine-Translation-Sequence-to-Sequence-And-Attention.html
       - title:  W5 Self-Attention and Transformers
-        url:    /2021/09/27/Self-Attention-and-Transformers.html
+        url:    /2021/09/27/CS224N-W5-Self-Attention-and-Transformers.html

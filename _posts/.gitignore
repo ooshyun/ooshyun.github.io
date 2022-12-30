@@ -4,23 +4,27 @@
 !2021-04-13-olive-pro-max-tws.md
 !2021-12-20-equalizer.md
 !2022-11-13-speech-enhancement.md
-!2021-07-13-What-is-the-basic-concept-and-Framework-in-Nature-Lanugage-Process?.md
-!2021-09-27-How-to-Calculate-in-Neural-Network-and-What-is-the-Dependency-Parsing.md
-!2021-09-27-How-to-struct-the-Dependency-Parsing-and-the-Problem-solved-by-RNN-Bi-RNN-GRU-LTSM?.md
-!2021-09-27-Machine-Translation-Sequence-to-Sequence-And-Attention.md
-!2021-09-27-Self-Attention-and-Transformers.md
-!2021-09-27-continuous-back-of-words.md
-!2021-09-27-evaluation-of-word-vectors.md
-!2021-09-27-global-vectors-for-word-representation.md
-!2021-09-27-hierarchical-softmax.md
-!2021-09-27-negative-sampling.md
-!2021-09-27-skip-gram.md
 !2022-06-18-test-for-post.md
 !2022-07-01-disk-partition-and-mount.md
 !2022-07-01-gpu-conda-environment-for-tensorflow-pytorch.md
 !2022-07-01-os-setup-for-machine-learning.md
 !2022-07-01-samba-installation-in-ubuntu.md
 !2022-07-01-user-and-group.md
-!2022-11-13-CS224N-Standford.md
+
+!cs224n
+# !2022-11-13-CS224N-Standford.md
+# !2021-07-13-CS224N-W1-Basic-concept-and-Framework-in-Nature-Lanugage-Process.md
+# !2021-09-27-CS224N-W2-Neural-Network-and-What-is-the-Dependency-Parsing.md
+# !2021-09-27-CS224N-W3-RNN-Bi-RNN-GRU-and-LTSM-in-dependency-parsing.md
+# !2021-09-27-CS224N-W4-Machine-Translation-Sequence-to-Sequence-And-Attention.md
+# !2021-09-27-CS224N-W5-Self-Attention-and-Transformers.md
+
+# !2021-09-27-continuous-back-of-words.md
+# !2021-09-27-evaluation-of-word-vectors.md
+# !2021-09-27-global-vectors-for-word-representation.md
+# !2021-09-27-hierarchical-softmax.md
+# !2021-09-27-negative-sampling.md
+# !2021-09-27-skip-gram.md
+
 !projects/
 !.gitignore

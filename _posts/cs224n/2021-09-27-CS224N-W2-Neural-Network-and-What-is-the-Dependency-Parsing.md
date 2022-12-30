@@ -1,5 +1,5 @@
 ---
-title: Neural Network and What is the Dependency Parsing
+title: CS224N W2. Neural Network and What is the Dependency Parsing
 sidebar:
     nav: cs224n-eng
 aside:

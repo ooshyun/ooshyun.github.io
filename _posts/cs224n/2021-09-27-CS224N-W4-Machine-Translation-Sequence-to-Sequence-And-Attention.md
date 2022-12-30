@@ -1,5 +1,5 @@
 ---
-title: Machine Translation Sequence to Sequence And Attention
+title: CS224N W4. Machine Translation Sequence to Sequence And Attention
 sidebar:
     nav: cs224n-eng
 aside:

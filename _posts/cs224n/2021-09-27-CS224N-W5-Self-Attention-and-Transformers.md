@@ -1,5 +1,5 @@
 ---
-title: Self attention and Transformer
+title: CS224N W5. Self attention and Transformer
 sidebar:
     nav: cs224n-eng
 aside:

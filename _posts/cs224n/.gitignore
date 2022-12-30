@@ -1,0 +1,18 @@
+**
+!.gitignore
+!2022-11-13-CS224N-Standford.md
+!2021-07-13-CS224N-W1-Basic-concept-and-Framework-in-Nature-Lanugage-Process.md
+!2021-09-27-CS224N-W2-Neural-Network-and-What-is-the-Dependency-Parsing.md
+!2021-09-27-CS224N-W3-RNN-Bi-RNN-GRU-and-LTSM-in-dependency-parsing.md
+!2021-09-27-CS224N-W4-Machine-Translation-Sequence-to-Sequence-And-Attention.md
+!2021-09-27-CS224N-W5-Self-Attention-and-Transformers.md
+
+!w1/
+# !2021-09-27-continuous-back-of-words.md
+# !2021-09-27-evaluation-of-word-vectors.md
+# !2021-09-27-global-vectors-for-word-representation.md
+# !2021-09-27-hierarchical-softmax.md
+# !2021-09-27-negative-sampling.md
+# !2021-09-27-skip-gram.md
+
+!w2/
