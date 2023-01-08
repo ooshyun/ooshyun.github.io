@@ -6,4 +6,6 @@ tags:
 
 If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:
 
-I'm Seunghyun Oh! :)
+<span style="background-color: #fff5b1">I'm Seunghyun Oh! :)</span>.
+
+

@@ -5,7 +5,7 @@ tags: CS224N
 ---
 **All contents is arranged from [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097) contents. Please see the details to the [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097)!**
 
-### Intro
+## 1. Intro
 
 **How can we predict a center word from the surrounding context in terms of word vectors?**
 
@@ -25,7 +25,7 @@ We defines as below,
     - ${v}_i$: input word vector, when **the word is in the context**
     - $u_i$: output word vector, when **the word is in the center**
 
-### Steps
+## 2. Steps
 1. Generate our one-hot word vectors for the input context of size
     
     $m: (x^{c-m}, \dots, x^{c-1}, x^{c+1}, \dots, x^{c+m}) \in \mathbb{R}^{\lvert V\lvert}$
@@ -70,7 +70,7 @@ We defines as below,
 loss.
 
 <p>
-    <img src="/assets/images/cs224n/w1/cbow/cs224n-2019-notes01-wordvecs1-equation-applySGD.png" width="200" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/cbow/cs224n-2019-notes01-wordvecs1-equation-applySGD.png" width="200" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
     </p>
@@ -79,13 +79,13 @@ loss.
 - We use stochastic gradient descent to update all relevant word vectors $u_c$ and $v_j$.
 
 <p>
-    <img src="/assets/images/cs224n/w1/cbow/cs224n-2019-notes01-wordvecs1-loss.png" width="200" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/cbow/cs224n-2019-notes01-wordvecs1-loss.png" width="200" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
     </p>
 </p>   
 
-### Reference
-- <a href="https://web.stanford.edu/class/cs224n/">Course Main Page: Winter 2021</a><br>
-- <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ">Lecture Videos</a><br>
-- <a href="https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097">Stanford Online - CS224n</a><br>
+## Reference
+- [Course Main Page: Winter 2021](https://web.stanford.edu/class/cs224n/)
+- [Lecture Videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ)
+- [Stanford Online - CS224n](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097)

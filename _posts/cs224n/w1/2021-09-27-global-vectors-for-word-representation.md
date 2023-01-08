@@ -5,10 +5,10 @@ tags: CS224N
 ---
 **All contents is arranged from [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097) contents. Please see the details to the [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097)!**
 
-### Intro
+## 1. Intro
 - Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014
 
-### 1.1 Previous Method
+## 2. Previous Method
 1. Count-based and rely on matrix factorization (e.g. Latent Semantic Analysis (LSA), Hyperspace Analogue to Language (HAL))
     - Effectively leverage global statistical information, they are primarily used to capture word similarities
     - Poorly do on tasks such as word analogy, indicating a sub-optimal vector space structure.
@@ -21,7 +21,7 @@ tags: CS224N
 
 - Using global statistics to predict the probability of word j appearing in the context of word i with a least squares objective
 
-### 1.2 Co-occurrence Matrix
+## 3. Co-occurrence Matrix
 
 - $X$: word-word co-occurrence matrix
 - $X_{ij}$: number of times word $j$ occur in the context of word $i$
@@ -29,8 +29,8 @@ tags: CS224N
 - $P_{ij} = P(w_j \lvert w_i) = \dfrac{X_{ij}}{X_i}$: the probability of $j$ appearing in the context of word $i$
 - $V \in R^{n×\lvert V\lvert}$ and $U \in R^{\lvert V\lvert×n}$, Where n is an arbitrary size which defines the size of our embedding space. $V$ is the input word matrix such that the $i$-th column of $V$ is the n-dimensional embedded vector for word wi when it is an input to this model. We denote this $n × 1$ vector as $v_i$. Similarly, $U$ is the output word matrix. The $j$-th row of $U$ is an n-dimensional embedded vector for word $w_j$ when it is an output of the model. We denote this row of U as $u_j$. Note that we do in fact learn two vectors for every word $w_i$ (i.e. input word vector $v_i$ and output word vector $u_i$).
 
-### 1.3 Least Squares Objective
-#### 1.3.1 Explaination in CS224N
+## 4. Least Squares Objective
+**$\checkmark$ Explaination in CS224N**
 - Softmax: To compute the probability of word $j$ appears in the context of word $i$
     
     $$
@@ -90,9 +90,9 @@ tags: CS224N
     $$
             
         
-#### 1.3.2 Explaination in Korean
+**$\checkmark$ Explaination in Korean**
 - Link to [https://wikidocs.net/22885](https://wikidocs.net/22885)
     
-### 1.4 Conclusion
+## 5. Conclusion
 1. It consistently outperforms word2vec on the word analogy task, given the same corpus, vocabulary, window size, and training time. 
 2. It achieves better results faster, and also obtains the best results irrespective of speed.

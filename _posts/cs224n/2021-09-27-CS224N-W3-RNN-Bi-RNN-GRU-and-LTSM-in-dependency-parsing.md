@@ -9,4 +9,3 @@ tags: CS224N
 ---
 To be released...
 
-RNN-Bi-RNN-GRU-and-LTSM-in-dependency-parsing

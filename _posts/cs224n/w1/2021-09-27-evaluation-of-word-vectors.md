@@ -7,7 +7,7 @@ tags: CS224N
 
 ## 1. Intrinsic and Extrinsic Evaluation
 
-### Intrinsic evaluation 
+**$\checkmark$ Intrinsic evaluation**
 
 - Evaluation on a specific, intermediate task
 - Fast to compute performance
@@ -20,7 +20,7 @@ tags: CS224N
     4. Maps the output word vectors by this system back to natural language words
     5. Produces words as answers
         
-### Extrinsic evaluation
+**$\checkmark$ Extrinsic evaluation**
 
 - Is the evaluation on a real task
 - Can be slow to compute performance
@@ -29,7 +29,7 @@ tags: CS224N
 
 ## 2. Intrinsic Example: Word Vector Analogies
 
-###  a:b :: c:?
+**$\checkmark$  a:b :: c:?**
 
 - This intrinsic evaluation system then identifies the word vector which maximizes [the cosine similarity](https://jiho-ml.com/weekly-nlp-5/)
     
@@ -42,7 +42,7 @@ tags: CS224N
 - Semantic word vector analogies (intrinsic evaluation) that may suffer from different cities having the same name
     
     <p>
-        <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-sementic_word_vector.png" width="150" height="400" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-sementic_word_vector.png" width="150" height="400" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
         </p>
@@ -51,13 +51,13 @@ tags: CS224N
 - Syntactic word vector analogies (intrinsic evaluation) that test the notion of superlative adjectives.
     
     <p>
-        <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-syntatic_word_vector.png" width="150" height="400" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-syntatic_word_vector.png" width="150" height="400" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
         </p>
     </p>      
 
-### Analogy Evaluation Tuning Example
+**$\checkmark$ Analogy Evaluation Tuning Example**
 
 - Some of the hyperparameters in word vector embedding techniques (such as Word2Vec and GloVe) that can be tuned using an intrinsic evaluation system (such as an analogy completion system)
     - Dimension of word vectors
@@ -69,7 +69,7 @@ tags: CS224N
 - Here we compare the performance of different models under the use of different hyperparameters and datasets.
     
     <p>
-        <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-different-hyperparameters-datasets.png" width="150" height="500" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-different-hyperparameters-datasets.png" width="150" height="500" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
         </p>
@@ -93,7 +93,7 @@ tags: CS224N
     - Below Figure demonstrates how accuracy has been shown to improve with larger corpus.
         
         <p>
-            <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-accuracy-larger-corpus.png" width="150" height="400" class="projects__article__img__center">
+            <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-accuracy-larger-corpus.png" width="150" height="400" class="projects__article__img__center">
             <p align="center">
             <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
             </p>
@@ -102,7 +102,7 @@ tags: CS224N
     - Below Figure demonstrates how other hyperparameters have been shown to affect the accuracies using GloVe.
         
         <p>
-            <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-hyperparameters-affect.png" width="150" height="250" class="projects__article__img__center">
+            <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-hyperparameters-affect.png" width="150" height="250" class="projects__article__img__center">
             <p align="center">
             <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1</em>
             </p>
@@ -114,7 +114,7 @@ tags: CS224N
         1. A window size of 8 around each center word typically works well for GloVe embeddings.
             
             <p>
-                <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-window-size.png" width="150" height="400" class="projects__article__img__center">
+                <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-window-size.png" width="150" height="400" class="projects__article__img__center">
                 <p align="center">
                 <em class="projects__img__caption"> Reference. cs224n-2019-notes01-wordvecs1 </em>
                 </p>
@@ -124,18 +124,18 @@ tags: CS224N
             
             Intuitively, it would seem that these vectors would capture noise in the corpus that doesn’t allow generalization, i.e. resulting in high variance, but Yin et al. show in On the Dimensionality of Word Embedding that skip-gram and GloVe are robust to this over-fitting.
                 
-### Correlation Evaluation
+**$\checkmark$ Correlation Evaluation**
 
 Another simple way to evaluate the quality of word vectors is by asking humans to assess the similarity between two words on a fixed scale (say 0-10) and then comparing this with the cosine similarity between the corresponding word vectors.
 
 <p>
-    <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-correlation-evalution.png" width="150" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-word-vectors-correlation-evalution.png" width="150" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Table. Here we see the correlations between of word vector similarities using different embedding techniques with different human judgment datasets, Reference. cs224n-2019-notes01-wordvecs1 </em>
     </p>
 </p>      
         
-### Dealing with Ambiguity
+**$\checkmark$ Dealing with Ambiguity**
 
 - For instance, "run" is both a noun and a verb and is used and interpreted differently based on the context. Improving Word Representations Via Global Context And Multiple Word Prototypes (Huang et al, 2012)
 
@@ -147,7 +147,7 @@ Another simple way to evaluate the quality of word vectors is by asking humans t
             
 ## 3. Training for Extrinsic Tasks
 
-### In named-entity recognition (NER)
+**$\checkmark$ In named-entity recognition (NER)**
 - Given a context and a central word, we want to classify the central word to be one of many classes.
 - For the input, "Jim bought 300 shares of Acme Corp. in 2006", we would like a classified output 
 
@@ -165,7 +165,7 @@ Another simple way to evaluate the quality of word vectors is by asking humans t
     where $x^{(i)}$ is a d-dimensional word vector generated by some word embedding technique and  $y^{(i)}$ is a C-dimensional one-hot vector which indicates the labels we wish to eventually predict(sentiments, other words, named entities, buy/sell decisions, etc.).
 
     <p>
-        <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-ner.png" width="150" height="400" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-ner.png" width="150" height="400" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> We can classify word vectors using simple linear decision boundaries such as the one shown here (2-D word vectors) using techniques such as logistic regression and SVMs, Reference. cs224n-2019-notes01-wordvecs1 </em>
         </p>
@@ -174,8 +174,8 @@ Another simple way to evaluate the quality of word vectors is by asking humans t
 - In typical machine learning tasks, we usually hold input data and target labels fixed and train weights using optimization techniques (such as gradient descent, L-BFGS, Newton’s method, etc.)
 - we introduce the idea of retraining the input word vectors when we train for extrinsic tasks
 
-### Retraining Word Vectors
-[ING]     
+**$\checkmark$ Retraining Word Vectors**
+
 In many cases, these pre-trained word vectors are a good proxy for optimal word vectors for the extrinsic task and they perform well
 at the extrinsic task. However, it is also possible that the pre-trained
 word vectors could be trained further (i.e. retrained) using the extrin-
@@ -193,7 +193,7 @@ further using an example. Consider the pretrained vectors to be in a
 two dimensional space as shown in Figure. 
 
 <p>
-    <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-retain-word-vector-1.png" width="100" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-retain-word-vector-1.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Here, we see that the words "Telly", "TV", and "Television" are clas- sified correctly before retraining. "Telly" and "TV" are present in the extrinsic task training set while "Television" is only present in the test set, Reference. cs224n-2019-notes01-wordvecs1 </em>
     </p>
@@ -203,7 +203,7 @@ Here, we see that the word vectors are classified correctly on some extrinsic cl
 
 
 <p>
-    <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-retain-word-vector-2.png" width="100" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-retain-word-vector-2.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Here, we see that the words "Telly" and "TV" are classified correctly after training, but "Television" is not since it was not present in the training set, Reference. cs224n-2019-notes01-wordvecs1 </em>
     </p>
@@ -305,14 +305,14 @@ is small. If the training set is large, retraining may improve performance.
 We see in Figure 1 that a linear classifier mis- classifies many datapoints. Using a non-linear decision boundary as shown in Figure 2, we manage to classify all training points accu- rately. Although oversimplified, this is a classic case demonstrating the need for non-linear decision boundaries. In the next set of notes, we study neural networks as a class of non-linear models that have performed particularly well in deep learning application
 
 <p>
-    <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-non-linear-classifier-wrong.png" width="150" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-non-linear-classifier-wrong.png" width="150" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Here, we see that many examples are wrongly classified even though the best linear decision boundary is chosen. This is due linear decision boundaries have limited model capacity for this dataset, Reference. cs224n-2019-notes01-wordvecs1 </em>
     </p>
 </p> 
 
 <p>
-    <img src="/assets/images/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-non-linear-classifier-correct.png" width="150" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w1/evaluation-word-vectors/cs224n-2019-notes01-wordvecs1-evalution-non-linear-classifier-correct.png" width="150" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Here, we see that the non-linear decision boundary allows for much better classification of datapoints, Reference. cs224n-2019-notes01-wordvecs1 </em>
     </p>
