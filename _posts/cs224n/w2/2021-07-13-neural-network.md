@@ -130,7 +130,7 @@ Backpropagation is technique that allows us to use the chain rule of differentia
 Here, we use a neural network with a single hidden layer and a single unit output. Let us establish some notation that will make it easier to generalize this model later:
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-generalized-model.png" width="100" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-generalized-model.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -175,7 +175,7 @@ $$
 We see above that the gradient reduces to the product $\delta_i^{(2)} · a_j^{(1)}$ where $\delta_i^{(2)}$ is essentially the error propagating backwards from the *i*-th neuron in layer 2. $a_j^{(1)}$ is an input fed to i-th neuron in layer 2 when scaled by $W_{ij}$. Let us discuss the "error sharing / distribution" interpretation of backpropagation better using Figure 6 as an example. Say we were to update $W_{14}^{(1)}$:
             
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-parts-of-nn.png" width="100" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-parts-of-nn.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -203,7 +203,7 @@ Notice that the result we arrive at using this approach is exactly the same as t
 **$\checkmark$ Normalized Sequence**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-normalized-sequence-1.png" width="100" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-normalized-sequence-1.png" width="100" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -215,7 +215,7 @@ Notice that the result we arrive at using this approach is exactly the same as t
 4. However, $a_j^{(k−1)}$ may have been forwarded to multiple nodes in the next layer as shown in Figure 8. It should receive responsibility for errors propagating backward from node *m* in layer *k* too, using the exact same mechanism.
     
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-normalized-sequence-2.png" width="100" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-normalized-sequence-2.png" width="200" height="500" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -344,11 +344,24 @@ $$
 
 $\left\lvert\left\lvert E(a) \right\lvert\right\lvert^2_2 $ means "$L^2$norm", so it defines $\left\lvert\left\lvert x \right\lvert\right\lvert_2 := \sqrt{x^H x}$ 
 
+- A full loss function includes regularization over all parameters 𝜃, e.g., L2 regularization
+    
+    $J(\theta) = \dfrac{1}{N}\displaystyle\sum_{i=1}^N - log(\dfrac{e^{f_{y_i}}}{\sum_{c=1}^C e^{f_c}})+\lambda\displaystyle\sum_k \theta_k^2$
+    
+- **Classic view**: Regularization works to prevent overfitting when we have a lot of features (or later a very powerful/deep model, etc.)
+- **Now**: Regularization produces models that generalize well when we have a “big” model. We do not care that our models overfit on the training data ,even though they are hugely overfit
+
+<p>
+    <img src="/assets/images/post/cs224n/w2/nn/nn-regularization.png" width="100" height="300" class="projects__article__img__center">
+    <p align="center">
+    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    </p>
+</p>        
+        
 ### 7.3 Dropout
 
-    
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-dropout.png" width="100" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-dropout.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -359,15 +372,29 @@ Dropout is a powerful technique for regularization, first introduced by Srivasta
 We will keep alive each neuron with a probability p). Then, during testing, we will use the full network to compute our predictions. The result is that the network typically learns more meaningful informa- tion from the data, is less likely to overfit, and usually obtains higher performance overall on the task at hand. One intuitive reason why this technique should be so effective is that what dropout is doing is essentially doing is training exponentially many smaller networks at once and averaging over their predictions.
             
 In practice, the way we introduce dropout is that we take the output h of each layer of neurons, and keep each neuron with probability p, and else set it to 0. Then, during back-propagation, we only pass gradients through neurons that were kept alive duringthe forward pass. Finally, during testing, we compute the forward pass using all of the neurons in the network. However, a key sub- tlety is that in order for dropout to work effectively, the expected output of a neuron during testing should be approximately the same as it was during training – else the magnitude of the outputs could be radically different, and the behavior of the network is no longer well-defined. Thus, we must typically divide the outputs of each neuron during testing by a certain value – it is left as an exercise to the reader to determine what this value should be in order for the expected outputs during training and testing to be equivalent.
-            
+
+**$\checkmark$ Srivastava, Hinton, Krizhevsky, Sutskever, & Salakhutdinov 2012/JMLR 2014**
+
+Preventing Feature Co-adaptation = Good Regularization Method!
+
+- Training time: at each instance of evaluation (in online SGD-training), randomly set 50% of the inputs to each neuron to 0
+- Test time: halve the model weights (now twice as many)
+- (Except usually only drop first layer inputs a little (~15%) or not at all)
+- This prevents feature co-adaptation: A feature cannot only be useful in the presence of particular other features
+- In a single layer: A kind of middle-ground between Naïve Bayes (where all feature weights are set independently) and logistic regression models (where weights are set in the context of all others)
+- Can be thought of as a form of [model bagging](https://en.wikipedia.org/wiki/Bootstrap_aggregating) (i.e., like an ensemble model)
+- Nowadays usually thought of as strong, feature-dependent regularizer[Wager, Wang, & Liang 2013]
+
+
 **$\checkmark$ Dropout Method**
+
 Reference: [https://towardsdatascience.com/12-main-dropout-methods-mathematical-and-visual-explanation-58cdc2112293](https://towardsdatascience.com/12-main-dropout-methods-mathematical-and-visual-explanation-58cdc2112293)                
 
 ### 7.4 Neuron Unit
 **$\checkmark$ Sigmoid**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-sigmoid.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-sigmoid.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -388,7 +415,7 @@ $$
 **$\checkmark$ Tanh**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-tanh.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-tanh.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -404,7 +431,7 @@ $$
 **$\checkmark$ Hard tanh**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-hard-tanh.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-hard-tanh.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -431,7 +458,7 @@ $$
 **$\checkmark$ Soft sign**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-soft-sign.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-soft-sign.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -454,7 +481,7 @@ where sgn is the signum function which returns $\pm$1 depending on the sign of z
 **$\checkmark$ ReLU**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-ReLU.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-ReLU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -477,7 +504,7 @@ $$
 **$\checkmark$ Leaky ReLU**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-LeakyReLU.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-LeakyReLU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -500,7 +527,7 @@ $$
 **$\checkmark$ Exponential Linear Unit (ELU)**
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-ELU.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-ELU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -555,13 +582,22 @@ Where $n^{(l)}$ is the number of input units to *W* (fan-in) and $n^{(l+1)}
 
 **In this parameter initialization scheme, bias units are initialized to 0.** This approach attempts to maintain activation variances as well as backpropagated gradient variances across layers. **Without such initialization, the gradient variances (which are a proxy for information) generally decrease with backpropagation across layers.**
 
+- You normally must initialize weights to small random values (i.e., not zero matrices!) to avoid symmetries that prevent learning/specialization.
+- Initialize hidden layer biases to 0 and output (or reconstruction) biases to optimal value if weights were 0 (e.g., mean target or inverse sigmoid of mean target)
+- Initialize all other weights ~ Uniform(–r, r), with r chosen so numbers get neither too big or too small [later the need for this is removed with use of layer normalization]
+- **Xavier initialization has variance inversely proportional to fan-in nin (previous layer size) and fan-out nout (next layer size):**
+    
+$$
+    Var(W_i) = \dfrac{2}{n_{in}+n_{out}}
+$$
+
 - [CS231N: neural-networks, init](https://cs231n.github.io/neural-networks-2/#init)
 - [Practical example](https://github.com/karpathy/nn-zero-to-hero/blob/master/lectures/makemore/makemore_part3_bn.ipynb)
 
 ### 7.7 Learning Stategies
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-learning-stategies.png" width="100" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-learning-stategies.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
     </p>
@@ -588,7 +624,23 @@ $$
 $$
             
 In the above scheme, $\alpha_0$ is a tunable parameter and represents the starting learning rate. $\tau$ is also a tunable parameter and represents the time at which the learning rate should start reducing. In practice, this method has been found to work quite well. In the next section, we discuss another method for adaptive gradient descent that does not require hand-set learning rates.
-            
+
+**$\checkmark$ Strategy**
+
+- You can just use a constant learning rate. Start around lr = 0.001?
+
+- It must be order of magnitude right – try powers of 10
+    - Too big: model may diverge or not converge
+    - Too small: your model may not have trained by the assignment deadline
+
+- Better results can generally be obtained by allowing learning rates to decrease as you train
+    - By hand: halve the learning rate every k epochs
+    - An epoch = a pass through the data (shuffled or sampled–not in same order each time)
+    - By a formula: $lr = lr_o e^{-kt}$, for epoch t
+    - There are fancier methods like cyclic learning rates (q.v.)
+
+- Fancier optimizers still use a learning rate but it may be an initial rate that the optimizer shrinks – so you may want to start with a higher learning rate → You can meet Adam in Assignment 3 
+
 ### 7.8 Momentum Updates
 
 Momentum methods, a variant of gradient descent inspired by the study of dynamics and motion in physics, attempt to use the “velocity” of updates as a more effective update scheme. Pseudocode for momentum updates is shown below:
@@ -643,3 +695,54 @@ x += - learning_rate * m / (np.sqrt(v) + eps)
 **RMSProp is a variant of AdaGrad that utilizes a moving average of squared gradients – in particular, unlike AdaGrad,** its updates do not become monotonically smaller. The Adam update rule is in turn a variant of RMSProp, but with the addition of momentum-like updates. We refer the reader to the respective sources of these methods for more detailed analyses of their behavior. It is simply similar to velocity and accelerates such as considering derivate and derivate's derivate.
 
 - Other method: AdamW, AdamWR, SGDW
+
+**$\checkmark$ Strategy**
+
+- Usually, plain SGD will work just fine! However, getting good results will often require hand-tuning the learning rate
+- For more complex nets and situations, or just to avoid worry, you often do better with one of a family of more sophisticated “adaptive” optimizers that scale the parameter adjustment by an accumulated gradient.
+- Example(These models give differential per-parameter learning rates)
+    
+    ```
+    Adagrad, RMSprop, Adam(A fairly good, safe place to begin in many cases), SparseAdam
+    ```    
+
+## 8. Vertorization
+    
+E.g., looping over word vectors versus concatenating them all into one large matrix and then multiplying the softmax weights with that matrix:
+
+```python
+from numpy import random
+N = 500 # number of windows to classify
+d = 300 # dimensionality of each window
+C = 5 # number of classes
+W = random.rand(C, d)
+wordvectors_list = [random.rand(d,1) for i in range(N)]
+wordvectors_one_matrix = random.rand(d,N)
+
+%timeit [W.dot(wordvecotrs_list[i]) for i in range(N)]
+%timeit W.dot(wordvectros_one_matrix)
+```
+
+- 1000 loops, best of 3: **639 μs** per loop
+- 10000 loops, best of 3: **53.8 μs** per loop
+- Always try to use vectors and matrices rather than for loops
+- The speed gain goes from 1 to 2 orders of magnitude with GPUs
+
+## 9. Non-linearities, old and new
+
+- **Logistic("sigmoid"), tanh, hard tans, ReLU(Rectified Linear Unit)**
+- tanh is just a rescaled and shifted sigmoid (2 × as steep, [−1,1]):
+
+$$
+    tanh(z) = 2logistic(2z) −1
+$$
+
+- Both logistic and tanh are still used in various places (e.g., to get a probability), but are no longer the defaults for making deep networks
+- For building a deep network, the first thing you should try is ReLU — it trains quickly and performs well due to good gradient backflow
+
+<p>
+    <img src="/assets/images/post/cs224n/w2/nn/nn-non-linearities.png" width="100" height="350" class="projects__article__img__center">
+    <p align="center">
+    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    </p>
+</p>  
