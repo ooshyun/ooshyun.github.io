@@ -7,6 +7,8 @@ aside:
 key: 20210713
 tags: CS224N
 ---
+**All contents is arranged from [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097) contents. Please see the details to the [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097)!**
+
 ## 1. Statistical Machine Translation, SMT (1990s-2010s)
 
 "Learn a probabilistic model from data"
