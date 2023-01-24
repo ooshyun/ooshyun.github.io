@@ -17,7 +17,7 @@ tags: CS224N
     <p>
         <img src="/assets/images/post/cs224n/w2/ner-example.png" width="400" height="100" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p> 
 
@@ -37,7 +37,7 @@ tags: CS224N
         <p>
             <img src="/assets/images/post/cs224n/w2/simple-ner-example.png" width="150" height="50" class="projects__article__img__center">
             <p align="center">
-            <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+            <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
             </p>
         </p> 
 
@@ -51,7 +51,7 @@ tags: CS224N
         <p>
             <img src="/assets/images/post/cs224n/w2/ner-binary-classification.png" width="300" height="300" class="projects__article__img__center">
             <p align="center">
-            <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+            <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
             </p>
         </p> 
 

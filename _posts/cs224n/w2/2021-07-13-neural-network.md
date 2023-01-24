@@ -20,7 +20,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/neuron.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>         
 
@@ -132,7 +132,7 @@ Here, we use a neural network with a single hidden layer and a single unit outpu
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-generalized-model.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -177,7 +177,7 @@ We see above that the gradient reduces to the product $\delta_i^{(2)} · a_j^{(
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-parts-of-nn.png" width="100" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
 
@@ -205,7 +205,7 @@ Notice that the result we arrive at using this approach is exactly the same as t
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-normalized-sequence-1.png" width="100" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
 
@@ -217,7 +217,7 @@ Notice that the result we arrive at using this approach is exactly the same as t
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-normalized-sequence-2.png" width="200" height="500" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
     
@@ -354,7 +354,7 @@ $\left\lvert\left\lvert E(a) \right\lvert\right\lvert^2_2 $ means "$L^2$norm", s
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-regularization.png" width="100" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>        
         
@@ -363,7 +363,7 @@ $\left\lvert\left\lvert E(a) \right\lvert\right\lvert^2_2 $ means "$L^2$norm", s
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-dropout.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
     
@@ -396,7 +396,7 @@ Reference: [https://towardsdatascience.com/12-main-dropout-methods-mathematical-
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-sigmoid.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
 
@@ -417,7 +417,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-tanh.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>    
 
@@ -433,7 +433,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-hard-tanh.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>   
 
@@ -460,7 +460,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-soft-sign.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -483,7 +483,7 @@ where sgn is the signum function which returns $\pm$1 depending on the sign of z
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-ReLU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -506,7 +506,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-LeakyReLU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -529,7 +529,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-ELU.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -599,7 +599,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-learning-stategies.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
            
@@ -646,7 +646,7 @@ In the above scheme, $\alpha_0$ is a tunable parameter and represents the starti
 Momentum methods, a variant of gradient descent inspired by the study of dynamics and motion in physics, attempt to use the “velocity” of updates as a more effective update scheme. Pseudocode for momentum updates is shown below:
             
 ```python
-# Reference. Standford CS224n, 2021
+# Reference. Stanford CS224n, 2021
 # Snippet 2.2
 # Computes a standard momentum update # on parameters x
 v = mu*v - alpha*grad_x
@@ -666,7 +666,7 @@ $$
 In this technique, we see that if the RMS of the history of gradients is extremely low, the learning rate is very high. A simple implementation of this technique is:
 
 ```python
-# Reference. Standford CS224n, 2021
+# Reference. Stanford CS224n, 2021
 # Snippet 2.3
 # Assume the gradient dx and parameter vector x 
 cache += dx**2
@@ -679,7 +679,7 @@ Other common adaptive methods are RMSProp and Adam, whose update rules are shown
 
 
 ```python
-# Reference. Standford CS224n, 2021
+# Reference. Stanford CS224n, 2021
 #Snippet 2.4
 # Update rule for RMS prop
 cache = decay_rate * cache + (1 - decay_rate) * dx**2 
@@ -743,6 +743,6 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w2/nn/nn-non-linearities.png" width="100" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>  

@@ -56,7 +56,7 @@ $$
     <p>
         <img src="/assets/images/post/cs224n/w3/language-model/lm-idea.png" width="250" height="350" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>      
 
@@ -66,7 +66,7 @@ Suppose we are learning a 4-gram Language Model
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-example.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -77,7 +77,7 @@ Suppose we are learning a 4-gram Language Model
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-sparsity-problem.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -98,7 +98,7 @@ Secondly, consider the denominator of Equation 3. If $w_1$ and $w_2$ never 
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-storage.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -113,7 +113,7 @@ You can build a simple trigram Language Model over a1.7 million word corpus (Reu
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-practice-1.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -124,7 +124,7 @@ You can also use a Language Model to generate text
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-practice-2.png" width="250" height="250" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p> 
 
@@ -141,7 +141,7 @@ We saw this applied to Named Entity Recognition in Week 2:
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-window-neural-model-NER.png" width="200" height="250" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -150,7 +150,7 @@ We saw this applied to Named Entity Recognition in Week 2:
     <p>
         <img src="/assets/images/post/cs224n/w3/language-model/lm-window-neural-model-example.png" width="200" height="100" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>
     
@@ -159,7 +159,7 @@ We saw this applied to Named Entity Recognition in Week 2:
     <p>
         <img src="/assets/images/post/cs224n/w3/language-model/lm-window-neural-model-structure.png" width="200" height="350" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>
     
@@ -186,7 +186,7 @@ We saw this applied to Named Entity Recognition in Week 2:
     <p>
         <img src="/assets/images/post/cs224n/w3/rnn/rnn-simple-structure.png" width="200" height="400" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>    
     
@@ -221,7 +221,7 @@ We saw this applied to Named Entity Recognition in Week 2:
         <p>
             <img src="/assets/images/post/cs224n/w3/rnn/rnn-total-sequence.png" width="200" height="400" class="projects__article__img__center">
             <p align="center">
-            <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+            <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
             </p>
         </p>
     
@@ -246,14 +246,14 @@ We saw this applied to Named Entity Recognition in Week 2:
     <p>
         <img src="/assets/images/post/cs224n/w3/rnn/rnn-multi-var-chain-rule.png" width="450" height="400" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>
 
     <p>
         <img src="/assets/images/post/cs224n/w3/rnn/rnn-backprop.png" width="400" height="400" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>
 
@@ -262,7 +262,7 @@ We saw this applied to Named Entity Recognition in Week 2:
     <p>
         <img src="/assets/images/post/cs224n/w3/rnn/rnn-backprop-2.png" width="400" height="400" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>
 
@@ -273,7 +273,7 @@ We saw this applied to Named Entity Recognition in Week 2:
 <p>
     <img src="/assets/images/post/cs224n/w3/language-model/lm-evaluation-perplexity.png" width="200" height="150" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -294,7 +294,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w3/vanishing-and-explode/vanishing-1.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -385,7 +385,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w3/vanishing-and-explode/vanishing-2.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021: Gradient signal from far away is lost because it’s much smaller than gradient signal from close-by. So, model weights are updated only with respect to near effects, not long-term effects. </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021: Gradient signal from far away is lost because it’s much smaller than gradient signal from close-by. So, model weights are updated only with respect to near effects, not long-term effects. </em>
     </p>
 </p>
 
@@ -457,7 +457,7 @@ The above equations can be thought of a GRU’s four fundamental operational sta
 <p>
     <img src="/assets/images/post/cs224n/w3/gru-lstm/gru.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, Figure: The detailed internals of a GRU </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, Figure: The detailed internals of a GRU </em>
     </p>
 </p>
 
@@ -491,21 +491,21 @@ We have a sequence of inputs $x^{(t)}$, and we will compute a sequence of hidden
 <p>
     <img src="/assets/images/post/cs224n/w3/gru-lstm/lstm-1.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n </em>
     </p>
 </p>
 
 <p>
     <img src="/assets/images/post/cs224n/w3/gru-lstm/lstm-2.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n </em>
     </p>
 </p>
 
 <p>
     <img src="/assets/images/post/cs224n/w3/gru-lstm/lstm-3.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n </em>
     </p>
 </p>
 
@@ -527,7 +527,7 @@ $$
 <p>
     <img src="/assets/images/post/cs224n/w3/gru-lstm/lstm-4.png" width="200" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, The detailed internals of a LSTM </em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, The detailed internals of a LSTM </em>
     </p>
 </p>
 
@@ -644,14 +644,14 @@ No! It can be a problem for all neural architectures (including feed-forward and
 <p>
     <img src="/assets/images/post/cs224n/w3/bidirection-and-multi-layer/bidirection-1.png" width="300" height="400" class="projects__article__img__center">
     <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n</em>
     </p>
 </p>
 
 <p>
     <img src="/assets/images/post/cs224n/w3/bidirection-and-multi-layer/bidirection-2.png" width="300" height="400" class="projects__article__img__center">
     <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n</em>
     </p>
 </p>       
 
@@ -672,7 +672,7 @@ $h^{(t)}$: We regard this as “the hidden state” of a bidirectional RNN. This
 <p>
     <img src="/assets/images/post/cs224n/w3/bidirection-and-multi-layer/bidirection-3.png" width="300" height="350" class="projects__article__img__center">
     <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n</em>
     </p>
 </p>   
 
@@ -687,7 +687,7 @@ We can also make them “deep” in another dimension by applying multiple RNNs 
 <p>
     <img src="/assets/images/post/cs224n/w3/bidirection-and-multi-layer/multi-layer.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, Figure: A deep bi-directional RNN with three RNN layers.</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, Figure: A deep bi-directional RNN with three RNN layers.</em>
     </p>
 </p>   
 
@@ -708,7 +708,7 @@ For example: In 2017 paper, Britz et al find that for Neural Machine Translation
 <p>
     <img src="/assets/images/post/cs224n/w3/summary.png" width="300" height="350" class="projects__article__img__center">
     <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, http://web.stanford.edu/class/cs224n/</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, http://web.stanford.edu/class/cs224n/</em>
     </p>
 </p> 
 

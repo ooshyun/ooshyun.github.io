@@ -24,7 +24,7 @@ Use Bayes Rule to break this down into two components to be learned separately:
 <p>
     <img src="/assets/images/post/cs224n/w4/smt/smt-formula.png" width="200" height="200" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>   
 
@@ -33,7 +33,7 @@ It needs large amount of parallel data(e.g. pairs of human-translated French/Eng
 <p>
     <img src="/assets/images/post/cs224n/w4/smt/smt-example.png" width="200" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Examples from: “The Mathematics of Statistical Machine Translation: Parameter Estimation", Brown et al, 1993.</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Examples from: “The Mathematics of Statistical Machine Translation: Parameter Estimation", Brown et al, 1993.</em>
     </p>
 </p>
 
@@ -54,14 +54,14 @@ Alignments $a$ are latent variables: They aren’t explicitly specified in the d
 <p>
     <img src="/assets/images/post/cs224n/w4/smt/smt-formula-decode.png" width="200" height="200" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
 <p>
     <img src="/assets/images/post/cs224n/w4/smt/smt-decode.png" width="200" height="400" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, ”Statistical Machine Translation", Chapter 6, Koehn, 2009.</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, ”Statistical Machine Translation", Chapter 6, Koehn, 2009.</em>
     </p>
 </p>
 
@@ -85,7 +85,7 @@ Neural Machine Translation (NMT) is a way to do Machine Translation with a singl
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-intro.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -105,7 +105,7 @@ NMT directly calculates $P(y\lvert x)=P(y_1\lvert x)P(y_2\lvert y_1,x)...P(y_t\l
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-intro.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -127,7 +127,7 @@ Seq2Seq encoders will often do something strange: they will process the input se
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-encoder.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure : Example of a Seq2Seq encoder network. This model may be used to translate the English sentence "whatis your name?" Note that the input tokens are read in reverse. Note that the network is unrolled; each column is a timestep and each row is a single layer, so that horizontal arrows correspond to hidden states and vertical arrows are LSTM inputs/outputs.</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure : Example of a Seq2Seq encoder network. This model may be used to translate the English sentence "whatis your name?" Note that the input tokens are read in reverse. Note that the network is unrolled; each column is a timestep and each row is a single layer, so that horizontal arrows correspond to hidden states and vertical arrows are LSTM inputs/outputs.</em>
     </p>
 </p>
 
@@ -140,7 +140,7 @@ Once the decoder is set up with its context, we’ll pass in a special token to 
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-decoder.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -163,7 +163,7 @@ $[o_t^{(f)}\ \ o_t^{(b)}]$, where $o_t^{( f )}$ is the output of the forward-d
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-bidirectional.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure: Example of a single-layer bidirectional LSTM encoder network. Note that the input is fed into two different LSTM layers, but in different directions, and the hidden states are concatenated to get the final context vector.</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure: Example of a single-layer bidirectional LSTM encoder network. Note that the input is fed into two different LSTM layers, but in different directions, and the hidden states are concatenated to get the final context vector.</em>
     </p>
 </p>
 
@@ -174,7 +174,7 @@ Multi-layer RNNs are also called stacked RNNs.
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-multilayers.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure: Example of a single-layer bidirectional LSTM encoder network. Note that the input is fed into two different LSTM layers, but in different directions, and the hidden states are concatenated to get the final context vector.</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure: Example of a single-layer bidirectional LSTM encoder network. Note that the input is fed into two different LSTM layers, but in different directions, and the hidden states are concatenated to get the final context vector.</em>
     </p>
 </p>
 
@@ -187,7 +187,7 @@ We saw how to generate (or “decode”) the target sentence by taking argmax on
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-greedy.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -236,7 +236,7 @@ Scores are all negative, and higher score is better. We search for high -scoring
     <p>
         <img src="/assets/images/post/cs224n/w4/nmt/beamsearchdecoding.mp4.gif" width="350" height="450" class="projects__article__img__center">
         <p align="center">
-        <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+        <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
     </p>    
 
@@ -346,7 +346,7 @@ Instead of optimizing "softmax", one can also <span style="background-color: #FC
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-training-data.png" width="150" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -365,7 +365,7 @@ At test time, one can similarly predict target word out of a selected subset, ca
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-candidate-list.png" width="150" height="250" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -378,7 +378,7 @@ One idea introduced by [Gulcehre et al. 11](https://arxiv.org/abs/1603.08148) t
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-pointer-network-arch.png" width="350" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure: Pointer network Architecture 11 Gulcehre et al. 2016, Pointing the Unknown Words</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure: Pointer network Architecture 11 Gulcehre et al. 2016, Pointing the Unknown Words</em>
     </p>
 </p>
 
@@ -397,7 +397,7 @@ This is achieved by adapting a compression algorithm called **Byte Pair Encodin
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-byte-pair-code.png" width="350" height="200" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure : Byte Pair Encoding</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure : Byte Pair Encoding</em>
     </p>
 </p>
 
@@ -424,7 +424,7 @@ There are also a family of CNN character-based models which will be covered in l
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-hybrid.png" width="300" height="450" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Figure: Hybrid NMT</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Figure: Hybrid NMT</em>
     </p>
 </p>
 
@@ -454,7 +454,7 @@ Attention mechanisms make use of this observation by providing the decoder netwo
 <p>
     <img src="/assets/images/post/cs224n/w4/attention/att-motiv.png" width="400" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -465,7 +465,7 @@ Attention provides a solution to the bottleneck problem. <span style="background
 <p>
     <img src="/assets/images/post/cs224n/w4/attention/attention-mechanism.mp4.gif" width="400" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
 </p>
 
@@ -634,7 +634,7 @@ The main takeaway of this discussion is to show that they are lots of ways of do
 <p>
     <img src="/assets/images/post/cs224n/w4/attention/att-Huong.png" width="400" height="300" class="projects__article__img__center">
     <p align="center">
-    <em class="projects__img__caption"> Reference. Standford CS224n, 2021, Notes on Deep Learning for NLP, Antoine J.-P. Tixier</em>
+    <em class="projects__img__caption"> Reference. Stanford CS224n, 2021, Notes on Deep Learning for NLP, Antoine J.-P. Tixier</em>
     </p>
 </p>
 
