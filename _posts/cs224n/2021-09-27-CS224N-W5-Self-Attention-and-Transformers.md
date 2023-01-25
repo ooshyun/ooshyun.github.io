@@ -180,7 +180,7 @@ Most systems use this. Sometimes people try more flexible representations of pos
 
     Note that there are no elementwise nonlinearities in self-attention; stacking more self-attention layers just re-averages **value** vectors.
 
-    Add a feed-forward network to post-process each output vector.
+    **Add a feed-forward network to post-process each output vector($W_2, b_2$ in below equation)**
 
     $$
         \begin{aligned}
@@ -424,7 +424,7 @@ The only new part is attention from decoder to encoder(Multi-Head Cross-Attentio
 
 ### 5.1 Brief overview
 
-**Word structure and subword models**
+**$\checkmark$ Word structure and subword models**
 
 Let’s take a look at the assumptions we’ve made about a language’s vocabulary. We assume a fixed vocab of tens of thousands of words, built from the training set. All *novel* words seen at test time are mapped to a single UNK.
 
@@ -612,24 +612,28 @@ Why should pretraining and finetuning help, from a “training neural nets” pe
 - 768-dimensional hidden states, 3072-dimensional feed-forward hidden layers.
 - Byte-pair encoding with 40,000 merges
 - Trained on BooksCorpus: over 7000 unique books.
+    
     - Contains long spans of contiguous text, for learning long-distance dependencies.
+
 - The acronym “GPT” never showed up in the original paper; it could stand for “Generative PreTraining” or “Generative PreTrained Transformer”
 - How do we format inputs to our decoder for **finetuning tasks?**
     
-    **Natural Language Inference:** Label pairs of sentences as *entailing/contradictory/neutral*
+    - [Radford et al., 2018]((https://www.cs.ubc.ca/~amuham01/LING530/papers/radford2018improving.pdf)) evaluate on natural language inference.
+
+    - Natural Language Inference: Label pairs of sentences as *entailing/contradictory/neutral*
     
-    **Entailment**
+    - Entailment
     
-    Premise: *The man is in the doorway* 
-    
-    Hypothesis: *The person is near the door*
-    
-    Radford et al., 2018 evaluate on natural language inference.
-    
+        ```
+            Premise: The man is in the doorway 
+            Hypothesis: The person is near the door
+        ```    
     Here’s roughly how the input was formatted, as a sequence of tokens for the decoder.
     
-    [START] *The man is in the doorway* [DELIM] *The person is near the door* [EXTRACT]
-    
+    ```
+        [START] The man is in the doorway [DELIM] The person is near the door [EXTRACT]
+    ```
+
     The linear classifier is applied to the representation of the [EXTRACT] token.
     
 - Increasingly convincing generations (GPT2) [[Radford et al., 2018](https://www.cs.ubc.ca/~amuham01/LING530/papers/radford2018improving.pdf)]

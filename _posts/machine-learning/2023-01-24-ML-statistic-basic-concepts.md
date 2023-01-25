@@ -5,11 +5,39 @@ aside:
 key: 20230124
 tags: MachineLearning
 ---
-### What is p-value?
+### What is p-value ?
 
 $$
-p = P(\text{Assumption} \lvert \text{ Observation})
+p = P(\text{Assumption} \lvert \text{ Observation})\ ?
 $$
+
+p-value, "Null hypothesis"
+
+$$
+    \text{p value }=\text{ 1 case + 2 case + 3 case}
+$$
+
+1. The probability random chance would result in the observation
+2. The probability of observing something else tha is equally rare
+3. The probablity of observing something rarer or more extreme
+
+- Example for p-value(Two-Sided)
+    
+    1. [Null hypothesis, opposite meaning is "My coin is super special because it landed on Heads twice in a row] In statistic lingo, the hypothesis is even though I got HH in a row, my coin is no different from a normal coin. (H: Head, T: Tail) In this case, the probability is HH 0.25, TT 0.25, HT/TH 0.5. It didn't matter a order because the first flip didn't effect the next flip.
+
+    $$
+        \text{p-value for 2 Heads }= 0.25 + 0.25 + 0 = 0.5
+    $$
+
+    2. [Null hypothesis] In statistic lingo, the hypothesis is even though I got HHHTH in a row, my coin is no different from a normal coin. (H: Head, T: Tail)
+    
+    $$
+        \text{p-value for HHHTH }= \dfrac{5}{32} + \dfrac{5}{32} + \dfrac{2}{32} = 0.375
+    $$
+
+    - Probability distribution (refer to the [youtube](https://www.youtube.com/watch?v=JQc3yx0-Q9E&t=702s)!)
+
+- One-sided p-value 
 
 ### Linear regression
 
@@ -38,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-$**\checkmark$ The goal is removing most of $\beta$, and simplify the linear model!**
+**$\checkmark$ The goal is removing most of $\beta$, and simplify the linear model!**
 
 ### Ridge regression, “L2”
 
@@ -97,4 +125,6 @@ $$
 </p>
 
 ### Reference
+- [p-values: What they are and how to interpret them](https://www.youtube.com/watch?v=vemZtEM63GY)
+- [How to calculate p-values](https://www.youtube.com/watch?v=JQc3yx0-Q9E)
 - [Youtube, [핵심 머신러닝] 정규화모델 1(Regularization 개념, Ridge Regression)](https://www.youtube.com/watch?v=pJCcGK5omhE&t=21s)

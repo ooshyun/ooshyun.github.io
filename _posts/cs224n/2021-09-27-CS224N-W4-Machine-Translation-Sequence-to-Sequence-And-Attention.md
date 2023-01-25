@@ -283,9 +283,9 @@ Evaluating the quality of machine learning translations has become it own entire
 
 BLEU compares the machine-written translation to one or several human-written translation(s), and computes a similarity score based on: n-gram precision (usually for 1, 2, 3 and 4-grams) and a penalty for too-short system translations. Its limitation is there are many valid ways to translate a sentence. So a good translation can get a poor BLEU score because it has low n-gram overlap with the human translation. 
 
-In 2002, IBM researchers developed the Bilingual Evaluation Under- study (BLEU) that remains, with its many variants to this day, one of the most respected and reliable methods for machine translation.
+In 2002, IBM researchers developed the Bilingual Evaluation Understudy (BLEU) that remains, with its many variants to this day, one of the most respected and reliable methods for machine translation.
 
-The BLEU algorithm evaluates the precision score of a candidate machine translation against a reference human translation. The ref- erence human translation is a assumed to be a *model* example of a translation, and we use n-gram matches as our metric for how similar a candidate translation is to it. Consider a reference sentence A and candidate translation B:
+The BLEU algorithm evaluates the precision score of a candidate machine translation against a reference human translation. The reference human translation is a assumed to be a *model* example of a translation, and we use n-gram matches as our metric for how similar a candidate translation is to it. Consider a reference sentence A and candidate translation B:
 
 1. A there are many ways to evaluate the quality of a translation, like comparing the number of n-grams between a candidate transla- tion and reference.
 2. B the quality of a translation is evaluate of n-grams in a reference and with translation.
@@ -296,7 +296,7 @@ The BLEU algorithm identifies all such matches of n-grams above, including the u
 
 The algorithm also satisfies two other constraints. For each n-gram size, a gram in the reference translation cannot be matched more than once. For example, the unigram "a" appears twice in B but only once in A. This only counts for one match between the sentences. Additionally, we impose a brevity penalty so that very small sentences that would achieve a 1.0 precision (a "perfect" matching) are not considered good translations. For example, the single word "there" would achieve a 1.0 precision match, but it is obviously not a good match.
 
-Let us see how to actually compute the BLEU score. First let *k* be the maximum n-gram that we want to evaluate our score on. That is, if *k* = 4, the BLUE score only counts the number of n-grams with length less than or equal to 4, and ignores larger n-grams. Let
+Let us see how to actually compute the BLEU score. First let *k* be the maximum n-gram that we want to evaluate our score on. That is, if *k* = 4, the BLEU score only counts the number of n-grams with length less than or equal to 4, and ignores larger n-grams. Let
 
 $$
     p_n = \text{# matched n-grams / # n-grams in candidate transition}
@@ -360,7 +360,7 @@ $$
     \end{cases}
 $$
 
-At test time, one can similarly predict target word out of a selected subset, called *candidate list*, of the entire vocabulary. <span style="background-color: #FCF3CF">The challenge is that the correct target word is unknown and we have to "guess" what the target word might be.</span> In the paper, the authors proposed to construct a candidate list for each source sentence using K most frequent words (based on unigram probability) and K’ likely target words for each source word in the sentence. In Figure 8), an example is shown with *K*′ = 3 and the candidate list consists of all the words in purple boxes. In practice, one can choose the following values: *K* = 15*k*, 30*k*, 50*k* and *K*′ = 10, 20.
+At test time, one can similarly predict target word out of a selected subset, called *candidate list*, of the entire vocabulary. <span style="background-color: #FCF3CF">The challenge is that the correct target word is unknown and we have to "guess" what the target word might be.</span> In the paper, the authors proposed to construct a candidate list for each source sentence using K most frequent words (based on unigram probability) and K’ likely target words for each source word in the sentence. In below Figure, an example is shown with *K*′ = 3 and the candidate list consists of all the words in purple boxes. In practice, one can choose the following values: *K* = 15*k*, 30*k*, 50*k* and *K*′ = 10, 20.
 
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-candidate-list.png" width="150" height="250" class="projects__article__img__center">
@@ -392,7 +392,7 @@ As discussed in previous section, "copy" mechanisms are still not sufficient in 
 
 [Sennrich et al. 13](https://arxiv.org/abs/1508.07909) proposed a method to enable open-vocabulary translation by representing rare and unknown words as a sequence of subword units.
 
-This is achieved by adapting a compression algorithm called **Byte Pair Encoding**. The essential idea is to start with a vocabulary of characters and keep extending the vocabulary with most frequent n-gram pairs in the data set. For instance, in Figure 10, our data set contains 4 words with their frequencies on the left, i.e. "low" appears 5 times. Denote ( *p*, *q*, *f* ) as a n-gram pair p, q with frequency f. In this figure, we’ve already selected most frequent n-gram pair (e,s,9) and now we are adding current most frequent n-gram pair (es,t,9). This process is repeated until all n-gram pairs are selected or vocabulary size reaches some threshold.
+This is achieved by adapting a compression algorithm called **Byte Pair Encoding**. The essential idea is to start with a vocabulary of characters and keep extending the vocabulary with most frequent n-gram pairs in the data set. For instance, in below figure, our data set contains 4 words with their frequencies on the left, i.e. "low" appears 5 times. Denote ( *p*, *q*, *f* ) as a n-gram pair p, q with frequency f. In this figure, we’ve already selected most frequent n-gram pair (e,s,9) and now we are adding current most frequent n-gram pair (es,t,9). This process is repeated until all n-gram pairs are selected or vocabulary size reaches some threshold.
 
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-byte-pair-code.png" width="350" height="200" class="projects__article__img__center">
@@ -405,21 +405,21 @@ One can choose to either build separate vocabularies for training and test sets 
 
 **Character-based model**
 
-[Ling et al. 15](https://arxiv.org/abs/1508.02096) proposed a character-based model to enable open vocabulary word representation.For each word *w* with *m* characters, instead of storing a word embedding, this model iterates over all characters *c*1, *c*2 . . . *cm* to look up the character embeddings *e*1, *e*2 . . . *em*. These character embeddings are then fed into a bi-LSTM to get the final hidden states *hf* , *hb* for forward and backward directions respectively. The final word embed- ding is computed by an affine transformation of two hidden states:
+[Ling et al. 15](https://arxiv.org/abs/1508.02096) proposed a character-based model to enable open vocabulary word representation.For each word *w* with *m* characters, instead of storing a word embedding, this model iterates over all characters *c*1, *c*2 . . . *cm* to look up the character embeddings *e*1, *e*2 . . . *em*. These character embeddings are then fed into a bi-LSTM to get the final hidden states *hf* , *hb* for forward and backward directions respectively. The final word embedding is computed by an affine transformation of two hidden states:
 
 $$
     e_w = W_fH_f + W_bH_b + b
 $$
 
-There are also a family of CNN character-based models which will be covered in lecture 13.
+There are also a family of CNN character-based models which will be covered in lecture 13(in Stanford 224N).
 
 ### 2.14 Hybrid NMT
 
-[Luong et al. 16](https://arxiv.org/abs/1604.0078) proposed a Hybrid Word-Character model to deal with unknown words and achieve open-vocabulary NMT. The system translates mostly at word-level and consults the character compo- nents for rare words. On a high level, the character-level recurrent neural networks compute source word representations and recover unknown target words when needed. The twofold advantage of such a hybrid approach is that it is much faster and easier to train than character-based ones; at the same time, it never produces unknown words as in the case of word-based models.
+[Luong et al. 16](https://arxiv.org/abs/1604.0078) proposed a Hybrid Word-Character model to deal with unknown words and achieve open-vocabulary NMT. The system translates mostly at word-level and consults the character components for rare words. On a high level, the character-level recurrent neural networks compute source word representations and recover unknown target words when needed. The twofold advantage of such a hybrid approach is that it is much faster and easier to train than character-based ones; at the same time, it never produces unknown words as in the case of word-based models.
 
 **Word-based Translation as a Backbone** The core of the hybrid NMT is a deep LSTM encoder-decoder that translates at the word level. We maintain a vocabulary of size $\lvert V\lvert$ per language and use ```<unk>``` to represent out of vocabulary words.
 
-**Source Character-based Representation** In regular word-based NMT, a universal embedding for ```<unk>``` is used to represent all out- of-vocabulary words. This is problematic because it discards valuable information about the source words. Instead, we learn a deep LSTM model over characters of rare words, and use the final hidden state of the LSTM as the representation for the rare word (below Figure).
+**Source Character-based Representation** In regular word-based NMT, a universal embedding for ```<unk>``` is used to represent all out-of-vocabulary words. This is problematic because it discards valuable information about the source words. Instead, we learn a deep LSTM model over characters of rare words, and use the final hidden state of the LSTM as the representation for the rare word (below Figure).
 
 <p>
     <img src="/assets/images/post/cs224n/w4/nmt/nmt-hybrid.png" width="300" height="450" class="projects__article__img__center">
