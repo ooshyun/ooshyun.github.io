@@ -6,19 +6,19 @@ key: 20230224
 tags: CS Numerous
 ---
 
-영상만드시는 분께 허락을 받아 [youtube.com/watch?v=dQhj5RGtag0](http://youtube.com/watch?v=dQhj5RGtag0) 영상에서 나오는 내용을 제 나름대로 정리한 것임을 미리 언급드립니다. 영어가 익숙하시다면 **꼭 영상을 보시는 것**을 추천드립니다.
+영상만드시는 분께 허락을 받아 [youtube.com/watch?v=dQhj5RGtag0](http://youtube.com/watch?v=dQhj5RGtag0) 영상에서 나오는 내용을 제 나름대로 정리한 것임을 미리 언급드립니다. 영어가 익숙하시다면 **꼭 영상을 보시는 것**을 추천드립니다. 
 
-## 0. Prologe
+### 0. Prologue
 
-DSP(Digital Signal Processing) 엔지니어로 일을 하게되면 “Fixed point”라는 개념을 많이 접하게 됩니다. 때문에 기존에 쓰던 덧셈, 뺄셈, 곱셈, 나눗셈, 제곱근과 같은 연산에 exponential이나 log는 연산량을 고려해 알고리즘을 짤 때, 골치아픈 경우가 많았습니다. 그런데 그냥 편하게 Floating point를 사용하면 되지, 왜 구지 Fixed point을 사용할까? Floating point로 프로그래밍에서 계산을 할 때 아래와 같은 결과는 어떻게 나올 수가 있는 걸까요? 이 질문에 답은 Floating point가 고안된 과정을 쭉 훑어보면 나올 수 있습니다.
+ DSP(Digital Signal Processing) 엔지니어로 일을 하게되면 “Fixed point”라는 개념을 많이 접하게 됩니다. 때문에 기존에 쓰던 덧셈, 뺄셈, 곱셈, 나눗셈, 제곱근과 같은 연산에 exponential이나 log는 연산량을 고려해 알고리즘을 짤 때, 골치아픈 경우가 많았습니다. 그런데 그냥 편하게 Floating point를 사용하면 되지, 왜 구지 Fixed point을 사용할까? Floating point로 프로그래밍에서 계산을 할 때 아래와 같은 결과는 어떻게 나올 수가 있는 걸까요? 이 질문에 답은 Floating point가 고안된 과정을 쭉 훑어보면 나올 수 있습니다.
+
+<!--more-->
 
 $$
 0.1 + 0.1. = 0.20000000298023224 ?
 $$
 
-<!--more-->
-
-## 1. Integer representation
+### 1. Integer representation
 
 컴퓨터에서 수를 표현하기 위해서 어떤 방법이 있을까요? 가장 쉽게 생각 할 수 있는 방법은 “이진수” 입니다.
 
@@ -29,7 +29,7 @@ $$
 
 컴퓨터내에 있는 모든 숫자는 0과 1로 표현될 수 있는 것을 이용해 이진 수로 0과 양의 정수를 표현할 수 있죠. 위의 예시는 $100001001_{2} = 137$ 을 보여주고 있습니다. 그렇다면 32bit, 즉 int 혹은 int32로 선언한 변수의 메모리로 우리는 $2^{32}$의 수 까지 표현할 수 있는 것이죠.
 
-## 2. Decimal representation
+### 2. Decimal representation
 
 여기까지는 이해하는 데 그렇게 어렵지 않죠. 그럼 당연히 정수만 우리는 표현하진 않죠, 소수와 음수는 어떻게 표현할 수 있을까요? 먼저 소수를 살펴봅시다.
 
@@ -45,7 +45,7 @@ $$
 
 생각 할 수 있는 간단한 소수를 표현하는 방법은 정수를 표현하기 위한 영역과 소수를 표현하기 위한 영역으로 나누는 겁니다. 위의 첫번째 예시처럼 $2^0+2^{-1}$로 수를 표현하면 우리는 $1.5$를 표현할 수 있죠. 이 방법을 우리는 **Fixed point**라고 부릅니다. 고정된 점을 이용한다… 이런 의미인 것 같죠?
 
-## 3. Point index and Digits
+### 3. Point index and Digits
 
 그럼 fixed point 표기로 우리는 31개의 소수점자리를 표현할 수 있습니다. 그러면 그 소수점자리를 가리키는 **“Point index”** 와 실제 숫자인 “**Mantissa”**로 32bit을 채워 숫자를 표기할 수 있을 겁니다.
 
@@ -55,11 +55,11 @@ Point index(5bit) | Digits(Mantissa)(27bit)
                25 |                  3.759739548
 ```
 
-## 4. How to represent negative number?
+### 4. How to represent negative number?
 
 그러면 음수는 어떻게 표현할 수 있을까요? 가장 간단한 방법은 Sign bit라고 맨 앞에 1비트가 0이면 양의 수, 1이면 음의 수로 표현하는 겁니다. 이외에도 [2’s complement](https://en.wikipedia.org/wiki/Two%27s_complement) 방식도 있습니다.
 
-## 5. Redundancy Problem
+### 5. Redundancy Problem
 
 하지만 위와 같이 소수를 점으로 표현하게 되면 한 가지 문제가 생길 수 밖에 없습니다. 아래와 같이 그건 바로 수를 표현하는 데 공간을 낭비하고, 표현할 수 있는 수도 제한적이며, 이는 **같은 메모리 공간에 같은 수를 표현하는 데 여러 표기가 있다**는 것이 핵심 문제라는 것이죠. 
 
@@ -73,7 +73,11 @@ Redundancy
 
 그래서 이를 해결하는 방법이 바로 과학시간에 많이 배우는 **Scientific Notation $4.937 \times 10^9$** 입니다.
 
-## 6. Scientific Notation $4.937 \times 10^9$
+### 6. Scientific Notation 
+
+$$
+    4.937 \times 10^9
+$$
 
 왜 이 표기를 쓰기 시작한 걸까요? 영상에서는 한 숫자를 표현할 수 있는 **“유일한 하나의 표현 방법”**이 그 이유라고 설명합니다. 여기서 부터 아래의 예시처럼 mantissa는 항상 소수자리를 표현하게 됩니다.
 
@@ -98,7 +102,7 @@ sign | exponent |            mantissa
     </p>
 </p>       
 
-## 7. How to represent zero?
+### 7. How to represent zero?
 
 근데, 위와 표기하게 되면 문제가 한 가지 있습니다. 영상에서 숫자 범위를 보시면 알겠지만, **0을 표현할 수가 없게 됩니다**. 그리고 다른 한 가지 문제는 **exponent로 표현을 할 때 숫자 범위에 불균형**을 보실 수 있습니다.
 
@@ -138,7 +142,7 @@ sign | exponent | mantissa
 
 그러면 우리는 엄청 작은 수를 표현할 수 있는 숫자 표기법을 가질 수 있게 된 겁니다!
 
-## 8. Philosophy of floating point, Estimation
+### 8. Philosophy of floating point, Estimation
 
 “Floating point arithmetic is all about this compromise between precision and being able to use a wide range of numbers.” 
 
@@ -146,7 +150,7 @@ sign | exponent | mantissa
 
 아직 숫자 표기에 $-0$이 있습니다. 사실 크게 문제가 될 것 같지 않지만, 위의 수를 표현하고자 하는 철학(?)으로 이 문제 또한 해결하고자 한 표기법이 바로 **“IEEE single-precision floating point standard”**입니다. 
 
-## 9. How to represent Big number?
+### 9. How to represent Big number?
 <p>
     <img src="/assets/images/post/cs/numbers/big-number.png" width="400" height="400" class="projects__article__img__center">
     <p align="center">
@@ -168,7 +172,7 @@ sign | exponent | mantissa
 
 우리는 exponent가 모두 1이며 동시에 mantissa가 모두 0인 경우에 Infinitiy라고 부를 겁니다. 그리고 그 상태에서 mantissa가 모두 0이 아닌 경우를 Not a Number(NaN)이라고 부를 거죠. 
 
-## 10. Calculation between zero and infinity
+### 10. Calculation between zero and infinity
 
 이렇듯, floating number와 실제 숫자에서 가장 큰 차이는 0이 표현하는 바입니다. 
 
@@ -185,7 +189,7 @@ $$
 
 네, 바로 **0/0** 을 정의하기 위해서 **Not a Number(NaN)**를 정의합니다. $0 \times \infty$의 경우도 [a number that’s too small to store] x [a number that’s too large to store] 인데, 수의 범위를 정할 수 없으니 이 경우도 **Not a Number(NaN)**가 되는 거죠. NaN은 즉, **“Invalid operation”**을 위해서 태어난 친구인 것이죠. 
 
-## 11. Epliloge
+### 11. Epilogue
 
 참고로 Wiki에서 볼 수 있는 IEEE 754 정의하고 있는 32bit Floating point number의 예시는 다음과 같습니다.
 
@@ -220,7 +224,7 @@ fp multiplication (emulated):     35 cycles
 
 여기까지 정수, 소수, 음수, 더 넓은 숫자를 위한 표기법, 가장 작은 수들, 가장 큰 수들, IEEE가 생각하는 숫자의 철학까지 현재 정의하고 있는 Floating number에 대한 IEEE 흐름을 살펴봤습니다. 이제 숫자를 배워봤으니, 다음 차례로 차근차근 신호처리를 들어가 보겠습니다.
 
-## Reference
+### Reference
 
 - jan Misali's how floating point works [youtube.com/watch?v=dQhj5RGtag0](http://youtube.com/watch?v=dQhj5RGtag0)
 - NaN and Hardware floating point, and FLOP [https://www.youtube.com/watch?v=5TFDG-y-EHs](https://www.youtube.com/watch?v=5TFDG-y-EHs)

@@ -146,9 +146,14 @@
             - [ ]Linux
             - [ ]Book
         - Programming/CodeBug(BugFix)
-
+    
+    - [TODO] 액박 페이지
+        - https://ooshyun.github.io/2021/07/13/stochastic-gradient-descent-nn
+    
     - 썸네일 만들기(링크를 올리면 미리보기가 안보여!)
-        
+        - _config.yml에서 excerpt_separator 옵션
+        - 글에 <!--more--> 표시하면 됌
+
 
 - _include/head.html: the top of the sites Home - Seunghyun Oh
 - _include/header.html: the top of the pages, character and name
