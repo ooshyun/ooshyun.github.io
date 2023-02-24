@@ -147,6 +147,9 @@
             - [ ]Book
         - Programming/CodeBug(BugFix)
 
+    - 썸네일 만들기(링크를 올리면 미리보기가 안보여!)
+        
+
 - _include/head.html: the top of the sites Home - Seunghyun Oh
 - _include/header.html: the top of the pages, character and name
 - _sass/_header.scss: the style of contents related w/ header
