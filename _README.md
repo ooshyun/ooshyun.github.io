@@ -152,6 +152,7 @@
     
     - 썸네일 만들기(링크를 올리면 미리보기가 안보여!)
         - _config.yml에서 excerpt_separator 옵션
+        - http://www.seanbuscay.com/blog/jekyll-teaser-pager-and-read-more/
         - 글에 <!--more--> 표시하면 됌
 
 
