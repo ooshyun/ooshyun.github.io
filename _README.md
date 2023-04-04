@@ -164,6 +164,7 @@
 - header style: _sass/components/_header.scss
 - photo style: _sass/additional/_photo-frame.scss
 - Reference for link in markdown and html: https://jekyllrb.com/docs/liquid/tags/#links
+- How to add image in markdown: [![Text](Image URL or Path)](Link URL)
 
 - good example
 - https://www.christiansteinmetz.com/projects

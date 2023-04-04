@@ -1,5 +1,5 @@
 ---
-title: PHY interface for DRAM and CPU
+title: PHY interface between DRAM and CPU
 key: 20180910
 tags: Projects
 ---
@@ -15,8 +15,8 @@ custom__conf="projects__img__center"
     <em> The procedure of PHY Interface </em>
     </p>
 </p>
-<br>
-The design procedure includes specifications, circuit design, verification with PVT(Process, Voltage, and Temperature) variation, Layout, and design/estimate PCB board. Specifically, it targeted DDR3 and LPDDR3 memory specifications referred to as JEDEC Standard. The component constituted the list as below.
+<br> 
+In this project, I supported The design procedure including specifications, circuit design, verification with PVT(Process, Voltage, and Temperature) variation, Layout, and design/estimate PCB board. Specifically, it targeted DDR3 and LPDDR3 memory specifications referred to as JEDEC Standard. The component constituted the list as below.
 
 **Application**
 - Serializer/Deserializer
@@ -24,4 +24,3 @@ The design procedure includes specifications, circuit design, verification with 
 - Predriver for adjusting slew rate and write operation
 - Estimation of Eye diagram in Tx
 - Rx buffer for sampling
-- Layout for Samsung 65nm CMOS 

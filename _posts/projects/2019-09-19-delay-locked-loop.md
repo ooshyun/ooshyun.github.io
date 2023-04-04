@@ -1,9 +1,9 @@
 ---
-title: Delay Locked Loop for DRAM and CPU
+title: Delay Locked Loop for PHY interface between DRAM and CPU
 key: 20190919
 tags: Projects
 ---
-When designing the interface circuit between Memory and CPU, this circuit needs another block related to a different clock. Since not only two components but also every hardware had its clock rate, this independent circuit for synchronization is necessary when writing the data. For this reason, I started designing this circuit after creating the PHY interface block.
+When designing the interface circuit between Memory and CPU, this circuit needs another block related to a different clock. Since not only two components but also every hardware had its clock rate, this independent circuit shoud need a synchronization when writing the data. For this reason, I started to design this circuit named Delay Locked Loop(DLL) after creating the PHY interface block.
 <br><br>
 <!-- {% include image.html 
 url="/assets/images/project/dll-procedure.png" 
@@ -16,7 +16,7 @@ custom__conf="projects__img__center"
     </p>
 </p>
 <br>
-Specifically, this circuit gives the accurate clock for the next destination, such as the CPU. The logic diagram constituted as Coarse and Fine control for this goal. The Coarse control has a delay cell with NAND and NOT gate, and the counting is on Ring-counter, a group of D-flip flops. After the difference between the target clock and the tuning clock is under the range, it goes to fine-tuning seamlessly. This fine control includes phase interpolation, a digital loop filter for controlling the circuits, and a phase detector for judging the correct timing for synchronization. Those features are simulated by process, temperature, and voltage simulation. After designing the circuits, the layout/PCB design/estimation is as follows. The abstract application is as below.
+Specifically, this circuit gives the sychronized clock for the next destination, such as the CPU. The logic diagram constituted as Coarse and Fine control. The Coarse control has a delay cell constituted by NAND and NOT gate, and a counting cell named Ring-counter, a group of D-flip flops. After the difference between the target clock and the tuning clock is under the range, it goes to fine-tuning seamlessly. This fine control includes phase interpolation, a digital loop filter for controlling the circuits, and a phase detector for judging the correct timing for synchronization. We verificed the circuit performance by simulating in process, temperature, and voltage. After designing the circuits, the layout, PCB design and estimation were as follows. The abstract application is as below.
 
 **Application**
 - Coarse and Fine control line

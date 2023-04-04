@@ -1,9 +1,9 @@
 ---
-title: Design Equalizer for music
+title: Equalizer Design using Digital Filter
 key: 20211220
 tags: Projects
 ---
-This project is starting to implement an equalizer in the embedded device. Since the limitation of the edge device has a small computation capacity, it needs the filter application for adjusting the low-frequency band significantly below 200Hz. As a personal project for research and testing in a python environment, the inspiration is from a simple parallel or cascaded Infinite Impulse Response(IIR) filter <a href="https://www.aes.org/e-lib/browse.cfm?elib=19355">[1]</a>, <a href="https://ieeexplore.ieee.org/abstract/document/6891289/">[2]</a>. The process using equalizer simulates in filtfilt and filt function in scipy.signal library also for implementing those functions.
+To implement digital filter in embedded device, this project is designing digital filter in Python and C for simmulation. Since the limitation of the edge device has a small computation capacity, it needs the filter application for adjusting the low-frequency band significantly below 200Hz. As a personal research, the inspiration is from a simple parallel or cascaded Infinite Impulse Response(IIR) filter <a href="https://www.aes.org/e-lib/browse.cfm?elib=19355">[1]</a>, <a href="https://ieeexplore.ieee.org/abstract/document/6891289/">[2]</a>. The process using equalizer simulates in filtfilt and filt function in scipy.signal library also for implementing those functions.
 <br>
 
 <!-- {% include image.html 
@@ -18,7 +18,7 @@ custom__conf="projects__img__center"
     </p>
 </p>
 
-Specifically, I designed a biquid filter for high-pass, low-pass, band-pass, shelf, peak, and notch forms. And also it tested parallel IIR filter application, which used mainly wrapped fixed pole design and minimum phase through Hilbert Transform. The code for those designs and test is on the <a href="https://github.com/ooshyun/FilterDesign">github</a>. The code includes not only the implementation of the filter but also filt function in c and several digital signal processing examples such as <a href="https://github.com/ooshyun/FilterDesign/tree/master/study/fft_scratch">vanilia fft</a>. The list of details is as below.
+Specifically, I designed a biquid filter for high-pass, low-pass, band-pass, shelf, peak, and notch forms. And also it tested parallel IIR filter application, which used mainly wrapped fixed pole design and minimum phase through Hilbert Transform. The code for those designs and test is on the <a href="https://github.com/ooshyun/FilterDesign">github</a>. The code includes not only the implementation of the filter but also filt function in c and several digital signal processing examples such as <a href="https://github.com/ooshyun/FilterDesign/tree/master/study/fft_scratch">vanilia fft</a>. The part of this research implements into Olive Max and Olive Pro project for Hifi2-mini. 
 
 **Measurement**
 <!-- {% include image.html 
@@ -32,6 +32,8 @@ custom__conf="projects__img__center"
     </p>
 </p>
 
+The below list of details contains how to design and simulate the digitial filter and the implmentation of graphical equalizer from a paper "Efficient design of a parallel graphic equalizer, 2017".
+
 **Applications**
 - Biquid filter
 - Cascaded IIR filter
@@ -41,7 +43,7 @@ custom__conf="projects__img__center"
     - Minimum phase system using Hilbert Transform
     - Least square solution
 
-**Code**<br>
+**Code**
 - <a href="https://github.com/ooshyun/FilterDesign">Digital Filter design</a>
 
 

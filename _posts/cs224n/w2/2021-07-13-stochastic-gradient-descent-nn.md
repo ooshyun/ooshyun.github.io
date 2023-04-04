@@ -197,7 +197,7 @@ $$
 </p>
 
 <p>
-    <img src="/assets/images/post/cs224n/w2/nn-backprop.png"  width="300" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/cs224n/w2/nn/nn-backprop.png"  width="300" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
     </p>
@@ -206,7 +206,7 @@ $$
 - Upstream, Downstream
 
     <p>
-        <img src="/assets/images/post/cs224n/w2/nn-up-down-stream.png"  width="300" height="200" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w2/nn/nn-up-down-stream.png"  width="300" height="200" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
@@ -215,7 +215,7 @@ $$
 - Single Node
 
     <p>
-        <img src="/assets/images/post/cs224n/w2/nn-single-node.png"  width="300" height="300" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w2/nn/nn-single-node.png"  width="300" height="300" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>
@@ -224,7 +224,7 @@ $$
 - Example
 
     <p>
-        <img src="/assets/images/post/cs224n/w2/nn-example.png"  width="300" height="300" class="projects__article__img__center">
+        <img src="/assets/images/post/cs224n/w2/nn/nn-example.png"  width="300" height="300" class="projects__article__img__center">
         <p align="center">
         <em class="projects__img__caption"> Reference. Stanford CS224n, 2021</em>
         </p>

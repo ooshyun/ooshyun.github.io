@@ -79,7 +79,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       activities
+      en      : &EN       history
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -101,7 +101,7 @@ header:
       fr-LU   : *FR
       tr      : &TR       
       # @end locale config
-    url: /activities.html
+    url: /history.html
 
 os-setup-ko:
   - title: Setup Software for Machine Learning

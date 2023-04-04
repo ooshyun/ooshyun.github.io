@@ -40,7 +40,7 @@ key: page-about
   (Website last updated 11/2022)
   <br><br>
   <div class="about__link__font">
-    <a href="mailto:daniel.ohsj@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a>
+    <a href="mailto:daniel.ohsj@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/project/2019_19th_RF_analog-circuit_RFIC_paper.pdf %}" Hello> CV </a>
     <br>    
   </div>
 </div>
@@ -94,62 +94,28 @@ key: page-about
 </div> 
 
 ### Experience
+![Image](./assets/favicon_package_2205/android-chrome-192x192.png){:.logo}
+<div class="about__edu__font">
+  <div class="name__font">
+    <a href="https://ooshyun.github.io/">Freelance</a>
+  </div>
+  <div class="degree__font">
+    Embedded AI engineer<br>   
+  </div>
+  <div class="duration__font">
+    Apr 2023 - Current<br>
+  </div>
+</div>
+
 ![Image](./assets/images/logo/logo_oliveunion.png){:.logo}
 <div class="about__edu__font">
   <div class="name__font">
     <a href="https://us.oliveunion.com/">OliveUnion</a>
   </div>
   <div class="degree__font">
-    Digital signal processing engineer<br>   
+    Embedded Digital signal processing engineer<br>   
   </div>
   <div class="duration__font">
-    Apr 2020 - Current<br>
-  </div>
-</div>
-
----
-### Projects
-<div class="about__project__font">
-  <div class="project__font">
-    Speech Enhancement using LSTM <br>
-    <div class="duration__font">
-      Spring 2022 to Spring 2023, Expected, <a href="https://github.com/ooshyun/cnn-audio-denoiser-voicebank">[Code]</a>, <a href="{% link _posts/projects/2022-11-13-speech-enhancement.md %}">Read more</a> <br> 
-    </div>
-  </div>
-  <br>
-  <div class="project__font">
-    Olive Max, true wireless earbuds as hearing aid for severe hearing loss <br>
-    <div class="duration__font">
-      Spring 2022 to Spring 2023, Expected, <a href="{% link _posts/projects/2021-04-13-olive-pro-max-tws.md %}">Read more</a>
-      <br>
-    </div>
-  </div>
-  <br>
-  <div class="project__font">
-    Design Equalizer with cascasde and parallel biquid filter <br>
-    <div class="duration__font">
-      Fall 2021, <a href="https://github.com/ooshyun/FilterDesign">[Code]</a>, <a href="{% link _posts/projects/2021-12-20-equalizer.md %}">Read more</a> <br>
-    </div> 
-  </div>  
-  <br>
-  <div class="project__font">
-    Olive Pro, true wireless earbuds for hearing aid <br>
-    <div class="duration__font">
-      Spring 2020 to Spring 2021, <a href="{% link _posts/projects/2021-04-13-olive-pro-max-tws.md %}">Read more</a> <br>
-    </div>
-  </div>  
-  <br>
-  <div class="project__font">
-    Delay Locked Loop for DDR3 and LPDDR3 <br>
-    <div class="duration__font">
-      Fall 2018 to Fall 2019, <a href="{% link _posts/projects/2019-09-19-delay-locked-loop.md %}">Read more</a> <br>
-    </div>
-  </div>
-  <br>
-  <div class="project__font">
-    PHY Interface for DDR3 and LPDDR3 <br>
-    <div class="duration__font">
-      Spring 2018 to Spring 2019, <a href="{% link _posts/projects/2018-09-10-phy-interface.md %}">Read more</a> <br>
-    </div>
+    Apr 2020 - Apr 2023<br>
   </div>
 </div>
