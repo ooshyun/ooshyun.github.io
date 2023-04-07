@@ -40,7 +40,7 @@ key: page-about
   (Website last updated 04/2023)
   <br><br>
   <div class="about__link__font">
-    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2023.pdf %}" Hello> CV </a>
+    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2023_ENG.pdf %}" Hello> CV </a>
     <br>    
   </div>
 </div>
