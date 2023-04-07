@@ -31,16 +31,16 @@ key: page-about
 
 ### about
 <div class="about__font">
-  Currently, I'm developing true-wireless earbuds for hard-hearing people as a digital signal processing engineer in <a href="https://us.oliveunion.com/"> Olive Union(Seoul, Republic of Korea)</a>. I received my Master's degree in Computer and Electronics Engineering. During my Master's studies, I researched designing for analog circuits in the high-speed interface. Specifically, My research focused on the PHY interface synchronizing blocks such as CPU and DRAM. Throughout this research, I was also interested in human-centered signals such as EEG. I attempted to find a method to obtain and process this analog data.
-  <br><br>
-  Pursuing my graduate studies in the field of designing analog circuits and interest in human-centered signals has led me to challenge in speech. I am interested in speech processing with machine learning. Specifically, my research has concentrated on speech enhancement using machine learning techniques and implementation in micro-devices. With my background in understanding hardware devices and sound properties, I want to contribute to allowing these tiny devices to have a broader capacity to use signal processing and machine learning techniques on their constraints.
+  Currently, I'm developing embedded AI solutions for real-time signal processing as a freelance. Previously, I developed true-wireless earbuds for hard-hearing people as a digital signal processing engineer in <a href="https://us.oliveunion.com/"> Olive Union(Seoul, Republic of Korea)</a>, and received my Master's degree in Computer and Electronics Engineering. 
+  <br><br>  
+  In my Master's studies, I researched designing for analog circuits in the high-speed interface, such as PHY interface synchronizing blocks between CPU and DRAM. Throughout this research, I was also interested in human-centered signals, which led me to find a method to obtain and process this analog data. Pursuing my graduate studies in the field of designing analog circuits and interest in human-centered signals has led me to challenge in speech. As an individual with 3+ years of engineering industry experience as an Embedded DSP Engineer, I designed DSP algorithms for implementing those in tiny devices with optimization techniques. It led me to be interested in speech processing using machine learning. Specifically, my research has concentrated on implementing ML models into tiny devices for speech enhancement. With my background in understanding hardware devices and sound properties, I want to contribute to allowing these tiny devices to have a broader capacity to process signals with machine learning techniques on their constraints.
   <br><br>
   In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.
   <br><br>
-  (Website last updated 11/2022)
+  (Website last updated 04/2023)
   <br><br>
   <div class="about__link__font">
-    <a href="mailto:daniel.ohsj@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/project/2019_19th_RF_analog-circuit_RFIC_paper.pdf %}" Hello> CV </a>
+    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.notion.so/ooshyun/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2023.pdf %}" Hello> CV </a>
     <br>    
   </div>
 </div>
