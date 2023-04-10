@@ -1,8 +1,9 @@
 /* start custom scss snippet */
 .about__font{
-    line-height: map-get($base, font-size-h4) * 1.2;
+    line-height: map-get($base, font-size-h4) * 1.4;
     color: black;
     vertical-align: middle;
+    text-align: justify;
 }
 .about__link__font{
     text-align: center;
