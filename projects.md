@@ -78,3 +78,13 @@ key: page-about
     </div>
   </div>
 </div>
+
+<!-- ## Side Projects
+<div class="about__project__font">
+    Jammy <br>
+    <div class="duration__font">
+      Spring 2023 <a href="{% link assets/music-vis/jonejkim.github.io/music-vis-d3js/index.html %}">Read more</a> <br>
+    </div>
+</div> -->
+
+<!-- <audio id="audio" src="./assets/music-vis/jonejkim.github.io/music-vis-d3js/assets/kubbiJam.mp3" crossorigin="anonymous" ></audio> -->
