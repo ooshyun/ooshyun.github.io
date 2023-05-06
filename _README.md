@@ -157,6 +157,17 @@
         - [ ] 카테고리별로 글 볼 수 있도록 하기(폴더별로 보듯)
         - [ ] 댓글 달기
         - [ ] toc 블럭 키우기(글자가 잘려,,,)
+        - [ ] Project에 음악 visualizer 넣기
+            ```markdown
+            ## Side Projects
+            <div class="about__project__font">
+                Jammy <br>
+                <div class="duration__font">
+                Spring 2023 <a href="{% link assets/music-vis/jonejkim.github.io/music-vis-d3js/index.html %}">Read more</a> <br>
+                </div>
+            </div>
+            <audio id="audio" src="./assets/music-vis/jonejkim.github.io/music-vis-d3js/assets/kubbiJam.mp3" crossorigin="anonymous" ></audio>
+            ```
 
 - _include/head.html: the top of the sites Home - Seunghyun Oh
 - _include/header.html: the top of the pages, character and name
