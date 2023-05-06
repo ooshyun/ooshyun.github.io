@@ -146,15 +146,17 @@
             - [ ]Linux
             - [ ]Book
         - Programming/CodeBug(BugFix)
-    
-    - [TODO] 액박 페이지
-        - https://ooshyun.github.io/2021/07/13/stochastic-gradient-descent-nn
-    
+        
     - 썸네일 만들기(링크를 올리면 미리보기가 안보여!)
         - _config.yml에서 excerpt_separator 옵션
         - http://www.seanbuscay.com/blog/jekyll-teaser-pager-and-read-more/
         - 글에 <!--more--> 표시하면 됌
 
+    - [TODO] 2023.05.06 
+        - [ ] 글별 카테로리 이름에 넣기
+        - [ ] 카테고리별로 글 볼 수 있도록 하기(폴더별로 보듯)
+        - [ ] 댓글 달기
+        - [ ] toc 블럭 키우기(글자가 잘려,,,)
 
 - _include/head.html: the top of the sites Home - Seunghyun Oh
 - _include/header.html: the top of the pages, character and name
