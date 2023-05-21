@@ -26,11 +26,11 @@ Source Code → Preprocessing → Include header, Expand Macro(.i, .ii)
 → Machine Code(.o, .obj) → Linker(ld), Static Library(.lib, .a) 
 → Executable Machine Code(.exe)
 ```
-그럼 어떻게 컴파일 해야 되는데? 의 질문 할 수 있는데, 그 해답이 바로 이 컴파일러 중 하나인 gcc를 사용하는 방법을 익히는 것 입니다. 오늘은 CMake를 다룰 예정이라 더 자세한 과정은 [이 링크](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)를 참고하시면 되겠습니다.
+그럼 어떻게 컴파일 해야 되는데? 의 질문 할 수 있는데, 그 해답이 바로 이 컴파일러 중 하나인 gcc를 사용하는 방법을 익히는 것 입니다. 
 
 ### 1.3 Make
 
-Make는 그럼 무엇일까요? 코드를 하나, 두개만 써놓은 것은 아니고 우리는 수십개의 파일을 자동적으로 컴파일 할 수 있도록 “군집화”해주는 utility 입니다. **makefile**이라는 파일을 통해 커맨드 창에 make만 치면 자동적으로 컴파일이 될 수 있게 해줍니다. 이 또한, 자세한 내용은 [이 링크](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)를 참고하시길 바랍니다.
+Make는 그럼 무엇일까요? 코드를 하나, 두개만 써놓은 것은 아니고 우리는 수십개의 파일을 자동적으로 컴파일 할 수 있도록 “군집화”해주는 utility 입니다. 여러가지 옵션과 동시에 여러 파일을 컴파일 할 수 있도록 **makefile**이라는 파일을 통해 커맨드 창에 make만 치면 자동적으로 컴파일이 될 수 있게 해줍니다. 오늘은 CMake를 다룰 예정이라 gcc와 make에 대해 더 자세한 과정은 [이 링크](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)를 참고하시면 되겠습니다.
 
 ## 2. CMake
 
@@ -39,38 +39,39 @@ Make는 그럼 무엇일까요? 코드를 하나, 두개만 써놓은 것은 아
 ```
 .
 ├── Source1
-|   ├── SubDir1-1
+│   ├── SubDir1-1
 │   │   ├── Config.cmake
 │   │   └── func11.cpp
-|   ├── SubDir1-2
+│   ├── SubDir1-2
 │   │   ├── Config.cmake
 │   │   └── func12.cpp
-    ...   ...
-|		└── CMakeLists.txt
+│  ...  ...
+|   └── CMakeLists.txt
 
 ├── Source2
-|   ├── SubDir2-1
+│   ├── SubDir2-1
 │   │   ├── Config.cmake
 │   │   └── func21.cpp
-|   ├── SubDir2-2
+│   ├── SubDir2-2
 │   │   ├── Config.cmake
 │   │   └── func22.cpp
-    ...   ...
-|   ├── CmakeFunc1.cmake
-|   ├── CmakeFunc2.cmake
-|		└── CMakeLists.txt
+│  ...  ...
+│   ├── CmakeFunc1.cmake
+│   ├── CmakeFunc2.cmake
+│  ...  ...
+│   └── CMakeLists.txt
 └── CMakeLists.txt
 ```
 
 ### 2.2 CMake Basic Usage
 
-#### #0 CMakelists.txt 는 프로젝트 명을 적어주기
+#### #0 CMakelists.txt 에 프로젝트 명을 적어주기
     
-가장 먼저 하는 것은 cmake 버전 조건과 프로젝트 명을 적는 것입니다(내가 누구인지는 알아야 파일도 실행을 하지... 빼먹지 말기!).
+가장 먼저 하는 것은 cmake 버전 조건과 프로젝트 명을 적는 것입니다(내가 누구인지는 알아야 파일도 실행을 하지... 빼먹지 말기!). 사용한 프로그래밍 언어와 버전을 명시해주는 건 선택사항입니다(써주는 게 좋겠죠?). 
 
 ```
 cmake_minimum_required(VERSION 3.0.0)
-project(SourceAssignment VERSION 0.1.0)
+project(SourceAssignment LANGUAGES CXX VERSION 0.1.0)
 ```
     
 #### #1 기본으로 변수명, 디버깅, 캐쉬에 대해 먼저 짚고 넘어가기
@@ -157,18 +158,37 @@ Bash 스크립트를 통해 Argument를 받아 library, execute, library + execu
 CMake의 경우, 여러개의 라이브러리와 실행파일을 빌드가 가능합니다. 이는 아래 두 개를 이용하면 됩니다.
 
 - add_library(LIBRARY_NAME LIBRARY_TYPE LIBRARY_TARGET_FILES)
-- add_executable(EXEUTE_NAME EXCUTE_TYPE EXCUTE_TARGET_FILES)
+- add_executable(EXEUTE_NAME EXCUTE_TARGET_FILES)
 
 그리고 실행파일의 경우 라이브러리와 링크해야 하므로 아래의 경우를 사용하면 됩니다.
 
-- 실행파일을 라이브러에 링크해 빌드하는 경우
-    
-    ```
-    set(VAR_LIBRARY_PATH "LIBRARY_PATH")
-    add_executable(EXEUTE_NAME EXCUTE_TYPE EXCUTE_TARGET_FILES)
-    target_link_libraries(EXEUTE_NAME ${VAR_LIBRARY_PATH})
-    ```
-        
+   
+```
+# 실행파일을 라이브러리에 링크해 빌드하는 경우
+set(VAR_LIBRARY_PATH "LIBRARY_PATH")
+add_executable(EXEUTE_NAME EXCUTE_TARGET_FILES)
+target_link_libraries(EXEUTE_NAME ${VAR_LIBRARY_PATH})
+```
+
+예를 들어보면 아래처럼 사용할 수 있겠죠?
+```
+# CMakelists.txt
+add_executable(example main.cpp
+                       feature1.cpp
+                       ...)
+```
+
+혹은
+
+```
+# CMakelists.txt
+set(SRC_FILES main.cpp
+              feature1.cpp
+              ...)
+add_executable(example SRC_FILES)
+```
+위 처럼 set을 이용해서 이렇게 쓸 수도 있습니다.
+
 #### #3 빌드 시스템을 통해 OS아키텍처에 따른 실행파일을 만들 수 있을까?
 
 필자의 경우 x86_64와 arm64가 있었는데 이는 CMAKE_OSX_ARCHITECTURES를 설정하면 됩니다.
@@ -202,10 +222,11 @@ cmake -DARGU_BUILD_TYPE:STRING=lib
 ```
 .
 ├── Source
-|   ├── SubDir
+│   ├── SubDir
 │   │   ├── Config.cmake
-│   │   └── main.cpp
-|		└── CMakeLists.txt
+│   │   ├── main.cpp
+│   │  ...
+│   └── CMakeLists.txt
 └── CMakeLists.txt
 ```
 
@@ -223,18 +244,18 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/Source)
 include(${PROJECT_SOURCE_DIR}/Source)
 ```
 
-- 이렇게 Configuration을 이용하여 타겟 소스 파일은 서브폴더에서도 지정이 가능하다.
+이렇게 Configuration을 이용하여 타겟 소스 파일은 서브폴더에서도 지정이 가능하다.
     
-    ```
-    // ./Source/CMakeLists.txt
-    add_executable(EXECUTE_NAME)
-    include(EXECUTE_NAME/Config.cmake)
-    ```
-    
-    ```
-    // ./Source/SubDir/Config.cmake
-    target_sources(EXECUTE_NAME "${PROJECT_SOURCE_DIR}/SubDir/main.cpp")
-    ```
+```
+// ./Source/CMakeLists.txt
+add_executable(EXECUTE_NAME)
+include(EXECUTE_NAME/Config.cmake)
+```
+
+```
+// ./Source/SubDir/Config.cmake
+target_sources(EXECUTE_NAME "${PROJECT_SOURCE_DIR}/SubDir/main.cpp")
+```
         
 #### #6 빌드 시스템이 컴파일러와 버전을 지정할 수 있을까?
 
