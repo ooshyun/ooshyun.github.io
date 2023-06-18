@@ -12,7 +12,7 @@
 # !2022-07-01-samba-installation-in-ubuntu.md
 # !2022-07-01-user-and-group.md
 
-!cs224n
+!cs224n/
 # !2022-11-13-CS224N-Standford.md
 # !2021-07-13-CS224N-W1-Basic-concept-and-Framework-in-Nature-Lanugage-Process.md
 # !2021-09-27-CS224N-W2-Neural-Network-and-What-is-the-Dependency-Parsing.md
@@ -26,6 +26,8 @@
 # !2021-09-27-hierarchical-softmax.md
 # !2021-09-27-negative-sampling.md
 # !2021-09-27-skip-gram.md
+
+!programming-language/
 
 
 !projects/
