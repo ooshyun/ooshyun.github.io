@@ -8,6 +8,8 @@ tags: C++
 
 C로 프로그램을 짜다 보면 종종 실수하는 부분이 있습니다. 그건 바로 malloc과 new를 통한 동적 메모리 할당과 짝꿍인 “동적 메모리 해체”니다. 이로 인해 발생하는 메모리 누수 문제입니다. 이를 위해 **C++11 이후에 도입된 개념**이 바로 **Smart Pointer** 입니다. 한 번 예시를 봐보겠습니다.
 
+<!--more-->
+
 ```cpp
 // From. https://www.geeksforgeeks.org/smart-pointers-cpp/
 
