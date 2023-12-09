@@ -5,7 +5,6 @@ aside:
 key: 20230702
 tags: Math
 ---
-## Prologue
 
 모델 경량화 기법중에 Pruning의 하나에서 [Taylor Expansion Analysis on Pruning Error](https://www.notion.so/MIT-6-S965-Fall-2022-TinyML-and-Efficient-Deep-Learning-Computing-bdbe14872a4e4648941d2c4cfeb4e798?pvs=21)에서 최소값을 구한다고 나온 증명속 테일러 급수… 넌 누구니…?
 

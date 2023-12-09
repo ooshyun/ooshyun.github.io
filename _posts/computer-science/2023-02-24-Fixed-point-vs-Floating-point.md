@@ -6,17 +6,15 @@ key: 20230224
 tags: CS Numerous
 ---
 
-영상만드시는 분께 허락을 받아 [youtube.com/watch?v=dQhj5RGtag0](http://youtube.com/watch?v=dQhj5RGtag0) 영상에서 나오는 내용을 제 나름대로 정리한 것임을 미리 언급드립니다. 영어가 익숙하시다면 **꼭 영상을 보시는 것**을 추천드립니다. 
+DSP(Digital Signal Processing) 엔지니어로 일을 하게되면 “Fixed point”라는 개념을 많이 접하게 됩니다. 때문에 기존에 쓰던 덧셈, 뺄셈, 곱셈, 나눗셈, 제곱근과 같은 연산에 exponential이나 log는 연산량을 고려해 알고리즘을 짤 때, 골치아픈 경우가 많았습니다. 그런데 그냥 편하게 Floating point를 사용하면 되지, 왜 구지 Fixed point을 사용할까? Floating point로 프로그래밍에서 계산을 할 때 아래와 같은 결과는 어떻게 나올 수가 있는 걸까요? 이 질문에 답은 Floating point가 고안된 과정을 쭉 훑어보면 나올 수 있습니다.
 
 <!--more-->
-
-### 0. Prologue
-
- DSP(Digital Signal Processing) 엔지니어로 일을 하게되면 “Fixed point”라는 개념을 많이 접하게 됩니다. 때문에 기존에 쓰던 덧셈, 뺄셈, 곱셈, 나눗셈, 제곱근과 같은 연산에 exponential이나 log는 연산량을 고려해 알고리즘을 짤 때, 골치아픈 경우가 많았습니다. 그런데 그냥 편하게 Floating point를 사용하면 되지, 왜 구지 Fixed point을 사용할까? Floating point로 프로그래밍에서 계산을 할 때 아래와 같은 결과는 어떻게 나올 수가 있는 걸까요? 이 질문에 답은 Floating point가 고안된 과정을 쭉 훑어보면 나올 수 있습니다.
 
 $$
 0.1 + 0.1. = 0.20000000298023224 ?
 $$
+
+영상만드시는 분께 허락을 받아 [youtube.com/watch?v=dQhj5RGtag0](http://youtube.com/watch?v=dQhj5RGtag0) 영상에서 나오는 내용을 제 나름대로 정리한 것임을 미리 언급드립니다. 영어가 익숙하시다면 **꼭 영상을 보시는 것**을 추천드립니다. 
 
 ### 1. Integer representation
 
