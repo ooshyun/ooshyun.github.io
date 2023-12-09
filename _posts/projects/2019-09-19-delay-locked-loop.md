@@ -2,6 +2,7 @@
 title: Delay Locked Loop for PHY interface between DRAM and CPU
 key: 20190919
 tags: Projects
+comment: false
 ---
 When designing the interface circuit between Memory and CPU, this circuit needs another block related to a different clock. Since not only two components but also every hardware had its clock rate, this independent circuit shoud need a synchronization when writing the data. For this reason, I started to design this circuit named Delay Locked Loop(DLL) after creating the PHY interface block.
 <br><br>

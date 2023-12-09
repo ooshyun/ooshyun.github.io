@@ -2,6 +2,7 @@
 title: PHY interface between DRAM and CPU
 key: 20180910
 tags: Projects
+comment: false
 ---
 This project started from the need to design the interface circuit between the CPU and Memory. Since not only two components but also every hardware had its clock rate, the independent circuit for synchronization is necessary. For this reason, the independent circuit for receiving and transceiving the amount of data between CPU and Memory is essential, named the PHY interface. 
 <br>
