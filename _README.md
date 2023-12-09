@@ -197,6 +197,13 @@
             <audio id="audio" src="./assets/music-vis/jonejkim.github.io/music-vis-d3js/assets/kubbiJam.mp3" crossorigin="anonymous" ></audio>
             ```
 
+    - TBD
+        - Interview
+            - notion: https://cochl.oopy.io/4aa042ea-8748-499c-974a-fbd630c29a9d
+            - medium: https://medium.com/cochl/meet-cochls-team-seunghyun-oh-back-end-engineer-e1b3c05c39fe
+
+
+
 - _include/head.html: the top of the sites Home - Seunghyun Oh
 - _include/header.html: the top of the pages, character and name
 - _sass/_header.scss: the style of contents related w/ header

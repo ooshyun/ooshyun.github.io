@@ -25,6 +25,7 @@ titles:
   # @end locale config
 show_title: false
 key: page-about
+comment: false
 ---
 ## History
 <div class="activities__title__font">Academic Scholarship</div>

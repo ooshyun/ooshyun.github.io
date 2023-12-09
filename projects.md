@@ -25,6 +25,7 @@ titles:
   # @end locale config
 show_title: false
 key: page-about
+comment: false
 ---
 ## Projects
 <div class="about__project__font">
