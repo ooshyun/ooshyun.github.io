@@ -83,6 +83,34 @@
     - _project.md cannot build in Jeklly
     - header icon is red!!!
 
+* Add comment
+    - https://velog.io/@neori/Jekyll-TeXt-Theme로-GitHub-블로그-개발하기
+    - https://yenilee.github.io/2021/07/21/configure-gitalk.html
+    - github Oauth application -> _config.yml/comments
+    - github Oauth application: https://github.com/settings/developers
+    
+        ```markdown
+        Application name: ooshyun.log
+        Homepage URL: https://ooshyun.github.io/
+        Application description: // optional
+        Authorization callback URL: https://ooshyun.github.io/
+        ```
+        
+    - _config.yml
+
+        ```markdown
+        ## Gitalk
+        # please refer to https://github.com/gitalk/gitalk for more info.
+        gitalk:
+            clientID    : 'e08a1e93072c38209a89' # GitHub Application Client ID
+            clientSecret: 'f5dc8af9855f6eb1a8342033c58a5f5314b1cd8f' # GitHub Application Client Secret
+            repository  : 'ooshyun.github.io.comments' # GitHub repo
+            owner       : 'ooshyun' # GitHub repo owner
+            admin:  ['ooshyun'] # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+            # - your GitHub Id
+        ```
+    - comment repository should be public and opened issues in settings
+
 - 목표
     - [V] My awesome websites 밑에 문구 넣기 + size up logo 
     - [V] about: [TODO] 소개 문구 추가 수정
