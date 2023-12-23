@@ -16,7 +16,7 @@ tags: MachineLearning EdgeAI TinyML
 이들은 아래 그림처럼 CPU부터 휘발성 메모리(e.g. SRAM), 비휘발성 메모리(e.g. ROM, Flash Memory), Serial input/output (e.g. UART), Peripherals (e.g. watchdog), ADC(Analog to Ditital Converter), DAC(Digital to Analog Converter)등을 가지고 있는데,
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/microcontroller.png" width="200" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/microcontroller.png" width="200" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -25,7 +25,7 @@ tags: MachineLearning EdgeAI TinyML
 이들의 메모리 구조를 보면 확연히 컴퓨터와는 **메모리 크기**가 다른 것을 볼 수 있다. 그렇기에 무엇보다 작고 소중한 메모리를 더 많이 활용하기 위해 Cache가 중심으로 기법들을 설명할 것이다. 먼저 어떤 부분이 문제가 될 수 있을까? 알고리즘 중에서도 Neural Network를 이용하기 위해 어떤 점이 허들이 될 수 있을까? 
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/memory-hierarchy.png" width="200" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/memory-hierarchy.png" width="200" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -35,7 +35,7 @@ tags: MachineLearning EdgeAI TinyML
 
 첫 번째는 적은 메모리, 그 중에서도 SRAM을 지적하고 있다. 기존에 적으면 8GB, 크면 64GB가 되는 개인용 컴퓨터의 DRAM에서는 걱정하지 않았던 부분이 Microcontroller에서는 320kB까지 줄어들 수 있기에 문제가 될 수 있다.
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/peak-memory.png" width="200" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/peak-memory.png" width="200" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -44,7 +44,7 @@ tags: MachineLearning EdgeAI TinyML
 두 번째는 그럼 적은 메모리를 잘 이용하기 위해 Neural Network에서 어떤 데이터를 신경써야 하는 가 이다. 크게 Flash 메모리에서 저장하고 읽기를 주로하는 Parameter나 Weight와 같이 Synapses와 연관된 데이터. 그리고 SRAM에 저장하고 자주 읽기 쓰기를 반복하는 Feature나 Activation으로 나눌 수 있을 것이다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/nn-in-memory.png" width="200" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/nn-in-memory.png" width="200" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -70,7 +70,7 @@ $$
 이렇게 펼쳐놓음으로써 가독성이 안좋아질 수 있고 코드 길이는 4배만큼 unrolling을 하는 경우 4배나 늘어나긴 하겠지만, 뒤에 예제에서 확인하듯 실제로 여기에 언급된 최적화 기법들을 적용하면 단위 시간당 프레임 수가 점점 늘어나는 것을 확인할 수 있을 것이다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/loop-unrolling.png" width="300" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/loop-unrolling.png" width="300" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -80,7 +80,7 @@ $$
 두 번째 최적화 기법은 Loop reordering이다. "Loop에서 데이터를 읽는 순서만 바꿔서 data locality를 늘려 Cache를 잘 사용하자!"는 방법이다. 그림을 보면 행렬 A와 행렬 B의 데이터를 읽는 순서를 맞추기 위해 (i, j, k)에서 (i, k, j)로 바뀐 것을 볼 수 있다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/loop-reordering.png" width="300" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/loop-reordering.png" width="300" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -91,7 +91,7 @@ $$
 세 번째 최적화 기법은 Loop Tiling이다. 이 방법 또한 Loop Reordering과 동일하게 Cache miss를 줄이기 위한 방법인데, 행렬 A, B의 곱을 구할 때 특정 구역을 정해서 그 구역 안에서만 계산을 하고 다음 구역으로 넘어가는 방법이다. 이 방법을 쓰려면 Cache size를 고려해서 구역크기를 정해야지, 오히려 크기가 cache보다 크면 cache miss가 더 높아져 역효과를 낼 수도 있다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/loop-tiling-detail.png" width="300" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/loop-tiling-detail.png" width="300" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -100,7 +100,7 @@ $$
 아무래도 Cache의 크기가 제한적이기 때문에 이를 더 잘 활용하기 위해서 Multilvel tiling이라는 방법을 사용한다. 행렬 A를 작은 A'로, 더 작은 A''로 만든다는 이야기인데, 
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/loop-multilevel-tiling.png" width="400" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/loop-multilevel-tiling.png" width="400" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -109,7 +109,7 @@ $$
 이를 행렬 A, B에 적용하면 다음처럼 된다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/loop-tiling.png" width="400" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/loop-tiling.png" width="400" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -120,7 +120,7 @@ $$
 네 번째 최적화 기법은 SIMD programming이다. 이 방법은 "하나의 operation으로 여러 데이터를 처리하자"는 컨셉인데 아래처럼 32bit 연산을 한번에 4개를 처리헐 수 있다. 언뜻 보면 이는 데이터를 연속으로 배열해야하지만 이를 통해 연산량을 1/4배 할 수 있게 보이지만 데이터를 특정 배열대로 있어야 가능하기에, 데이터의 layer를 고려해야하는 부분이 있다. 아래 그림을 보면 dot_vec4와 같이 다양한 타입(e.g. int8, float16 ... )과 여러 연산 (e.g. 덧셈, 곱셈 ...) 을 각 디바이스마다 가지고 있으니, 특정 기기만 사용하는 업무라면 최적화하는데 고려해볼 수도?
 
 <p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/simd.png" width="400" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/simd.png" width="400" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
@@ -449,7 +449,7 @@ tinyengine_status convolve_1x1_s8_fpreq(const q7_t *input,
 2. 입력 데이터를 SIMD연산을 위해 아래와 같이 재 배열한다.
 
 	<p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/q7_q15_offset_reordered_ele.png" width="500" height="100" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/q7_q15_offset_reordered_ele.png" width="500" height="100" class="projects__article__img__center">
     <p align="center">
     </p>
 	</p>
@@ -472,7 +472,7 @@ tinyengine_status convolve_1x1_s8_fpreq(const q7_t *input,
 
 3. 입력 데이터를 차례로 읽고, 커널(ip_a0, ip_a1)도 입력데이터와 같이 데이터를 재 배열한다. 이때 커널에서 채널을 2개씩 읽어서 사용한다. 여기서 Unrolling을 하면 loop를 펼쳐놓으면 된다.
 	<p>
-    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/arm_nn_mat_mult_kernel_s8_s16_reordered.png" width="500" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/optimization-tiny-engine/part1/arm_nn_mat_mult_kernel_s8_s16_reordered.png" width="500" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture17-TinyEngine in https://efficientml.ai </em>
     </p>
