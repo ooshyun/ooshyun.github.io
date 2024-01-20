@@ -2,8 +2,8 @@
 title: Optimization for tiny devices in C++ 1/2
 aside:
     toc: true
-key: 20230124
-tags: MachineLearning EdgeAI TinyML
+key: 20231204
+tags: TinyML
 ---
 
 이전회사에서 Tensilica Processor IP로 HiFi DSP를 사용했었다. DSP는 신호처리를 위해 자체적인 병렬연산처리 Instruction이 있는 Processor인데, 배터리를 가지고 있는 임베디드 시스템상 알고리즘 마다 전력소모를 최소화하기 위해 MIPS나 FLOP 대신 MCPS(Million Cycles Per Second)와 MOPS(Millon Operations Per Second)를 Xtensa IDE에서 제공하는 프로파일링을 이용해서 최적화 작업을 하였다. 이 당시에는 DSP 알고리즘 자체를 최적화하면서 별 거 아닌 것 처럼 여겼지만, 실제로 제품 배터리를 총 5시간 중 30분이 늘어나는 것을 보고 Cache를 사용하는 것과 같이 C/C++ 언어 자체로 최적화하는 작업이 어떻게 이뤄지는지 궁금했었다. 그러던 찰나, [TinyML에 관련한 강의](https://www.youtube.com/playlist?list=PL80kAHvQbh-ocildRaxjjBy6MR1ZsNCU7)를 듣던 와중에 궁금해 하던 최적화 기법 중에서도 **TinyML**을 위한 최적화와 그에 대한 예제를 직접 보드에서 볼 수 있어 정리해보았다. 

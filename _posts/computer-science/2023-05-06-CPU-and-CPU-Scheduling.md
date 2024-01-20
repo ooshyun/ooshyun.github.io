@@ -3,7 +3,7 @@ title: CPU and CPU Scheduling
 aside:
     toc: true
 key: 20230506
-tags: CS OS
+tags: CS
 ---
 이전 시간까지 프로레서와 스레드, 그리고 동시성에 대해서 이야기했었습니다. 내용 중에 “원하는 연산은 CPU 프로세서로 가서 처리 된다.”라고 자주 CPU라는 녀석이 언급됐었는데, 오늘은 그 CPU, Central Processing Uni와 이 CPU가 명령어를 처리하기 위한 Schedule 에 대해서 다뤄볼까 합니다.
 

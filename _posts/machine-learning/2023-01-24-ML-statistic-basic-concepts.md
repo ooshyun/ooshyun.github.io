@@ -3,7 +3,7 @@ title: Basic concept for Machine learning using statistics
 aside:
     toc: true
 key: 20230124
-tags: MachineLearning
+tags: ML
 ---
 ### What is p-value ?
 

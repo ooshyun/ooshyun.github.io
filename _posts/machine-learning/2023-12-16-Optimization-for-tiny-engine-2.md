@@ -2,8 +2,8 @@
 title: Optimization for tiny devices in C++ 2/2
 aside:
     toc: true
-key: 20230124
-tags: MachineLearning EdgeAI TinyML
+key: 20231216
+tags: TinyML
 ---
 [지난 번 글](https://ooshyun.github.io/2023/12/04/Optimization-for-tiny-engine-1.html)부터 Tiny device에 적용할 수 있는 ML 최적화 기법에 대해 정리하고 있다. 이번 글에서는 Image to Column(Im2col) convolution, In-place depth-wise convolution, NHWC for point-wise convolution, and NCHW for depth-wise convolution, Winograd convolution를 다룰 예정이고, 저번 시간에 이어 그에 맞는 예제를 직접 보드에서 돌려보면서 어떻게 최적화가 되는지 알아보자.
 

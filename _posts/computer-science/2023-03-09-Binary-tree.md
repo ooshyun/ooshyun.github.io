@@ -3,7 +3,7 @@ title: Binary Tree
 aside:
     toc: true
 key: 20230224
-tags: CS DataStructure
+tags: CS
 ---
 
 글에 앞서 본 내용은 [MIT 6.006 Introduction to Algorithms, Spring 2020](https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY) 에서 Binary Tree Part 1, Binary Tree Part 2, 그리고 Binary Heaps을 정리해 둔 것을 우선 말씀드립니다. 본 내용이 영어로 궁금하시면 강의를 꼭 들어보시길 추천드립니다. 그리고 강의 전반으로 각 자료구조에 대해 이야기할 때, 항상 **문제 → 자료구조의 정의 → 동작원리(build, insert, delete) → 인터페이스로의 이용(Find) → Sorting(가능하다면)** 의 순서로 진행되니 참고 바랍니다.

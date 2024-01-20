@@ -3,7 +3,7 @@ title: Quantization 1/2
 aside:
     toc: true
 key: 20240119
-tags: MachineLearning EdgeAI TinyML
+tags: TinyML
 ---
 이번 글에서는 MIT HAN LAB에서 강의하는 [TinyML and Efficient Deep Learning Computing](https://www.youtube.com/playlist?list=PL80kAHvQbh-ocildRaxjjBy6MR1ZsNCU7)에 나오는 Quantization 방법을 두 차례에 걸쳐서 소개하려 한다. Quantization(양자화) 신호와 이미지에서 아날로그를 디지털로 변환하는 과정에서 사용하는 개념이다. 아래 그림과 같이 연속적인 센서로 부터 들어오는 아날로그 데이터 나 이미지를 표현하기 위해 단위 시간에 대해서 데이터를 샘플링하여 데이터를 수집한다.
 
@@ -36,7 +36,7 @@ tags: MachineLearning EdgeAI TinyML
 
 이번 글에서는 Quntization 중에서 Quantization 방법과 그 중 Linear한 방법에 대해 더 자세하게, 그리고 Post-training Quantization까지 다루고, 다음 글에서는 Quantization-Aware Training, Binary/Tenary Quantization, Mixed Precision Quantization까지 다루려고 한다.
 
-# 1. Common Network Quantization
+## 1. Common Network Quantization
 앞서서 소개한 것처럼 Neural Netowork를 위한 Quantization은 다음과 같이 나눌 수 있다. Quantization 방법을 하나씩 알아보자.
 
 <p>
@@ -46,7 +46,7 @@ tags: MachineLearning EdgeAI TinyML
     </p>
 </p>
 
-## 1.1 K-Means-based Quantization
+### 1.1 K-Means-based Quantization
 그 중 첫 번째로 K-means-based Quantization이 있다. [Deep Compression [Han et al., ICLR 2016]](https://arxiv.org/abs/1510.00149) 논문에 소개했다는 이 방법은 중심값을 기준으로 clustering을 하는 방법이다. 예제를 봐보자.
 
 <p>
@@ -110,7 +110,7 @@ inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저
 </p>
 
 
-## 1.2 Linear Quantization
+### 1.2 Linear Quantization
 
 두 번째 방법은 Linear Quatization이다. floating-point인 weight를 N-bit의 정수로 affine mapping을 시키는 방법이다. 간단하게 식으로 보는 게 더 이해가 쉽다.
 
@@ -131,7 +131,7 @@ inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저
 </p>
 
 
-## 1.3 Scale and Zero point
+### 1.3 Scale and Zero point
 
 <p>
     <img src="/assets/images/post/machinelearning/quantization/scale-zero-point.png" width="500" height="250" class="projects__article__img__center">
@@ -177,7 +177,7 @@ $$
 
 그럼 Symmetric하게 r의 범위를 제한하는 것과 같은 다른 Linear Quantization은 없을까? 이를 앞서, Quatized된 값들이 Matrix Multiplication을 하면서 미리 계산될 수 있는 수 (Quantized Weight, Scale, Zero point)가 있으니 inference시 연산량을 줄이기 위해 미리 계산할 수 있는 파라미터는 없을까? 
 
-## 1.4 Quantized Matrix Multiplication
+### 1.4 Quantized Matrix Multiplication
 입력 X, Weight W, 결과 Y가 Matrix Multiplication을 했다고 할 때 식을 계산해보자.
 
 $$
@@ -197,7 +197,7 @@ $$
 
 $$Z_x$$ 와 $$q_w, Z_w, Z_X$$ 의 경우는 미리 연산이 가능하다. 또 $$S_wS_X/S_Y$$ 의 경우 항상 수의 범위가 $$(0, 1)$$ 로 $$2^{-n}M_0$$ , $$M_0 \in [0.5, 1)$$ 로 변형하면 N-bit Integer로 Fixed-point 형태로 표현 가능하다. 여기에 $$Z_w$$가 0이면 어떨까? 또 미리 계산할 수 있는 항이 보인다.
 
-## 1.5 Symmetric Linear Quantization
+### 1.5 Symmetric Linear Quantization
 
 <p>
     <img src="/assets/images/post/machinelearning/quantization/sym-linear-quant.png" width="500" height="200" class="projects__article__img__center">
@@ -238,10 +238,10 @@ Symmetric Linear Quantization은 주어진 데이터에서 Full range mode와 Re
 </p>
 
 
-## 1.6 Linear Quantization examples
+### 1.6 Linear Quantization examples
 그럼 Quatization 방법에 대해 알아봤으니 이를 Full-Connected Layer, Convolution Layer에 적용해보고 어떤 효과가 있는지 알아보자.
 
-### 1.6.1 Full-Connected Layer
+#### 1.6.1 Full-Connected Layer
 아래처럼 식을 전개해보면 미리 연산할 계산할 수 있는 항과 N-bit integer로 표현할 있는 항으로 나눌 수 있다(전개하는 이유는 아마 미리 계산할 수 있는 항을 알아보기 위함이 아닐까 싶다).
 
 $$
@@ -280,7 +280,7 @@ $$
     </p>
 </p>
 
-### 1.6.2 Convolutional Layer
+#### 1.6.2 Convolutional Layer
 Convolution Layer의 경우는 Weight와 X의 곱의 경우를 Convolution으로 바꿔서 생각해보면 된다. 그도 그럴 것이 Convolution은 Kernel과 Input의 곱의 합으로 이루어져 있기 때문에 Full-Connected와 거의 유사하게 전개될 수 있을 것이다. 
 
 <p>
@@ -290,13 +290,13 @@ Convolution Layer의 경우는 Weight와 X의 곱의 경우를 Convolution으로
     </p>
 </p>
 
-# 2. Post-training Quantization (PTQ)
+## 2. Post-training Quantization (PTQ)
 그럼 앞서서 Quantizaed한 Layer를 Fine tuning할 없을까? **"How should we get the optimal linear quantization parameters (S, Z)?"** 이 질문에 대해서 Weight, Activation, Bias 세 가지와 그에 대하여 논문에서 보여주는 결과까지 알아보자.
 
-## 2.1 Weight quantization
+### 2.1 Weight quantization
 **TL;DR.** 이 강의에서 소개하는 Weight quantization은 Grandularity에 따라 Whole(Per-Tensor), Channel, 그리고 Layer로 들어간다.
 
-### 2.1.1 Granularity
+#### 2.1.1 Granularity
 Weight quantization에서 Granularity에 따라서 Per-Tensor, Per-Channel, Group, 그리고 Generalized 하는 방법으로 확장시켜 Shared Micro-exponent(MX) data type을 차례로 보여준다. Scale을 몇 개나 둘 것이냐, 그 Scale을 적용하는 범위를 어떻게 둘 것이냐, 그리고 Scale을 얼마나 디테일하게(e.g. floating-point)할 것이냐에 초점을 둔다.
 
 <p>
@@ -366,7 +366,7 @@ e.g. VSQ Data type int4 = Scale bit (4) + Group 0 Scale bit(4) / Group 0 Size(16
     </p>
 </p>
 
-### 2.1.2 Weight Equalization
+#### 2.1.2 Weight Equalization
 여기까지 Weight Quatization에서 그룹으로 얼마만큼 묶는지에 따라(강의에서는 Granularity) Quatization을 하는 여러 방법을 소개했다. 다음으로 소개 할 방법은 Weight Equalization이다. 2022년에 소개해준 내용인데, 이는 i번째 layer의 output channel를 scaling down 하면서 i+1번째 layer의 input channel을 scaling up 해서 Scale로 인해 Quantization 전후로 생기는 Layer간 차이를 줄이는 방법이다.
 
 <p>
@@ -404,7 +404,7 @@ $$
 
 이렇게 하면 i번째 layer의 output channel과 i+1번째 layer의 input channel의 Scale을 각각 $$ S $$ 와 $$ 1/S $$ 로하며 weight간의 격차를 줄일 수 있다.
 
-### 2.1.3 Adaptive rounding
+#### 2.1.3 Adaptive rounding
 
 <p>
     <img src="/assets/images/post/machinelearning/quantization/adaptive-rounding.png" width="300" height="150" class="projects__article__img__center">
@@ -425,7 +425,7 @@ $$
 
 $$
 
-## 2.2 Activation quantization
+### 2.2 Activation quantization
 두 번째로 Activation quantization이 있다. 모델결과로 나오는 결과를 직접적으로 결정하는 Activation Quatization에서는 두 가지를 고려한 방법을 소개한다. 하나는 Activation 레이어에서 결과값을 Smoothing한 분포를 가지게 하기 위해 Exponential Moving Average(EMA)를 사용하는 방법이고, 다른 하나는 다양한 입력값을 고려해 batch samples을 FP32 모델과 calibration하는 방법이다.
 
 Exponential Moving Average (EMA)은 아래 식에서 $$\alpha$$ 를 구하는 방법이다.
@@ -450,7 +450,7 @@ KL\ divergence=D_{KL}(P\lvert\lvert Q) = \sum_i^N P(x_i)log\dfrac{P(x_i)}{Q(x_i)
 
 $$
 
-## 2.3 Quanization Bias Correction
+### 2.3 Quanization Bias Correction
 마지막으로 Quatization으로 biased error를 잡는다는 것을 소개한다. $$ \epsilon = Q(W)-W $$ 이라고 두고 아래처럼 식이 전개시키면 마지막 항에서 보이는 $$  -\epsilon\mathbb{E}[x] $$ 부분이 bias를 quatization을 할 때 제거 된다고 한다(이 부분은 2023년에는 소개하진 않는데, 당연한 것이어서 안하는지, 혹은 영향이 크지 않아서 그런지는 모르겠다. Bias Quatization이후에 MobileNetV2에서 한 레이어의 output을 보면 어느정도 제거되는 것처럼 보인다).
 
 $$
@@ -471,7 +471,7 @@ $$
     </p>
 </p>
 
-## 2.4 Post-Training INT8 Linear Quantization Result
+### 2.4 Post-Training INT8 Linear Quantization Result
 앞선 Post-Training Quantization을 적용한 결과를 보여준다. 이미지계열 모델을 모두 사용했으며, 성능하락폭은 지표로 보여준다. 비교적 큰 모델들의 경우 준수한 성능을 보여주지만 MobileNetV1, V2와 같은 작은 모델은 생각보다 Quantization으로 떨어지는 성능폭(-11.8%, -2.1%) 이 큰 것을 볼 수 있다. 그럼 작은 크기의 모델들은 어떻게 Training 해야할까?
 
 <p>
