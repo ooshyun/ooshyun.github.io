@@ -10,7 +10,7 @@ tags: TinyML
 <!--more-->
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/intro.png" width="400" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/intro.png" width="400" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -19,14 +19,14 @@ tags: TinyML
 디지털로 데이터를 변환하기 위해 데이터 타입을 정하면서 이를 하나씩 양자화한다. 양수와 음수를 표현하기 위해 Unsigned Integer 에서 Signed Integer, Signed에서도 Sign-Magnitude 방식과 Two's Complement방식으로, 그리고 더 많은 소숫점 자리를 표현하기 위해 Fixed-point에서 Floating point로 데이터 타입에서 수의 범주를 확장시킨다. 참고로 Device의 Computationality와 ML 모델의 성능지표중 하나인 FLOP이 바로 floating point operations per second이다. 
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/comp-bitwidth-fix-float.png" width="200" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/comp-bitwidth-fix-float.png" width="200" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
 </p>
  
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/comp-memory-fix-float.png" width="200" height="350" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/comp-memory-fix-float.png" width="200" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -40,7 +40,7 @@ tags: TinyML
 앞서서 소개한 것처럼 Neural Netowork를 위한 Quantization은 다음과 같이 나눌 수 있다. Quantization 방법을 하나씩 알아보자.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/quantization-method.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/quantization-method.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -50,7 +50,7 @@ tags: TinyML
 그 중 첫 번째로 K-means-based Quantization이 있다. [Deep Compression [Han et al., ICLR 2016]](https://arxiv.org/abs/1510.00149) 논문에 소개했다는 이 방법은 중심값을 기준으로 clustering을 하는 방법이다. 예제를 봐보자.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/k-mean-quantization.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/k-mean-quantization.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -59,7 +59,7 @@ tags: TinyML
 위 예제는 weight를 codebook에서 -1, 0, 1.5, 2로 나눠 각각에 맞는 인덱스로 표기한다. 이렇게 연산을 하면 기존에 64bytes를 사용했던 weight가 20bytes로 줄어든다. codebook으로 예제는 2bit로 나눴지만, 이를 N-bit만큼 줄인다면 우리는 총 32/N배의 메모리를 줄일 수 있다. 하지만 이 과정에서 quantizatio error, 즉 quantization을 하기 전과 한 후에 오차가 생기는 것을 위 예제에서 볼 수 있다. 메모리 사용량을 줄이는 것도 좋지만, 이 때문에 성능에 오차가 생기지 않게 하기위해 이 오차를 줄이는 것 또한 중요하다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/k-mean-quantization-finetuning.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/k-mean-quantization-finetuning.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture5-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -69,7 +69,7 @@ tags: TinyML
 이를 보완하기 위해 Quantized한 Weight를 위에 그림처럼 Fine-tuning하기도 한다. centroid를 fine-tuning한다고 생각하면 되는데, 각 centroid에서 생기는 오차를 평균내 tuning하는 방법이다. 이 방법을 제안한 [논문](https://arxiv.org/abs/1510.00149) 에서는 Convolution 레이어에서는 4bit까지 centroid를 가졌을 때, Full-Connected layer에서는 2 bit까지 centroid를 가졌을 때 성능에 하락이 없다고 말하고 있었다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/continuous-data.png" width="400" height="00" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/continuous-data.png" width="400" height="00" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Deep Compression [Han et al., ICLR 2016] </em>
     </p>
@@ -78,7 +78,7 @@ tags: TinyML
 이렇게 Quantization 된 Weight는 위처럼 연속적인 값에서 아래처럼 Discrete한 값으로 바뀐다. 
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/discrete-data.png" width="400" height="00" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/discrete-data.png" width="400" height="00" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Deep Compression [Han et al., ICLR 2016] </em>
     </p>
@@ -87,14 +87,14 @@ tags: TinyML
 논문은 이렇게 Quantization한 weight를 한 번 더 Huffman coding를 이용해 최적화시킨다. 짧게 설명하자면, 빈도수가 높은 문자는 짧은 이진코드를, 빈도 수가 낮은 문자에는 긴 이진코드를 쓰는 방법이다. 압축 결과로 General한 모델과 압축 비율이 꽤 큰 SqueezeNet을 예로 든다. 자세한 내용은 논문을 참고하는 걸로. 
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/deep-compression.png" width="500" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/deep-compression.png" width="500" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Deep Compression [Han et al., ICLR 2016] </em>
     </p>
 </p>
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/deep-compression-result.png" width="500" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/deep-compression-result.png" width="500" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Deep Compression [Han et al., ICLR 2016] </em>
     </p>
@@ -103,7 +103,7 @@ tags: TinyML
 inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저장한 cluster의 인덱스를 이용해 codebook에서 해당하는 값을 찾아내는 것이다. 이 방법은 저장 공간을 줄일 수는 있지만, floating point Computation이나 메모리 접근하는 방식으로 centroid를 쓰는 한계가 있을 수 밖에 없다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/decoding-deep-compression.png" width="500" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/decoding-deep-compression.png" width="500" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. Deep Compression [Han et al., ICLR 2016] </em>
     </p>
@@ -115,7 +115,7 @@ inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저
 두 번째 방법은 Linear Quatization이다. floating-point인 weight를 N-bit의 정수로 affine mapping을 시키는 방법이다. 간단하게 식으로 보는 게 더 이해가 쉽다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/linear-quantization-eq.png" width="500" height="100" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/linear-quantization-eq.png" width="500" height="100" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -124,7 +124,7 @@ inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저
 여기서 S(Scale of Linear Quantization)와 Z(Zero point of Linear Quantization)가 있는데 이 둘이 quantization parameter 로써 tuning을 할 수 있는 값인 것이다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/linear-quantization-img.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/linear-quantization-img.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -134,7 +134,7 @@ inference를 위해 weight를 Decoding하는 과정은 inference과정에서 저
 ### 1.3 Scale and Zero point
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/scale-zero-point.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/scale-zero-point.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -162,14 +162,14 @@ $$
 예를 들어, 아래와 같은 예제에서 $$r_{max}$$ 는$$2.12$$ 이고 $$r_{min}$$ 은 $$-1.08$$ 로 Scale을 계산하면 아래 그림처럼 된다. Zero point는 $$-1$$ 로 계산할 수 있다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/scale-zero-point-ex1.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/scale-zero-point-ex1.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
 </p>
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/scale-zero-point-ex2.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/scale-zero-point-ex2.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -187,7 +187,7 @@ S_Y(q_Y-Z_Y) = S_W(q_W-Z_W) \cdot S_X(q_X-Z_X)\\
 $$
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/quantized-matrix-multi.png" width="500" height="150" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/quantized-matrix-multi.png" width="500" height="150" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -200,7 +200,7 @@ $$Z_x$$ 와 $$q_w, Z_w, Z_X$$ 의 경우는 미리 연산이 가능하다. 또 $
 ### 1.5 Symmetric Linear Quantization
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/sym-linear-quant.png" width="500" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/sym-linear-quant.png" width="500" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -213,7 +213,7 @@ Symmetric Linear Quantization은 주어진 데이터에서 Full range mode와 Re
 첫 번째 Full range mode 는 Scale을 real number(데이터, weight)에서 범위가 넓은 쪽에 맞추는 것이다. 예를 들어 아래의 경우, r_min이 r_max보다 절댓값이 더 크기 때문에 r_min에 맞춰 q_min을 가지고 Scale을 구한다. 이 방법은 Pytorch native quantization과 ONNX에서 사용된다고 강의에서 소개한다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/sym-full-range.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/sym-full-range.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -222,7 +222,7 @@ Symmetric Linear Quantization은 주어진 데이터에서 Full range mode와 Re
 두 번째 Restrict range mode는 Scale을 real number(데이터, weight)에서 범위가 좁은 쪽에 맞추는 것이다. 예를 들어 아래의 경우, r_min가 r_max보다 절댓값이 더 크기 때문에 r_min에 맞추면서 q_max에 맞도록 Scale을 구한다. 이 방법은 [TensorFlow](https://www.tensorflow.org/lite/performance/quantization_spec), NVIDIA TensorRT, Intel DNNL에서 사용된다고 강의에서 소개한다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/sym-restrict-range.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/sym-restrict-range.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -231,7 +231,7 @@ Symmetric Linear Quantization은 주어진 데이터에서 Full range mode와 Re
 그렇다면 왜 Symmetric 써야할까? Asymmetric 방법과 Symmetric 방법의 차이는 뭘까? (feat. Neural Network Distiller) 아래 그림을 참고하면 되지만, 가장 큰 차이로 보이는 것은 Computation vs Compactful quantized range로 이해간다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/sym-range-comp.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/sym-range-comp.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -274,7 +274,7 @@ $$
 간단히 표기하기 위해 $$Z_W=0, Z_b=0, S_b = S_W S_X$$ 이라고 가정한다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/full-connected-layer.png" width="500" height="350" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/full-connected-layer.png" width="500" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -284,7 +284,7 @@ $$
 Convolution Layer의 경우는 Weight와 X의 곱의 경우를 Convolution으로 바꿔서 생각해보면 된다. 그도 그럴 것이 Convolution은 Kernel과 Input의 곱의 합으로 이루어져 있기 때문에 Full-Connected와 거의 유사하게 전개될 수 있을 것이다. 
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/conv-layer.png" width="500" height="200" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/conv-layer.png" width="500" height="200" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-1 in https://efficientml.ai </em>
     </p>
@@ -300,7 +300,7 @@ Convolution Layer의 경우는 Weight와 X의 곱의 경우를 Convolution으로
 Weight quantization에서 Granularity에 따라서 Per-Tensor, Per-Channel, Group, 그리고 Generalized 하는 방법으로 확장시켜 Shared Micro-exponent(MX) data type을 차례로 보여준다. Scale을 몇 개나 둘 것이냐, 그 Scale을 적용하는 범위를 어떻게 둘 것이냐, 그리고 Scale을 얼마나 디테일하게(e.g. floating-point)할 것이냐에 초점을 둔다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/granularity.png" width="500" height="350" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/granularity.png" width="500" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -309,7 +309,7 @@ Weight quantization에서 Granularity에 따라서 Per-Tensor, Per-Channel, Grou
 첫 번째는 **Per-Tensor Quantization** 특별하게 설명할 것 없이 이전까지 설명했던 하나의 Scale을 사용하는 Linear Quantization이라고 생각하면 되겠다. 특징으로는 Large model에 대해서는 성능이 괜찮지만 작은 모델로 떨어지면 성능이 급격하게 떨어진다고 설명한다. Channel별로 weight 범주가 넓은 경우나 outlier weight가 있는 경우 quantization 이후에 성능이 하락했다고 말한다. 
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/per-channel-quant.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/per-channel-quant.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -318,7 +318,7 @@ Weight quantization에서 Granularity에 따라서 Per-Tensor, Per-Channel, Grou
 그래서 그 해결방안으로 나오는 것이 두 번째 방법인 **Per-Channel Quantization**이다. 위 예제에서 보면 Channel 마다 최대값과 각각에 맞는 Scale을 따로 가지는 것을 볼 수 있다. 그리고 적용한 결과인 아래 그림을 보면 Per-Channel과 Per-Tensor를 비교해보면 Per-Channel이 기존에 floating point weight와의 차이가 더 적다. 하지만, 만약 하드웨어에서 Per-Channel Quantization을 지원하지 않는다면 불필요한 연산을 추가로 해야하기 때문에 이는 적합한 방법이 될 수 없다는 점도 고려해야할 것이다(이는 이전 [Tiny Engine에 대한 글](https://ooshyun.github.io/2023/12/04/Optimization-for-tiny-engine-1.html)에서 Channel내에 캐싱을 이용한 최적화와 연관이 있다). 그럼 또 다른 방법은 없을까?
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/per-channel-vs-per-tensor.png" width="500" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/per-channel-vs-per-tensor.png" width="500" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -327,7 +327,7 @@ Weight quantization에서 Granularity에 따라서 Per-Tensor, Per-Channel, Grou
 세 번째 방법은 **Group Quantization**으로 소개하는 **Per-vector Scaled Quantization와 Shared Micro-exponent(MX) data type** 이다. Per-vector Scaled Quantization은 2023년도 강의부터 소개하는데, 이 방법은 Scale factor를 그룹별로 하나, Per-Tensor로 하나로 두개를 두는 방법이다. 아래의 그림을 보면,
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/group-quantization.png" width="300" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/group-quantization.png" width="300" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture05-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -344,7 +344,7 @@ $$S_q$$ 로 vector별 스케일링을 하나, $$\gamma$$ 로 Tensor에 스케일
 마지막 Per-vector Scaled Quantization을 이해하다보면 이전에 Per-Tensor, Per-Channel도 그룹으로 얼마만큼 묶는 차이가 있고, 이는 이들을 일반화할 수 있어 보인다. 강의에서 바로 다음에 소개하는 방법이 바로 **Multi-level scaling scheme**이다. Per-Channel Quantization와 Per-Vector Quantization(VSQ, Vector-Scale Quantization)부터 봐보자.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/multi-level-scaling-scheme-1.png" width="400" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/multi-level-scaling-scheme-1.png" width="400" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. With Shared Microexponents, A Little Shifting Goes a Long Way [Bita Rouhani et al.] </em>
     </p>
@@ -360,7 +360,7 @@ e.g. VSQ Data type int4 = Scale bit (4) + Group 0 Scale bit(4) / Group 0 Size(16
 이렇게 계산할 수 있다. 그리고, MX4, MX6, MX9가 나온다. 참고로 S는 Sign bit, M은 Mantissa bit, E는 Exponent bit를 의미한다(Mantissa나 Exponent에 대한 자세한 내용은 [floating point vs fixed point 글](https://ooshyun.github.io/2023/02/24/Fixed-point-vs-Floating-point.html)을 참고하자). 아래는 Microsoft에서 제공하는 Quantization Approach MX4, MX6, MX9에 대한 표이다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/multi-level-scaling-scheme-2.png" width="400" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/multi-level-scaling-scheme-2.png" width="400" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. With Shared Microexponents, A Little Shifting Goes a Long Way [Bita Rouhani et al.] </em>
     </p>
@@ -370,7 +370,7 @@ e.g. VSQ Data type int4 = Scale bit (4) + Group 0 Scale bit(4) / Group 0 Size(16
 여기까지 Weight Quatization에서 그룹으로 얼마만큼 묶는지에 따라(강의에서는 Granularity) Quatization을 하는 여러 방법을 소개했다. 다음으로 소개 할 방법은 Weight Equalization이다. 2022년에 소개해준 내용인데, 이는 i번째 layer의 output channel를 scaling down 하면서 i+1번째 layer의 input channel을 scaling up 해서 Scale로 인해 Quantization 전후로 생기는 Layer간 차이를 줄이는 방법이다.
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/weight-equalization.png" width="400" height="250" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/weight-equalization.png" width="400" height="250" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Data-Free Quantization Through Weight Equalization and Bias Correction [Markus et al., ICCV 2019] </em>
     </p>
@@ -407,7 +407,7 @@ $$
 #### 2.1.3 Adaptive rounding
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/adaptive-rounding.png" width="300" height="150" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/adaptive-rounding.png" width="300" height="150" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture06-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -465,7 +465,7 @@ $$
 $$
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/quantization-bias-correction.png" width="400" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/quantization-bias-correction.png" width="400" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture06-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -475,7 +475,7 @@ $$
 앞선 Post-Training Quantization을 적용한 결과를 보여준다. 이미지계열 모델을 모두 사용했으며, 성능하락폭은 지표로 보여준다. 비교적 큰 모델들의 경우 준수한 성능을 보여주지만 MobileNetV1, V2와 같은 작은 모델은 생각보다 Quantization으로 떨어지는 성능폭(-11.8%, -2.1%) 이 큰 것을 볼 수 있다. 그럼 작은 크기의 모델들은 어떻게 Training 해야할까?
 
 <p>
-    <img src="/assets/images/post/machinelearning/quantization/post-training-result.png" width="600" height="400" class="projects__article__img__center">
+    <img src="/assets/images/post/machinelearning/quantization/1/post-training-result.png" width="600" height="400" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Reference. MIT-TinyML-lecture06-Quantization-2 in https://efficientml.ai </em>
     </p>
@@ -485,6 +485,9 @@ $$
 강의는 주로 [MIT HAN LAB](https://efficientml.ai/)에서 진행된 연구를 중심으로 Quantization 방법을 설명한다. 내용이 길어, 다음 번 글에서 마저 작은 크기의 모델 훈련을 위한 Quantization 방법, 궁극의 Quatization인 Binary/Ternary Quantization, 그리고 Mixed Precision Quantization에 대해 이어서 이야기해보려 한다. 그리고, 이렇게 이론만 보면 아쉬우니 과제로 나온 Quantization 방법들을 코드로 구현해보는 것까지!
 
 To be continued... (1/2)
+
+*이어서 TinyML 스터디를 진행해 Quantization 1/2 편을 합친 포스트를 [여기](https://tinyml-kor.github.io/blog/posts/lecs/lec05.html)에 작성돼 있습니다.
+
 
 
 # Reference
