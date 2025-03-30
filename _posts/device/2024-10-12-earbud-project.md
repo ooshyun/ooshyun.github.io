@@ -15,7 +15,7 @@ tags: device TinyML
 <br>
 
 <p>
-    <img src="/assets/images/post/device/earbud/oliveunion.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/device/earbud/remove-the-noise/oliveunion.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Hearing aid in Olive Union </em>
     </p>
@@ -26,7 +26,7 @@ tags: device TinyML
 <br><br>
 
 <p>
-    <img src="/assets/images/post/device/earbud/clarity_challenge.png" width="500" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/device/earbud/remove-the-noise/clarity_challenge.png" width="500" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Top five in Clarity ICASSP Grand Challenge  </em>
     </p>
@@ -50,7 +50,7 @@ tags: device TinyML
 <br><br>
 
 <p>
-    <img src="/assets/images/post/device/earbud/order.png" width="400" height="300" class="projects__article__img__center">
+    <img src="/assets/images/post/device/earbud/remove-the-noise/order.png" width="400" height="300" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> 두근두근 드디어 PCB 주문! </em>
     </p>
@@ -63,7 +63,7 @@ tags: device TinyML
 <br>
 
 <p>
-    <img src="/assets/images/post/device/earbud/earbud_goal_vs_present.png" width="500" height="350" class="projects__article__img__center">
+    <img src="/assets/images/post/device/earbud/remove-the-noise/earbud_goal_vs_present.png" width="500" height="350" class="projects__article__img__center">
     <p align="center">
     <em class="projects__img__caption"> Target open source project, Open-earable(Left) and current status(Right) </em>
     </p>
