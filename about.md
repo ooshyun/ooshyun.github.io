@@ -32,23 +32,38 @@ comment: false
 
 ### about
 <div class="about__font">
-  Hi! I'm backend engineer developing Sound AI SDK for embedded devices in <a href="https://www.cochl.ai">Cochl(Seoul, Republic of Korea)</a>. Previously, I developed speech enhancement as a freelacne and true-wireless earbuds for hard-hearing people as a digital signal processing engineer in <a href="https://us.oliveunion.com/"> Olive Union(Seoul, Republic of Korea)</a>. As my Master's studies, I researched designing for analog circuits in the high-speed interface, such as PHY interface synchronizing blocks between CPU and DRAM. During this research, I was interested in human-centered signals, which led me to find a method to obtain and process this analog data.
-  <br><br>  
-  Pursuing my graduate studies in the field of designing analog circuits and interest in human-centered signals has led me to challenge in speech. As an individual with 3+ years of engineering industry experience as an Embedded DSP Engineer, I designed DSP algorithms to implement those in devices using optimization, acceleration, and noise reduction techniques. With this, I was challenged to broaden the ability of tiny devices to process human-centered signals using ML techniques. Specifically, my research has concentrated on optimizing high computing algorithms into embedded system especially in sound domain. With my background in understanding hardware and signal processing, I want to contribute to allowing these tiny devices to go beyond their constraints to process signals with machine learning techniques.
+  Hi! I'm a CS PhD student at the <a href="https://www.cs.washington.edu/">University of Washington Paul G. Allen School of Computer Science & Engineering</a>, advised by Prof. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>. I research proactive AI agents and efficient inference. Previously I built wearable AI systems for augmented hearing; currently I work on proactive agents that interact through speech.
+  <br><br>
+  Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE/TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://us.oliveunion.com/">Olive Union</a>.
   <br><br>
   In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.
   <br><br>
-  (Website last updated 12/2023)
+  (Website last updated 03/2026)
   <br><br>
   <div class="about__link__font">
-    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://ooshyun.notion.site/Seunghyun-Oh-3891a8e850834a8480cf3797cb49916e"> Notion</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2023_ENG.pdf %}" Hello> CV </a>
-    
-    <br>    
+    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.linkedin.com/in/seunghyun-oh-106815174/"> LinkedIn</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf %}"> CV </a>
+    <br>
   </div>
 </div>
 ---
 
 ### Education
+![Image](./assets/images/logo/logo_uw.png){:.logo}
+<div class="about__edu__font">
+  <div class="name__font">
+    University of Washington
+  </div>
+  <div class="degree__font">
+    PhD in Computer Science & Engineering
+  </div>
+  <div class="advisor__font">
+    Advisor. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>
+  </div>
+  <div class="duration__font">
+    Sep 2025 - Current
+  </div>
+</div>
+
 ![Image](./assets/images/logo/logo_coursera.png){:.logo}
 <div class="about__edu__font">
   <div class="name__font">
@@ -60,7 +75,7 @@ comment: false
   <div class="duration__font">
     Spring 2021
   </div>
-</div> 
+</div>
 
 
 ![Image](./assets/images/logo/logo_hanyang_univ.jpeg){:.logo}
@@ -105,7 +120,7 @@ comment: false
     Backend engineer for SDK<br>   
   </div>
   <div class="duration__font">
-    Jul 2023 - Current<br>
+    Jul 2023 - Aug 2025<br>
   </div>
 </div>
 

@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Seunghyun Oh
 description: > # this means to ignore newlines until "Language & timezone"
-  Machine Learning for Speech in Embedded System
+  CS PhD @ UW | Proactive AI Agents & Efficient Inference
 
 
 ## => Language and Timezone
@@ -38,7 +38,7 @@ author:
   name      : Seunghyun Oh
   url       : https://ooshyun.github.io
   avatar    : assets/favicon_package/favicon-32x32.png # path or url of avatar image (square)
-  bio       : I am Embedded digital signal processing engineer for machine learning
+  bio       : CS PhD student at UW. Proactive AI agents, efficient inference, on-device ML.
   email     : daniel.ohsj@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
@@ -48,7 +48,7 @@ author:
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # seunghyun-oh-106815174 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  linkedin  : seunghyun-oh-106815174 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : ooshyun # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
