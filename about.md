@@ -109,7 +109,7 @@ comment: false
     B.A. in Information and Communication Engineering  
   </div>  
   <div class="advisor__font">
-    Advisors. <a href="https://scholar.google.co.kr/citations?user=wcpWpdQAAAAJ&hl=ko">Kichang Kim</a> and <a href="http://icslab.cafe24.com/">Gyungsu Byun</a>  
+    Advisors. <a href="https://scholar.google.co.kr/citations?user=wcpWpdQAAAAJ&hl=ko">Kichang Kim</a> and <a href="https://scholar.google.com/citations?user=aDmqYYQAAAAJ&hl=en">Gyungsu Byun</a>  
   </div>  
   <div class="duration__font">
     Spring 2018 
