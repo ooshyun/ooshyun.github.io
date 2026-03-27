@@ -36,11 +36,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-top: 4rem;
 }
-.about__photo img {
-    width: 220px;
-    height: 220px;
+.article__content .about__photo img {
+    width: 220px !important;
+    height: 220px !important;
+    max-width: 220px !important;
     object-fit: cover;
     border-radius: 50%;
+    float: none;
+    padding: 0;
 }
 .about__icon__links {
     margin-top: 1rem;
