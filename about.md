@@ -27,25 +27,31 @@ show_title: false
 key: page-about
 comment: false
 ---
-<!-- {:.profile} is adding configuration based on scss -->
-![Image](./assets/images/profile/about.JPG){:.profile} 
-
-### about
-<div class="about__font">
-  Hi! I'm a CS PhD student at the <a href="https://www.cs.washington.edu/">University of Washington Paul G. Allen School of Computer Science & Engineering</a>, advised by Prof. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>. I research proactive AI agents and efficient inference. Previously I built wearable AI systems for augmented hearing; currently I work on proactive agents that interact through speech.
-  <br><br>
-  Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE/TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://us.oliveunion.com/">Olive Union</a>.
-  <br><br>
-  In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.
-  <br><br>
-  (Website last updated 03/2026)
-  <br><br>
-  <div class="about__link__font">
-    <a href="mailto:seunghyun.daniel.oh@gmail.com"> Email</a> • <a href="https://github.com/ooshyun"> Github</a> • <a href="https://www.linkedin.com/in/seunghyun-oh-106815174/"> LinkedIn</a> • <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf %}"> CV </a>
-    <br>
+<!-- Profile: photo+icons left (centered in column), text right -->
+<div class="about__header">
+  <div class="about__photo">
+    <img src="./assets/images/profile/about.JPG" alt="Profile photo">
+    <div class="about__icon__links">
+      <a href="mailto:seunghyun.daniel.oh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/ooshyun" title="Github"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/seunghyun-oh-106815174/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf %}" title="CV"><i class="fas fa-file-pdf"></i></a>
+    </div>
+  </div>
+  <div class="about__text">
+    <div class="about__font">
+      Hi! I'm a CS PhD student at the <a href="https://www.cs.washington.edu/">University of Washington Paul G. Allen School of Computer Science & Engineering</a>, advised by Prof. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>. I research proactive AI agents and efficient inference. Previously I built wearable AI systems for augmented hearing; currently I work on proactive agents that interact through speech.
+      <br><br>
+      Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE/TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://us.oliveunion.com/">Olive Union</a>.
+      <br><br>
+      In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.
+      <br><br>
+      <span class="about__updated">Website last updated 03/2026</span>
+    </div>
   </div>
 </div>
----
+
+<div class="about__spacer"></div>
 
 ### Education
 ![Image](./assets/images/logo/logo_uw.png){:.logo}

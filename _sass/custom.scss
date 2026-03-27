@@ -1,12 +1,96 @@
 /* start custom scss snippet */
+
+/* Typography overrides (Sam Altman blog style) */
+body {
+  font-family: "Oxygen", sans-serif;
+  color: #555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Crimson Text", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #555;
+}
+
+.article__content p {
+  margin: 24px 0;
+}
+/* Header: spacing between title and subtitle */
+.subtitle__stype {
+    margin-top: 0.25rem;
+}
+
+/* About: photo left (centered in column), text right */
+.about__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.about__photo {
+    flex-shrink: 0;
+    width: 220px;
+    text-align: center;
+    margin-top: 4rem;
+}
+.about__photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about__icon__links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    a {
+        color: #555;
+        font-size: 1.3rem;
+        transition: color 0.2s;
+        &:hover {
+            color: #2b6cc2;
+        }
+    }
+}
+.about__text {
+    flex: 1;
+    min-width: 0;
+}
+.about__updated {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+@media (max-width: 600px) {
+    .about__header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__photo img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
 .about__font{
     line-height: map-get($base, font-size-h4) * 1.4;
     color: black;
     vertical-align: middle;
     text-align: justify;
+    word-break: break-word;
+    hyphens: auto;
 }
 .about__link__font{
     text-align: center;
+}
+.about__spacer {
+    margin: 2.5rem 0;
 }
 .about__edu__font {
     line-height: map-get($base, font-size-h4) * 1.1;
