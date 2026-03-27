@@ -25,6 +25,13 @@ h1, h2, h3, h4, h5, h6 {
     .subtitle__stype {
         display: none;
     }
+    .title__stype {
+        font-size: 1em;
+    }
+    .header__brand > a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* About: photo left (centered in column), text right */
