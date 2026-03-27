@@ -22,9 +22,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.25rem;
 }
 @media (max-width: 499px) {
-    .header__title > .header__brand {
-        height: auto !important;
-        min-height: 3rem;
+    .subtitle__stype {
+        display: none;
     }
 }
 
