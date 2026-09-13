@@ -14,7 +14,7 @@ title: Writing
 {%- endfor -%}
 {%- assign _tagrows = _tagrows | sort | reverse -%}
 {%- assign _visible = site.posts | where_exp: "p", "p.content.size > 1" -%}
-{%- assign _en_count = _visible | where_exp: "p", "p.lang == 'en' or p.lang == nil" | map: "ref" | uniq | size -%}
+{%- assign _en_count = _visible | where_exp: "p", "p.lang != 'ko'" | map: "ref" | uniq | size -%}
 {%- assign _ko_count = _visible | where: "lang", "ko" | map: "ref" | uniq | size -%}
 
 <header class="head">
