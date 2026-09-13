@@ -455,7 +455,7 @@ def exp_li(e):
 home_body = f"""
 <header class="head">
   <h1>Seunghyun (Conan) Oh</h1>
-  <p class="role">{bi("CS PhD @ UW | Proactive AI Agents &amp; Efficient Inference", "CS PhD @ UW | Proactive AI Agents &amp; Efficient Inference")}</p>
+  <p class="role">{bi("CS PhD @ UW | Sound, Proactive Voice AI Assistant in Conversation, Efficient Inference", "CS PhD @ UW | Sound, Proactive Voice AI Assistant in Conversation, Efficient Inference")}</p>
 </header>
 <div class="intro">
   <img src="ooshyun-character.png" alt="Poodle character, Seunghyun's profile mark" width="96" height="96">
