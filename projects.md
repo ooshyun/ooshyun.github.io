@@ -30,6 +30,13 @@ comment: false
 ## Projects
 <div class="about__project__font">
   <div class="project__font">
+    Aurchestra: Fine-grained Soundscape Control for Augmented Hearing (MobiSys 2026, Best Artifact Award) <br>
+    <div class="duration__font">
+      Fall 2025, <a href="https://doi.org/10.1145/3745756.3809210">[Paper]</a>, <a href="https://github.com/ooshyun/fine_grained_soundscape_control">[Code]</a>, <a href="/aurchestra/">Read more</a> <br>
+    </div>
+  </div>
+  <br>
+  <div class="project__font">
     Speech Enhancement using LSTM for Tiny ML <br>
     <div class="duration__font">
       Spring 2023 to Fall 2023, Expected, <a href="https://github.com/ooshyun/Speech-Enhancement-TF">[Code]</a>, <a href="{% link _posts/projects/2022-11-13-speech-enhancement-tinyml.md %}">Read more</a> <br> 

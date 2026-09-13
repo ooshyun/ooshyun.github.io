@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurchestra: Fine-grained Soundscape Control for Augmented Hearing</title>
+  <meta name="description" content="Aurchestra is the first system to provide fine-grained, real-time soundscape control on resource-constrained hearables: a dynamic interface that surfaces only active sound classes and an on-device multi-output extraction network. MobiSys 2026 Best Artifact Award. University of Washington.">
+  <link rel="canonical" href="https://aurchestra.cs.washington.edu/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fine-grained Soundscape Control for Augmented Hearing">
+  <meta property="og:description" content="Aurchestra lets users mix their acoustic environment in real time on hearables. MobiSys 2026 Best Artifact Award.">
+  <meta property="og:url" content="https://aurchestra.cs.washington.edu/">
+  <meta property="og:image" content="https://aurchestra.cs.washington.edu/assets/og_image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    var loc = window.location.href + '';
+    if (loc.indexOf('http://') === 0 && loc.indexOf('http://localhost') !== 0 && loc.indexOf('http://127.0.0.1') !== 0) {
+      window.location.href = loc.replace('http://', 'https://');
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Fine-grained Soundscape Control for Augmented Hearing</h1>
+    <h3><a href="https://ooshyun.github.io" target="_blank" rel="noopener">Seunghyun Oh</a><sup>1</sup></h3>
+    <h3>
+      <a href="https://malekitani.github.io/" target="_blank" rel="noopener">Malek Itani</a><sup>1,2</sup>,&nbsp;
+      Aseem Gauri<sup>1</sup>,&nbsp;
+      <a href="https://homes.cs.washington.edu/~gshyam/" target="_blank" rel="noopener">Shyamnath Gollakota</a><sup>1,2</sup>
+    </h3>
+    <h3 class="affil"><sup>1</sup> Paul G. Allen School of Computer Science and Engineering, University of Washington &nbsp;&nbsp; <sup>2</sup> Hearvana AI</h3>
+    <h3 class="venue">MobiSys '26: Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services</h3>
+    <h3 class="award">🏆 Best Artifact Award, ACM MobiSys 2026</h3>
+    <h3 class="press">Featured in <a href="https://developer.analog.com/newsroom/mobisys-2026-recap" target="_blank" rel="noopener">Analog Devices' MobiSys 2026 recap</a></h3>
+  </div>
+
+  <hr>
+
+  <div class="yt-demo">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/PqgAgxqtnVA?autoplay=1&mute=1&loop=1&playlist=PqgAgxqtnVA&rel=0"
+        title="Aurchestra demo video"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="download">
+    <a href="https://doi.org/10.1145/3745756.3809210" target="_blank" rel="noopener">[Paper]</a>
+    <a href="https://github.com/ooshyun/fine_grained_soundscape_control" target="_blank" rel="noopener">[Code]</a>
+  </div>
+
+  <div class="abstract">
+    <p>
+      Hearables are becoming ubiquitous, yet their sound controls remain blunt: users can either enable global noise
+      suppression or focus on a single target sound. Real-world acoustic scenes, however, contain many simultaneous
+      sources that users may want to adjust independently. We introduce Aurchestra, the first system to provide
+      fine-grained, real-time soundscape control on resource-constrained hearables. Our system has two key components:
+      (1) a dynamic interface that surfaces only active sound classes and (2) a real-time, on-device multi-output
+      extraction network that generates separate streams for each selected class, achieving robust performance for
+      upto 5 overlapping target sounds and letting users mix their environment by customizing per-class volumes, much
+      like an audio engineer mixes tracks. We optimize the model architecture for multiple compute-limited platforms
+      and demonstrate real-time performance on 6 ms streaming audio chunks. Across real-world environments in
+      previously unseen indoor and outdoor scenarios, our system enables expressive per-class sound control and
+      achieves substantial improvements in target-class enhancement and interference suppression. Our results show
+      that the world need not be heard as a single, undifferentiated stream: with Aurchestra, the soundscape becomes
+      truly programmable.
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="figure">
+    <img src="assets/teaser_web.jpg" alt="Figure 1: Aurchestra pipeline. (A) a complex acoustic scene, (B) the dynamic interface listing detected sound classes, (C) the mixed output.">
+    <p>
+      <strong>Aurchestra transforms the auditory world into a programmable studio.</strong> Unlike traditional hearables
+      that offer binary noise cancellation (all-or-nothing), Aurchestra enables fine-grained soundscape control. (A) In a
+      complex acoustic scene, (B) the system automatically detects active sound classes (e.g., speech, traffic, birds)
+      and populates a dynamic interface. The user can then &ldquo;mix&rdquo; their reality in real-time, (C) independently
+      suppressing interference (traffic) while increasing the volume of some targets (speech) and maintaining others
+      (nature), effectively acting as the audio engineer of their own life.
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p>Keywords: Augmented Hearing, Hearables, Target Sound Extraction, Sound Event Detection, Real-time Audio</p>
+    <p>Contact: <a href="mailto:shoh10@cs.washington.edu">shoh10@cs.washington.edu</a></p>
+  </div>
+</body>
+</html>
