@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20230602
 tags: CS
+lang: ko
+ref: preproces-compile-and-linker
 ---
 
 오늘 시간에는 프로그램이 컴파일 돼 실행되는 과정을 이야기 해보자 합니다. 그리고 언어 중에서는 제가 사용하는 C와 스터디에서 다른 분들이 많이 사용하실 것같아 Java도 함께 곁들여 진행해보겠습니다. 혹시나 틀린 부분이 있다면 콕콕 집어주시기 바랍니다! 진행은 요 [링크](https://github.com/VSFe/Tech-Interview/blob/main/02-OPERATING_SYSTEM.md)에 질문들을 따라가보면서 살을 덧붙여볼게요.

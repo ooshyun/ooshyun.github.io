@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20210713
 tags: CS224N
+lang: en
+ref: cs224n-w5-self-attention-and-transformers
 ---
 **All contents is arranged from [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097) contents. Please see the details to the [CS224N](https://online.stanford.edu/artificial-intelligence/free-content?category=All&course=6097)!**
 

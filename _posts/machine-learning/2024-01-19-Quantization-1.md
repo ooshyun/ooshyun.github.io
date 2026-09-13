@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20240119
 tags: TinyML
+lang: ko
+ref: quantization-1
 ---
 이번 글에서는 MIT HAN LAB에서 강의하는 [TinyML and Efficient Deep Learning Computing](https://www.youtube.com/playlist?list=PL80kAHvQbh-ocildRaxjjBy6MR1ZsNCU7)에 나오는 Quantization 방법을 두 차례에 걸쳐서 소개하려 한다. Quantization(양자화) 신호와 이미지에서 아날로그를 디지털로 변환하는 과정에서 사용하는 개념이다. 아래 그림과 같이 연속적인 센서로 부터 들어오는 아날로그 데이터 나 이미지를 표현하기 위해 단위 시간에 대해서 데이터를 샘플링하여 데이터를 수집한다.
 

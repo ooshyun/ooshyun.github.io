@@ -26,6 +26,8 @@ titles:
 show_title: false
 key: page-about
 comment: false
+lang: en
+ref: about
 ---
 <!-- Profile: photo+icons left (centered in column), text right -->
 <div class="about__header">
@@ -42,7 +44,7 @@ comment: false
     <div class="about__font">
       Hi! I'm a CS PhD student at the <a href="https://www.cs.washington.edu/">University of Washington Paul G. Allen School of Computer Science & Engineering</a>, advised by Prof. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>. I research proactive AI agents and efficient inference. Previously I built wearable AI systems for augmented hearing; currently I work on proactive agents that interact through speech.
       <br><br>
-      Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE/TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://us.oliveunion.com/">Olive Union</a>.
+      Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE) for several target platforms (Syntiant, Arm Ethos, ESP32, Jetson, Edge TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://oliveunion.shop">Olive Union</a>.
       <br><br>
       In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.
       <br><br>
@@ -93,7 +95,7 @@ comment: false
     Master in Electronics and Computer Engineering  
   </div>
   <div class="advisor__font">
-    Advisor. <a href="https://scholar.google.co.kr/citations?hl=en&user=OqA2u8UAAAAJ&view_op=list_works&sortby=pubdate">Changsik Yoo </a>
+    Advisor. <a href="https://scholar.google.co.kr/citations?hl=en&user=N8CSltQAAAAJ">Changsik Yoo </a>
   </div>
   <div class="duration__font">
     Spring 2020  
@@ -147,7 +149,7 @@ comment: false
 ![Image](./assets/images/logo/logo_oliveunion.png){:.logo}
 <div class="about__edu__font">
   <div class="name__font">
-    <a href="https://us.oliveunion.com/">OliveUnion</a>
+    <a href="https://oliveunion.shop">OliveUnion</a>
   </div>
   <div class="degree__font">
     Embedded Digital signal processing engineer<br>   

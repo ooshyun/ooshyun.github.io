@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20240318
 tags: TinyML
+lang: en
+ref: knowledge-distillation
 ---
 이번 글에서는 Knowledge Distillation에 대해서 다뤄 볼 예정이다.
 

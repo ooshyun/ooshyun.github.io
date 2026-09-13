@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20210713
 tags: CS224N
+lang: en
+ref: cs224n-standford
 ---
 First of all, This writing consists of cource Standford CS224n: Natural Language Processing with Deep Learning on Winter 2021. And it also includes 2018 CS224n because of assignment 5 related to Convolution model based on pytorch and Colab(.ipynb)
 

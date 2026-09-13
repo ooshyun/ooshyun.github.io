@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20230106
 tags: LinearAlgebra
+lang: en
+ref: eigenvalue-and-eigenvector
 ---
 $$
     Av = \lambda v

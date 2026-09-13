@@ -2,6 +2,8 @@
 title: Remove the noise in a hearing aid, part 1
 key: 20250302
 tags: TinyML SpeechEnhancement SourceSeparation
+lang: ko
+ref: remove-the-noise
 ---
 보청기 스타트업에서 일하는 임베디드 DSP 엔지니어는 보청기로 들어오는 소리를 마이크로부터 데이터로 받아, 보드로 들어오는 아날로그 신호를 칼리브레이션하고, 이를 원하는 소리로 연산하여 스피커로 내보내는 개발입니다. 에어팟 프로나 갤럭시 버즈에서 보이는 Equalizer, 음량조절, 외부소리 듣기, 노이즈캔슬링과 같은 기능이 개발해야 하는 일이었습니다. 특히 다른 시스템보다 훨씬 하드웨어 스펙이 arm cortex-m0와 같이 낮으면서, 배터리 용량도 중요하기 때문에 알고리즘뿐 아니라 이를 최적화하여 에너지 소모량을 줄이는 것 또한 중요했습니다.  
 

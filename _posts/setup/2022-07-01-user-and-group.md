@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20220701
 tags: SetUp
+lang: ko
+ref: user-and-group
 ---
 - **Terminal에서 SSH를 통해서 user_name@ip_address 로 접속할 수 있다.**
 - 예시: `ssh daniel@192.168.0.229`

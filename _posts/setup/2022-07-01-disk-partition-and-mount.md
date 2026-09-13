@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20220701
 tags: SetUp
+lang: ko
+ref: disk-partition-and-mount
 ---
 시작하기전에 Ubuntu의 Application/Disk 를 이용하여 disk 포멧부터 시작하고 진행하였다. (필자의 경우 4TB 16시간이상이 걸렸다)
 

@@ -2,6 +2,8 @@
 title: Platform for microphone streaming, part 2
 key: 20250329
 tags: TinyML SpeechEnhancement SourceSeparation STM32
+lang: ko
+ref: platform-for-microphone-streaming
 ---
 다음 단계로 Speech enhancment 모델을 테스트하기 위해서 임베디드 플랫폼을 선정해야 했습니다. Web, App, Desktop based 어플리케이션은 [Denoiser](https://github.com/facebookresearch/denoiser)가 있어 쉽게 모델을 실험해 볼 수 있었지만, 임베디드 시스템에서는 DSP 보드에서만 알고리즘을 설계해봤기 떄문에, 이 플렛폼에 모델을 테스트하기 위해 달성할 수 있는 목표로 두 가지 정했습니다.
 

@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20220701
 tags: SetUp
+lang: ko
+ref: samba-installation-in-ubuntu
 ---
 #### 왜 FTP(File Transfer Protocol)를 사용 안하는가?
 

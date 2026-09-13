@@ -3,6 +3,8 @@ title: Olive Pro and Olive Max, Earbuds for hearing aid
 key: 20210413
 tags: Projects
 comment: false
+lang: en
+ref: olive-pro-max-tws
 ---
 <!-- <div class="projects__article__right">
 {% include image.html url="/assets/images/project/img_olivepro.jpg"  

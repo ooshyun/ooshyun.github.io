@@ -1,0 +1,14 @@
+en:
+  nav_about: "about"
+  nav_archive: "archive"
+  nav_projects: "projects"
+  read_more: "Read more"
+  all_posts: "All Posts"
+  statistics: "%d posts in %d pages"
+ko:
+  nav_about: "소개"
+  nav_archive: "아카이브"
+  nav_projects: "프로젝트"
+  read_more: "더 읽기"
+  all_posts: "전체 포스트"
+  statistics: "%d개의 포스트, %d 페이지"

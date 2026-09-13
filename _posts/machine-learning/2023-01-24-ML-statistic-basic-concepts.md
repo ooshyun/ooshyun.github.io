@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20230124
 tags: ML
+lang: en
+ref: ml-statistic-basic-concepts
 ---
 ### What is p-value ?
 

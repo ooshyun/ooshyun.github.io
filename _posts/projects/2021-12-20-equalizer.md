@@ -3,6 +3,8 @@ title: Equalizer Design using Digital Filter
 key: 20211220
 tags: Projects
 comment: false
+lang: en
+ref: equalizer
 ---
 
 <p>

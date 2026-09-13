@@ -6,6 +6,8 @@ aside:
     toc: true
 key: 20220701
 tags: SetUp
+lang: ko
+ref: gpu-conda-environment-for-tensorflow-pytorch
 ---
 
 ### 1. [선택사항] 기기에 연결된 GPU 확인해보기

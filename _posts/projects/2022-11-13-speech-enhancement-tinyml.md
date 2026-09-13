@@ -3,6 +3,8 @@ title: Speech Enhancement with ML for Edge devices
 key: 20221113
 tags: Projects
 comment: false
+lang: en
+ref: speech-enhancement-tinyml
 ---
 <!-- <div class="projects__article__right">
 {% include image.html url="/assets/images/project/speech-enhancement.png"  

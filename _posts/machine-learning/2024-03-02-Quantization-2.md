@@ -4,6 +4,8 @@ aside:
     toc: true
 key: 20240302
 tags: TinyML
+lang: ko
+ref: quantization-2
 ---
 이번 글에서는 지난시간에 이어 Quantization-Aware Tarining(QAT)부터 Binrary, Tenary Quantization, Low Bit-Wdith Quantization에 대해서 다뤄 볼 예정이다. 앞서서 Quantization 1편을 다른 포스트에 함께 기재해서 이번 포스트에서는 Quantization 1편과 합쳐진 포스트로 이동할게요.
 

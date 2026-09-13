@@ -1,7 +1,9 @@
 ---
 title: Welcome to My World
 key: 20220618
-tags: 
+tags:
+lang: en
+ref: test-for-post
 ---
 
 If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:
