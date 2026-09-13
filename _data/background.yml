@@ -1,0 +1,42 @@
+# Education and experience shown under the intro card on the home page
+education:
+  - when: "2025–"
+    name_en: "University of Washington"
+    name_ko: "University of Washington"
+    degree_en: "PhD in Computer Science &amp; Engineering"
+    degree_ko: "컴퓨터 과학 및 공학 박사과정"
+    note_en: 'Advisor. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>'
+    note_ko: '지도교수. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>'
+  - when: "2021"
+    name_en: "Coursera"
+    name_ko: "Coursera"
+    degree_en: "DeepLearning.AI TensorFlow Developer"
+    degree_ko: "DeepLearning.AI TensorFlow Developer"
+  - when: "2020"
+    name_en: "Hanyang University"
+    name_ko: "한양대학교"
+    degree_en: "Master in Electronics and Computer Engineering"
+    degree_ko: "전자컴퓨터공학 석사"
+    note_en: 'Advisor. <a href="https://scholar.google.co.kr/citations?hl=en&amp;user=N8CSltQAAAAJ">Changsik Yoo</a>'
+    note_ko: '지도교수. <a href="https://scholar.google.co.kr/citations?hl=en&amp;user=N8CSltQAAAAJ">유창식</a>'
+  - when: "2018"
+    name_en: "Inha University"
+    name_ko: "인하대학교"
+    degree_en: "B.A. in Information and Communication Engineering"
+    degree_ko: "정보통신공학 학사"
+    note_en: 'Advisors. <a href="https://scholar.google.co.kr/citations?user=wcpWpdQAAAAJ">Kichang Kim</a> and <a href="https://scholar.google.com/citations?user=aDmqYYQAAAAJ">Gyungsu Byun</a>'
+    note_ko: '지도교수. <a href="https://scholar.google.co.kr/citations?user=wcpWpdQAAAAJ">김기창</a>, <a href="https://scholar.google.com/citations?user=aDmqYYQAAAAJ">변경수</a>'
+
+experience:
+  - when: "2023–25"
+    org: '<a href="https://www.cochl.ai">Cochl</a>'
+    role_en: "Backend engineer for SDK"
+    role_ko: "SDK 백엔드 엔지니어"
+  - when: "2023"
+    org: '<span lang="en">Freelance</span><span lang="ko">프리랜서</span>'
+    role_en: "Embedded AI engineer"
+    role_ko: "임베디드 AI 엔지니어"
+  - when: "2020–23"
+    org: '<a href="https://oliveunion.shop">OliveUnion</a>'
+    role_en: "Embedded Digital signal processing engineer"
+    role_ko: "임베디드 디지털 신호처리 엔지니어"

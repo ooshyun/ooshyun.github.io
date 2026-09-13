@@ -1,0 +1,30 @@
+{%- comment -%}
+One writing-list row for a group of posts sharing the same `ref` (EN + KO versions merge into one row).
+include.group = { name, items } from group_by_exp.
+{%- endcomment -%}
+{%- assign _g = include.group -%}
+{%- assign _langs = " " -%}{%- assign _tags = " " -%}{%- assign _search = "" -%}
+{%- for _p in _g.items -%}
+  {%- assign _l = _p.lang | default: "en" -%}
+  {%- assign _needle = " " | append: _l | append: " " -%}
+  {%- unless _langs contains _needle -%}{%- assign _langs = _langs | append: _l | append: " " -%}{%- endunless -%}
+  {%- for _t in _p.tags -%}
+    {%- if _t == "lang:" or _t == "en" or _t == "ko" -%}{%- continue -%}{%- endif -%}
+    {%- assign _needle = " " | append: _t | append: " " -%}
+    {%- unless _tags contains _needle -%}{%- assign _tags = _tags | append: _t | append: " " -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- assign _search = _search | append: _p.title | append: " " -%}
+{%- endfor -%}
+{%- assign _search = _search | append: _tags | downcase | strip -%}
+{%- assign _first = _g.items.first -%}
+<li class="post" data-langs="{{ _langs | strip }}" data-tags="{{ _tags | strip | escape }}" data-search="{{ _search | escape }}">
+  <span>
+  {%- if _g.items.size > 1 -%}
+    {%- for _p in _g.items -%}<a lang="{{ _p.lang | default: 'en' }}" href="{{ _p.url | relative_url }}">{{ _p.title | escape }}</a>{%- endfor -%}
+    <span class="chip">EN/KO</span>
+  {%- else -%}
+    <a href="{{ _first.url | relative_url }}">{{ _first.title | escape }}</a>
+  {%- endif -%}
+  </span>
+  <time class="mono" datetime="{{ _first.date | date: '%Y-%m-%d' }}">{{ _first.date | date: '%Y-%m-%d' }}</time>
+</li>

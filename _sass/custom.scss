@@ -1,38 +1,32 @@
 /* start custom scss snippet */
 
-/* Typography overrides (Sam Altman blog style) */
+/* 2026 redesign: shared tokens + navigation/footer/list styles (see _sass/minimal/) */
+@import "minimal/tokens", "minimal/nav", "minimal/lists";
+
+/* Typography: IBM Plex Sans (+ Plex Sans KR for Hangul), Plex Mono for code/dates */
 body {
-  font-family: "Oxygen", sans-serif;
-  color: #555;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
 }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Georgia, serif;
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  color: #555;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
+code, pre, kbd { font-family: var(--font-mono); }
+.article__content p { margin: 24px 0; }
+.article__content a { color: var(--link); }
+.article__content a:hover { color: var(--link-hover); }
+:lang(ko) .article__content, .article__content:lang(ko) { line-height: 1.8; word-break: keep-all; }
 
-.article__content p {
-  margin: 24px 0;
-}
-/* Header: spacing between title and subtitle */
-.subtitle__stype {
-    margin-top: 0.25rem;
-}
-@media (max-width: 499px) {
-    .subtitle__stype {
-        display: none;
-    }
-    .title__stype {
-        font-size: 1em;
-    }
-    .header__brand > a {
-        display: flex;
-        align-items: center;
-    }
-}
+/* TeXt page chrome: same 720px column as the minimal layout; TOC aside sits to the right of it */
+.page__header, .page__footer, .footer { background: transparent; }
+.layout--page .main { max-width: calc(720px + 2 * #{map-get($spacers, 5)}); }
+.layout--page.has-aside .main, .layout--page .has-aside .main { max-width: calc(720px + 2 * #{map-get($spacers, 5)} + #{map-get($layout, aside-width)}); }
+.article__header h1, .article__header .article__title { font-size: 1.85rem; line-height: 1.25; }
 
 /* About: photo left (centered in column), text right */
 .about__header {
@@ -335,5 +329,6 @@ h1, h2, h3, h4, h5, h6 {
 .section [id="slide08"]:checked ~ .slidewrap .control02 {display:block;}
 .section [id="slide09"]:checked ~ .slidewrap .control03 {display:block;}
 .section [id="slide10"]:checked ~ .slidewrap .control04 {display:block;}
+
 
 /* end custom scss snippet */

@@ -1,0 +1,44 @@
+{%- comment -%} Intro card (bio text kept identical to the former about.md / about-ko.md) + education / experience {%- endcomment -%}
+<div class="intro">
+  <img src="{{ '/assets/images/profile/character.png' | relative_url }}" alt="Poodle character, Seunghyun's profile mark" width="96" height="96">
+  <div>
+    <p lang="en">Hi! I'm a CS PhD student at the <a href="https://www.cs.washington.edu/">University of Washington Paul G. Allen School of Computer Science &amp; Engineering</a>, advised by Prof. <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a>. I research proactive AI agents and efficient inference. Previously I built wearable AI systems for augmented hearing; currently I work on proactive agents that interact through speech.</p>
+    <p lang="en">Before the PhD, I spent 5+ years shipping on-device ML and real-time DSP in audio and wearable devices: cross-platform Sound AI SDK with hardware acceleration (TensorRT/QNN/SNPE) for several target platforms (Syntiant, Arm Ethos, ESP32, Jetson, Edge TPU) at <a href="https://www.cochl.ai">Cochl</a>, streaming speech enhancement on STM32 as a freelance engineer, and hearing aid DSP on Tensilica cores at <a href="https://oliveunion.shop">Olive Union</a>.</p>
+    <p lang="en">In my free time, I love trail running and reading autobiographies and philosophical essays, especially Walter Isaacson, Albert Camus, and Friedrich Nietzsche.</p>
+    <p lang="ko">안녕하세요! 저는 <a href="https://www.cs.washington.edu/">워싱턴 대학교 Paul G. Allen School of Computer Science &amp; Engineering</a>에서 <a href="https://homes.cs.washington.edu/~gshyam/">Shyamnath Gollakota</a> 교수님의 지도 아래 연구하고 있는 컴퓨터 과학 박사과정 학생입니다. 능동적 AI 에이전트(Proactive AI Agents)와 효율적 추론(Efficient Inference)을 연구하고 있습니다. 이전에는 증강 청각(Augmented Hearing)을 위한 웨어러블 AI 시스템을 개발했으며, 현재는 음성을 통해 상호작용하는 능동적 에이전트를 연구하고 있습니다.</p>
+    <p lang="ko">박사과정 이전에는 5년 이상 오디오 및 웨어러블 디바이스 분야에서 온디바이스 ML과 실시간 DSP를 개발했습니다: <a href="https://www.cochl.ai">Cochl</a>에서 여러 타깃 플랫폼(Syntiant, Arm Ethos, ESP32, Jetson, Edge TPU)을 위한 하드웨어 가속(TensorRT/QNN/SNPE) 기반 크로스 플랫폼 Sound AI SDK 개발, 프리랜서로 STM32 기반 스트리밍 음성 향상 시스템 설계, <a href="https://oliveunion.shop">Olive Union</a>에서 Tensilica DSP 코어 기반 보청기 DSP 알고리즘을 개발했습니다.</p>
+    <p lang="ko">여가 시간에는 트레일 러닝을 즐기고, 자서전과 철학 에세이를 읽는 것을 좋아합니다. 특히 월터 아이작슨, 알베르 카뮈, 프리드리히 니체의 작품을 좋아합니다.</p>
+    <p class="links">
+      <a href="mailto:{{ site.author.email }}">Email</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a>
+      <a href="{{ '/assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf' | relative_url }}"><span lang="en">CV (PDF)</span><span lang="ko">이력서 (PDF)</span></a>
+    </p>
+    <span class="updated"><span lang="en">Website last updated {{ site.time | date: '%m/%Y' }}</span><span lang="ko">웹사이트 최종 업데이트 {{ site.time | date: '%Y년 %-m월' }}</span></span>
+  </div>
+</div>
+<div class="background">
+  <div>
+    <h3><span lang="en">Education</span><span lang="ko">학력</span></h3>
+    <ul class="rows">
+    {%- for _e in site.data.background.education -%}
+      <li class="row"><span class="when mono">{{ _e.when }}</span><div>
+        <div class="title"><span lang="en">{{ _e.name_en }}</span><span lang="ko">{{ _e.name_ko }}</span></div>
+        <div class="meta"><span lang="en">{{ _e.degree_en }}</span><span lang="ko">{{ _e.degree_ko }}</span></div>
+        {%- if _e.note_en -%}<div class="meta"><span lang="en">{{ _e.note_en }}</span><span lang="ko">{{ _e.note_ko }}</span></div>{%- endif -%}
+      </div></li>
+    {%- endfor -%}
+    </ul>
+  </div>
+  <div>
+    <h3><span lang="en">Experience</span><span lang="ko">경력</span></h3>
+    <ul class="rows">
+    {%- for _x in site.data.background.experience -%}
+      <li class="row"><span class="when mono">{{ _x.when }}</span><div>
+        <div class="title">{{ _x.org }}</div>
+        <div class="meta"><span lang="en">{{ _x.role_en }}</span><span lang="ko">{{ _x.role_ko }}</span></div>
+      </div></li>
+    {%- endfor -%}
+    </ul>
+  </div>
+</div>

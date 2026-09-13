@@ -1,0 +1,33 @@
+{%- comment -%} include.limit = N → show only the N newest projects {%- endcomment -%}
+{%- assign _limit = include.limit | default: 100 -%}
+<ul class="rows">
+{%- for _pr in site.data.projects limit: _limit -%}
+  {%- assign _posts = site.posts | where: "ref", _pr.post -%}
+  {%- assign _en = _posts | where: "lang", "en" | first -%}
+  {%- assign _ko = _posts | where: "lang", "ko" | first -%}
+  {%- if _posts.size == 1 -%}{%- assign _only = _posts.first -%}{%- endif -%}
+  <li class="row">
+    <span class="when mono">{{ _pr.when }}</span>
+    <div>
+      <div class="title">
+        {%- if _en and _ko -%}
+          <a lang="en" href="{{ _en.url | relative_url }}">{{ _pr.title_en }}</a><a lang="ko" href="{{ _ko.url | relative_url }}">{{ _pr.title_ko }}</a>
+        {%- elsif _only -%}
+          <a href="{{ _only.url | relative_url }}"><span lang="en">{{ _pr.title_en }}</span><span lang="ko">{{ _pr.title_ko }}</span></a>
+        {%- else -%}
+          <span lang="en">{{ _pr.title_en }}</span><span lang="ko">{{ _pr.title_ko }}</span>
+        {%- endif -%}
+      </div>
+      {%- if _pr.desc_en -%}<div class="meta"><span lang="en">{{ _pr.desc_en }}</span><span lang="ko">{{ _pr.desc_ko }}</span></div>{%- endif -%}
+      <div class="refs">
+        {%- if _pr.code -%}[<a href="{{ _pr.code }}">code</a>] {% endif -%}
+        {%- if _en and _ko -%}
+          [<a lang="en" href="{{ _en.url | relative_url }}">post</a><a lang="ko" href="{{ _ko.url | relative_url }}">글</a>]
+        {%- elsif _only -%}
+          [<a href="{{ _only.url | relative_url }}"><span lang="en">post</span><span lang="ko">글</span></a>]
+        {%- endif -%}
+      </div>
+    </div>
+  </li>
+{%- endfor -%}
+</ul>

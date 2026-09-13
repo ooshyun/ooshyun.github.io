@@ -1,5 +1,43 @@
 ---
-layout: home
-# articles:
-#   excerpt_type: html
+layout: minimal
+nav: home
 ---
+<header class="head">
+  <h1>Seunghyun (Conan) Oh</h1>
+  <p class="role">{{ site.description }}</p>
+</header>
+
+{%- include minimal/bio.html -%}
+
+<section id="work">
+  <div class="h2row">
+    <h2><span lang="en">Publications and projects</span><span lang="ko">논문과 프로젝트</span></h2>
+    <a href="{{ '/projects.html' | relative_url }}"><span lang="en">All projects</span><span lang="ko">전체 프로젝트</span></a>
+  </div>
+  <h3><span lang="en">Papers</span><span lang="ko">논문</span></h3>
+  {%- include minimal/papers.html -%}
+  <h3><span lang="en">Projects</span><span lang="ko">프로젝트</span></h3>
+  {%- include minimal/projects.html limit=4 -%}
+</section>
+
+<section id="writing">
+  <div class="h2row">
+    <h2><span lang="en">Writing</span><span lang="ko">글</span></h2>
+    <a href="{{ '/writing.html' | relative_url }}"><span lang="en">All posts</span><span lang="ko">전체 글</span></a>
+  </div>
+  {%- include minimal/post-list.html limit=8 -%}
+  <p class="note">
+    <span lang="en">The 8 latest posts written in English. Posts available in both languages appear in both lists.</span>
+    <span lang="ko">한국어로 쓴 최근 글 8개입니다. 두 언어로 쓴 글은 양쪽 목록에 모두 보입니다.</span>
+  </p>
+</section>
+
+<section id="side">
+  <div class="h2row"><h2><span lang="en">Side projects</span><span lang="ko">사이드 프로젝트</span></h2></div>
+  <ul class="rows">
+    <li class="row"><span class="when mono">2026—</span><div>
+      <div class="title"><span lang="en">A new side project, in progress</span><span lang="ko">새 사이드 프로젝트, 진행 중</span></div>
+      <div class="meta"><span lang="en">Details here when it is ready to open.</span><span lang="ko">공개 준비가 되면 여기에 소개합니다.</span></div>
+    </div></li>
+  </ul>
+</section>

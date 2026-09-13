@@ -1,0 +1,23 @@
+{%- comment -%}
+Writing list built from site.posts, merged by `ref`.
+include.by_year = true  → year-grouped (writing page)
+include.limit  = N      → the script keeps only the N newest visible rows per language (home page)
+{%- endcomment -%}
+{%- comment -%} skip zero-byte draft files (Jekyll would still title them from the filename) {%- endcomment -%}
+{%- assign _visible = site.posts | where_exp: "p", "p.content.size > 1" -%}
+{%- assign _groups = _visible | group_by_exp: "p", "p.ref | default: p.slug" -%}
+{%- if include.by_year -%}
+  {%- assign _years = _groups | group_by_exp: "g", "g.items.first.date | date: '%Y'" -%}
+  {%- for _y in _years -%}
+  <div class="year-group">
+    <h3 class="mono">{{ _y.name }}</h3>
+    <ul class="rows">
+      {%- for _g in _y.items -%}{%- include minimal/post-item.html group=_g -%}{%- endfor -%}
+    </ul>
+  </div>
+  {%- endfor -%}
+{%- else -%}
+  <ul class="rows" id="posts" data-limit="{{ include.limit | default: 0 }}">
+    {%- for _g in _groups limit: 40 -%}{%- include minimal/post-item.html group=_g -%}{%- endfor -%}
+  </ul>
+{%- endif -%}

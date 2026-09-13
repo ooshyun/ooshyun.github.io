@@ -1,0 +1,34 @@
+# Projects (newest first). `post` is the shared `ref` of the write-up post; both language versions are linked when present.
+- when: "2023"
+  title_en: "Speech enhancement with LSTM for TinyML"
+  title_ko: "엣지 디바이스를 위한 머신러닝 기반 음성 향상"
+  desc_en: "Streaming denoiser small enough for microcontrollers."
+  desc_ko: "마이크로컨트롤러에서 돌아가는 스트리밍 잡음 제거기."
+  code: "https://github.com/ooshyun/Speech-Enhancement-TF"
+  post: speech-enhancement-tinyml
+- when: "2023"
+  title_en: "Clarity Challenge: speech enhancement for hearing aids"
+  title_ko: "보청기를 위한 Clarity Challenge 음성 향상"
+  code: "https://github.com/ooshyun/ClarityChallenge2023"
+  post: speech-enhancement-ha
+- when: "2022–23"
+  title_en: "Olive Max, true wireless earbuds as a hearing aid for severe hearing loss"
+  title_ko: "Olive Max, 고도 난청을 위한 보청기형 무선 이어버드"
+  post: olive-pro-max-tws
+- when: "2021"
+  title_en: "Equalizer design with cascade and parallel biquad filters"
+  title_ko: "디지털 필터를 이용한 이퀄라이저 설계"
+  code: "https://github.com/ooshyun/FilterDesign"
+  post: equalizer
+- when: "2020–21"
+  title_en: "Olive Pro, true wireless earbuds for hearing aid"
+  title_ko: "Olive Pro, 보청기용 무선 이어버드"
+  post: olive-pro-max-tws
+- when: "2018–19"
+  title_en: "Delay-locked loop for the PHY interface between DRAM and CPU"
+  title_ko: "DRAM과 CPU 간 PHY 인터페이스를 위한 지연 고정 루프"
+  post: delay-locked-loop
+- when: "2018–19"
+  title_en: "PHY interface between DDR3 and LPDDR3"
+  title_ko: "DDR3와 LPDDR3 간 PHY 인터페이스"
+  post: phy-interface

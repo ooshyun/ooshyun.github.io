@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : Seunghyun Oh
   url       : https://ooshyun.github.io
-  avatar    : assets/favicon_package/favicon-32x32.png # path or url of avatar image (square)
+  avatar    : assets/images/profile/character.png # path or url of avatar image (square)
   bio       : CS PhD student at UW. Proactive AI agents, efficient inference, on-device ML.
   email     : daniel.ohsj@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
@@ -95,7 +95,7 @@ chart: # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 8
+# paginate: 8  # home page no longer paginates (2026 redesign)
 paginate_path: /page:num # don't change this unless for special need
 
 

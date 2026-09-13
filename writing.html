@@ -1,0 +1,43 @@
+---
+layout: minimal
+nav: writing
+title: Writing
+---
+{%- comment -%} keyword buttons: unique write-ups per tag (EN + KO versions of one post count once) {%- endcomment -%}
+{%- assign _tagrows = "" | split: "" -%}
+{%- for _tag in site.tags -%}
+  {%- assign _name = _tag[0] -%}
+  {%- if _name == "lang:" or _name == "en" or _name == "ko" -%}{%- continue -%}{%- endif -%}
+  {%- assign _n = _tag[1] | where_exp: "p", "p.content.size > 1" | map: "ref" | uniq | size -%}
+  {%- assign _key = _n | prepend: "000" | slice: -3, 3 | append: "|" | append: _name -%}
+  {%- assign _tagrows = _tagrows | push: _key -%}
+{%- endfor -%}
+{%- assign _tagrows = _tagrows | sort | reverse -%}
+{%- assign _visible = site.posts | where_exp: "p", "p.content.size > 1" -%}
+{%- assign _en_count = _visible | where_exp: "p", "p.lang == 'en' or p.lang == nil" | map: "ref" | uniq | size -%}
+{%- assign _ko_count = _visible | where: "lang", "ko" | map: "ref" | uniq | size -%}
+
+<header class="head">
+  <h1><span lang="en">Writing</span><span lang="ko">글</span></h1>
+  <p class="lede">
+    <span lang="en">{{ _en_count }} posts in English. Switch to KO for the {{ _ko_count }} posts in Korean.</span>
+    <span lang="ko">한국어 글 {{ _ko_count }}개. EN으로 바꾸면 영어 글 {{ _en_count }}개를 볼 수 있습니다.</span>
+  </p>
+</header>
+<section>
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+    <input type="search" id="search" placeholder="Search titles and keywords" autocomplete="off" aria-label="Search posts">
+  </div>
+  <ul class="tags" aria-label="Filter by keyword">
+    <li><button type="button" data-tag="" aria-pressed="true"><span lang="en">All</span><span lang="ko">전체</span></button></li>
+    {%- for _row in _tagrows -%}
+      {%- assign _parts = _row | split: "|" -%}
+      {%- assign _n = _parts[0] | plus: 0 -%}
+      <li><button type="button" data-tag="{{ _parts[1] | escape }}" aria-pressed="false">{{ _parts[1] }}<span class="n">{{ _n }}</span></button></li>
+    {%- endfor -%}
+  </ul>
+  <p class="result" id="result"></p>
+  <p class="empty-state" id="empty"><span lang="en">No posts match. Clear the keyword or try another search.</span><span lang="ko">일치하는 글이 없습니다. 키워드를 해제하거나 다른 검색어를 입력해 보세요.</span></p>
+  {%- include minimal/post-list.html by_year=true -%}
+</section>

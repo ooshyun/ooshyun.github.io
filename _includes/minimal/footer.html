@@ -1,0 +1,7 @@
+{%- assign _author = site.author -%}
+<footer class="site-footer" itemscope itemtype="http://schema.org/Person">
+  <meta itemprop="name" content="{{ _author.name }}">
+  <meta itemprop="url" content="{{ _author.url | default: '/' }}">
+  <span>© 2018–{{ site.time | date: '%Y' }} {{ _author.name }}. <span lang="en">Text licensed CC BY-NC 4.0.</span><span lang="ko">글은 CC BY-NC 4.0 라이선스를 따릅니다.</span></span>
+  <span><a href="mailto:{{ _author.email }}">Email</a> &nbsp; <a href="https://github.com/{{ _author.github }}">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/{{ _author.linkedin }}/">LinkedIn</a></span>
+</footer>

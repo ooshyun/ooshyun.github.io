@@ -1,0 +1,11 @@
+# Publications shown on the home page and the projects page (newest first)
+- year: "2026"
+  title: "Aurchestra: Fine-grained Soundscape Control for Augmented Hearing"
+  authors: "<b>Seunghyun Oh</b>, Malek Itani, Shyamnath Gollakota"
+  venue: "MobiSys 2026"
+  award_en: "Best Artifact Award"
+  award_ko: "최우수 아티팩트상"
+  links:
+    - { label: paper, url: "https://doi.org/10.1145/3745756.3809210" }
+    - { label: code,  url: "https://github.com/ooshyun/fine_grained_soundscape_control" }
+    - { label: site,  url: "/aurchestra/" }

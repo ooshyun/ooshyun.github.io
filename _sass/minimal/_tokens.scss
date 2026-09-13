@@ -1,0 +1,30 @@
+/* Design tokens for the 2026 minimal redesign (shared by the minimal layout and TeXt post pages) */
+:root {
+  --bg: #F8F7F3;
+  --surface: #F5EDE0;          /* intro card: warm tint from the character (option C) */
+  --surface-border: #E6D9C4;
+  --ink: #1F1D1A;
+  --muted: #6F6A62;
+  --rule: #E2DFD7;
+  --link: #4B2E83;
+  --link-hover: #6A4BB0;
+  --mark: #C48A45;
+  --chip-bg: #ECE9E1;
+  --focus: #C48A45;
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans KR", "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1917; --surface: #262119; --surface-border: #3B3327; --ink: #E8E4DC; --muted: #9C968B;
+    --rule: #34322D; --link: #BCA8EC; --link-hover: #D4C6F5; --mark: #D9A15C; --chip-bg: #2C2A26; --focus: #D9A15C;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1917; --surface: #262119; --surface-border: #3B3327; --ink: #E8E4DC; --muted: #9C968B;
+  --rule: #34322D; --link: #BCA8EC; --link-hover: #D4C6F5; --mark: #D9A15C; --chip-bg: #2C2A26; --focus: #D9A15C;
+}
+
+/* language switching: <html data-lang="en|ko"> hides the other language's inline copies */
+[data-lang="en"] [lang="ko"]:not(.always) { display: none; }
+[data-lang="ko"] [lang="en"]:not(.always) { display: none; }

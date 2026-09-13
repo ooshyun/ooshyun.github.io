@@ -1,0 +1,16 @@
+{%- comment -%} Site navigation. include.current: home | writing | projects {%- endcomment -%}
+{%- assign _cur = include.current -%}
+<nav class="site-nav" aria-label="Primary">
+  <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/profile/character.png' | relative_url }}" alt="" width="34" height="34"><span>{{ site.title }}</span></a>
+  <ul>
+    <li><a href="{{ '/' | relative_url }}"{% if _cur == 'home' %} aria-current="page"{% endif %}><span lang="en">About</span><span lang="ko">소개</span></a></li>
+    <li><a href="{{ '/writing.html' | relative_url }}"{% if _cur == 'writing' %} aria-current="page"{% endif %}><span lang="en">Writing</span><span lang="ko">글</span></a></li>
+    <li><a href="{{ '/projects.html' | relative_url }}"{% if _cur == 'projects' %} aria-current="page"{% endif %}><span lang="en">Projects</span><span lang="ko">프로젝트</span></a></li>
+    <li><a href="{{ '/assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf' | relative_url }}"><span lang="en">CV</span><span lang="ko">이력서</span></a></li>
+    <li><a class="search-link" href="{{ '/writing.html#search' | relative_url }}" title="Search posts" aria-label="Search posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg></a></li>
+    <li><div class="lang" role="group" aria-label="Language">
+      <button type="button" class="lang-toggle__btn" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-toggle__btn" data-set="ko" aria-pressed="false">KO</button>
+    </div></li>
+  </ul>
+</nav>

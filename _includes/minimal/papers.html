@@ -1,0 +1,16 @@
+<ul class="rows">
+{%- for _p in site.data.papers -%}
+  <li class="row">
+    <span class="when mono">{{ _p.year }}</span>
+    <div>
+      <div class="title"><a href="{{ _p.links.first.url }}">{{ _p.title }}</a></div>
+      <div class="meta">{{ _p.authors }}. <em>{{ _p.venue }}</em>.
+        {%- if _p.award_en %} <span class="award"><span lang="en">{{ _p.award_en }}</span><span lang="ko">{{ _p.award_ko }}</span></span>{% endif -%}
+      </div>
+      <div class="refs">
+        {%- for _l in _p.links -%}[<a href="{{ _l.url | relative_url }}">{{ _l.label }}</a>] {% endfor -%}
+      </div>
+    </div>
+  </li>
+{%- endfor -%}
+</ul>
