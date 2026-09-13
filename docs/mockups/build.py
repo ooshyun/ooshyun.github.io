@@ -536,7 +536,6 @@ writing_body = f"""
 projects_body = f"""
 <header class="head">
   <h1>{bi("Publications and projects", "논문과 프로젝트")}</h1>
-  <p class="lede">{bi("Papers first, then projects from the PhD back to undergraduate work.", "논문을 먼저, 그 다음 박사과정부터 학부까지의 프로젝트를 최신순으로.")}</p>
 </header>
 <section>
   <div class="h2row"><h2>{bi("Papers", "논문")}</h2></div>
