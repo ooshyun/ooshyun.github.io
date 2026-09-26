@@ -1,0 +1,112 @@
+---
+layout: minimal
+nav: cv
+title: CV
+---
+{%- assign cv = site.data.cv -%}
+<header class="head">
+  <h1>Seunghyun (Conan) Oh</h1>
+  <p class="role">{{ site.description }}</p>
+  <p class="links cv-links">
+    <a href="mailto:{{ site.author.email }}">Email</a>
+    <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a>
+    <a href="{{ cv.pdf | relative_url }}"><span lang="en">CV as PDF</span><span lang="ko">PDF 다운로드</span></a>
+  </p>
+</header>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Research interests</span><span lang="ko">관심 연구 분야</span></h2></div>
+  <p class="cv-p"><span lang="en">{{ cv.interests_en }}</span><span lang="ko">{{ cv.interests_ko }}</span></p>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Education</span><span lang="ko">학력</span></h2></div>
+  <ul class="rows">
+  {%- for e in site.data.background.education -%}
+    {%- if e.name_en == "Coursera" -%}{%- continue -%}{%- endif -%}
+    <li class="row"><span class="when mono">{{ e.when }}</span><div>
+      <div class="title"><span lang="en">{{ e.name_en }}</span><span lang="ko">{{ e.name_ko }}</span></div>
+      <div class="meta"><span lang="en">{{ e.degree_en }}</span><span lang="ko">{{ e.degree_ko }}</span></div>
+      {%- if e.note_en -%}<div class="meta"><span lang="en">{{ e.note_en }}</span><span lang="ko">{{ e.note_ko }}</span></div>{%- endif -%}
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Honors and awards</span><span lang="ko">수상 및 자격</span></h2></div>
+  <ul class="rows">
+  {%- for h in cv.honors -%}
+    <li class="row"><span class="when mono">{{ h.when }}</span><div>
+      <div class="title"><span lang="en">{{ h.title_en }}</span><span lang="ko">{{ h.title_ko }}</span></div>
+      {%- if h.note_en -%}<div class="meta"><span lang="en">{{ h.note_en }}</span><span lang="ko">{{ h.note_ko }}</span></div>{%- endif -%}
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Publications</span><span lang="ko">논문 및 발표</span></h2></div>
+  <h3><span lang="en">Conference papers</span><span lang="ko">학술대회 논문</span></h3>
+  {%- include minimal/papers.html -%}
+  <h3><span lang="en">Posters and talks</span><span lang="ko">포스터 및 발표</span></h3>
+  <ul class="rows">
+  {%- for t in cv.talks -%}
+    <li class="row"><span class="when mono">{{ t.when }}</span><div>
+      <div class="title">{{ t.title }}</div>
+      <div class="meta">{{ t.authors }}. <em><span lang="en">{{ t.venue_en }}</span><span lang="ko">{{ t.venue_ko }}</span></em></div>
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Research experience</span><span lang="ko">연구 경력</span></h2></div>
+  <ul class="rows">
+  {%- for r in cv.research -%}
+    <li class="row"><span class="when mono">{{ r.when }}</span><div>
+      <div class="title">{{ r.org }}</div>
+      <div class="meta"><span lang="en">{{ r.role_en }}</span><span lang="ko">{{ r.role_ko }}</span></div>
+      <div class="meta"><span lang="en">{{ r.desc_en }}</span><span lang="ko">{{ r.desc_ko }}</span></div>
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Industry experience</span><span lang="ko">실무 경력</span></h2></div>
+  <ul class="rows">
+  {%- for x in cv.industry -%}
+    <li class="row"><span class="when mono">{{ x.when }}</span><div>
+      <div class="title">{{ x.org }}</div>
+      <div class="meta"><span lang="en">{{ x.role_en }}</span><span lang="ko">{{ x.role_ko }}</span></div>
+      <div class="meta"><span lang="en">{{ x.desc_en }}</span><span lang="ko">{{ x.desc_ko }}</span></div>
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Teaching</span><span lang="ko">교육 경력</span></h2></div>
+  <ul class="rows">
+  {%- for t in cv.teaching -%}
+    <li class="row"><span class="when mono">{{ t.when }}</span><div>
+      <div class="title">{{ t.org }}</div>
+      <div class="meta"><span lang="en">{{ t.role_en }}</span><span lang="ko">{{ t.role_ko }}</span></div>
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <div class="h2row"><h2><span lang="en">Skills</span><span lang="ko">기술 스택</span></h2></div>
+  <ul class="rows">
+  {%- for s in cv.skills -%}
+    <li class="row cv-skill"><span class="when"><span lang="en">{{ s.label_en }}</span><span lang="ko">{{ s.label_ko }}</span></span><div>
+      {%- if s.value -%}{{ s.value }}{%- else -%}<span lang="en">{{ s.value_en }}</span><span lang="ko">{{ s.value_ko }}</span>{%- endif -%}
+    </div></li>
+  {%- endfor -%}
+  </ul>
+</section>
+

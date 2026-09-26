@@ -38,6 +38,10 @@ body.minimal {
 .background .meta { font-size: 0.88rem; }
 
 .minimal section { margin-top: 3rem; }
+.cv-links { margin-top: 0.9rem; }
+.cv-p { margin: 0; }
+.cv-skill { grid-template-columns: 8.5rem 1fr; }
+.cv-skill .when { color: var(--muted); font-size: 0.9rem; white-space: normal; }
 .minimal .head + section { margin-top: 0; }
 
 @media (max-width: 560px) {
