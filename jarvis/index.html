@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis: A Proactive Speech Agent for Multi-Party Conversations</title>
+  <meta name="description" content="Jarvis is a real-time proactive speech agent that audibly participates in multi-party human conversations, grounded in a shared document, and speaks up only when it can help. University of Washington.">
+  <link rel="canonical" href="https://jarvis.cs.washington.edu/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jarvis: A Proactive Speech Agent for Multi-Party Conversations">
+  <meta property="og:description" content="A real-time speech agent that joins group conversations and speaks up only when it can help.">
+  <meta property="og:url" content="https://jarvis.cs.washington.edu/">
+  <meta property="og:image" content="https://jarvis.cs.washington.edu/assets/og_image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    var loc = window.location.href + '';
+    if (loc.indexOf('http://') === 0 && loc.indexOf('http://localhost') !== 0 && loc.indexOf('http://127.0.0.1') !== 0) {
+      window.location.href = loc.replace('http://', 'https://');
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Jarvis: A Proactive Speech Agent for Multi-Party Conversations</h1>
+    <h3>
+      <a href="https://ooshyun.github.io" target="_blank" rel="noopener">Seunghyun Oh</a><sup>1*</sup>,&nbsp;
+      <a href="https://hirotakahiraki.github.io" target="_blank" rel="noopener">Hirotaka Hiraki</a><sup>2*</sup>,&nbsp;
+      <a href="https://stellalisy.com" target="_blank" rel="noopener">Shuyue Stella Li</a><sup>1</sup>
+    </h3>
+    <h3>
+      <a href="https://homes.cs.washington.edu/~yuliats/" target="_blank" rel="noopener">Yulia Tsvetkov</a><sup>1</sup>,&nbsp;
+      <a href="https://homes.cs.washington.edu/~gshyam/" target="_blank" rel="noopener">Shyamnath Gollakota</a><sup>1</sup>
+    </h3>
+    <h3 class="affil">
+      <sup>1</sup> Paul G. Allen School of Computer Science and Engineering, University of Washington &nbsp;&nbsp;
+      <sup>2</sup> Graduate School of Interdisciplinary Information Studies, The University of Tokyo
+    </h3>
+    <h3 class="affil"><sup>*</sup> Both authors contributed equally to this research.</h3>
+    <h3 class="venue"><a href="https://arxiv.org/abs/2610.07506" target="_blank" rel="noopener">arXiv preprint, 2026</a></h3>
+  </div>
+
+  <hr>
+
+  <div class="yt-demo">
+    <video class="demo-video" controls playsinline preload="metadata" poster="assets/demo_poster.jpg">
+      <source src="assets/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="download">
+    <a href="https://arxiv.org/abs/2610.07506" target="_blank" rel="noopener">[Paper]</a>
+    <span class="tbd" title="Coming soon">[Code (TBD)]</span>
+    <span class="tbd" title="Coming soon">[Dataset (TBD)]</span>
+  </div>
+
+  <div class="abstract">
+    <p>
+      Speech agents are reactive and dyadic: they speak when spoken to, and to one person at a time. We ask what it
+      takes for a speech agent to instead take part in a conversation among several people and speak up only when it
+      can help. We introduce Jarvis, a real-time proactive speech agent that audibly participates in multi-party human
+      conversations. Grounded in a document shared beforehand, Jarvis follows the discussion and intervenes when the
+      group misses or misstates a fact and does not correct itself within a few turns. We make three contributions: a
+      problem setting based on epistemic breakdowns that makes proactive intervention measurable, realized as
+      <code>CHI-180-proactive</code>, a synthetic multi-party dataset seeded with known gaps, errors, and
+      self-corrections; a proactive backbone that harnesses a small, open-weight model with deterministic checks and
+      grounds every claim in a source sentence; and interaction techniques for taking the floor in live speech and
+      showing the cited evidence on screen. On <code>CHI-180-proactive</code>, Jarvis is correct on most events it
+      addresses and stays silent 97% of the time when the group resolves an issue itself. A live study with 23
+      participants confirms these trends with real-time interventions.
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="figure">
+    <img src="assets/teaser_web.jpg" alt="Figure 1: Jarvis in a live multi-party Zoom meeting. (A) Jarvis joins as a participant and follows a shared document. (B) It corrects an unresolved misstated fact and cites the page. (C) It stays silent when the group corrects the error first.">
+    <p>
+      <strong>Jarvis in a live multi-party meeting.</strong> (A) Jarvis joins the meeting as a participant, follows the
+      conversation against a shared document, and can answer direct questions. For proactive intervention, it has two
+      modes: 1) raises its hand to seek permission or 2) waits until no participant holds the floor and speaks
+      directly. (B) If a document-grounded missing or misstated fact remains unresolved, Jarvis speaks to correct it
+      and cites the relevant page. (C) If the group corrects the error first, Jarvis remains silent.
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p>Keywords: Proactive Agents, Speech Agents, Multi-Party Conversation, Human-AI Interaction</p>
+    <p>Contact: <a href="mailto:shoh10@cs.washington.edu">shoh10@cs.washington.edu</a></p>
+  </div>
+</body>
+</html>

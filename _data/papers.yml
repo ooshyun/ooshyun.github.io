@@ -1,5 +1,12 @@
 # Publications shown on the home page and the projects page (newest first)
 - year: "2026"
+  title: "Jarvis: A Proactive Speech Agent for Multi-Party Conversations"
+  authors: "<b>Seunghyun Oh</b><sup>*</sup>, Hirotaka Hiraki<sup>*</sup>, Shuyue Stella Li, Yulia Tsvetkov, Shyamnath Gollakota (<sup>*</sup>equal contribution)"
+  venue: "arXiv preprint"
+  links:
+    - { label: paper, url: "https://arxiv.org/abs/2610.07506" }
+    - { label: site,  url: "/jarvis/" }
+- year: "2026"
   title: "Aurchestra: Fine-grained Soundscape Control for Augmented Hearing"
   authors: "<b>Seunghyun Oh</b>, Malek Itani, Shyamnath Gollakota"
   venue: "MobiSys 2026"
