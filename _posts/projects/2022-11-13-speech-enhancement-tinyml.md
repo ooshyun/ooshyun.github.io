@@ -29,7 +29,7 @@ This project is currently an on-going project, which is on the modification of t
 - Dataset for clean and noisy sound
 - Trained Model
 - Model Compression
-- **[On-going]** Microphone streaming Pipeline in STM32F746
+- Microphone streaming Pipeline in STM32F746
 - The guide to implementing the model into specifically STM32F746
 - Development in Quantization and Pruning Model
 
