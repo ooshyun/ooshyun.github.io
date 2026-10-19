@@ -7,6 +7,12 @@
     - { label: paper, url: "https://arxiv.org/abs/2610.07506" }
     - { label: site,  url: "/jarvis/" }
 - year: "2026"
+  title: "Trigger Sound Suppression for Misophonia"
+  authors: "Vaishnavi Vidyasagar, Jasmine Zhang, Mahima Uliyar, <b>Seunghyun Oh</b>, Emily Catherine Gates, Mark Zachary Rosenthal, Shyamnath Gollakota"
+  venue: "arXiv preprint"
+  links:
+    - { label: paper, url: "https://arxiv.org/abs/2609.36351" }
+- year: "2026"
   title: "Fine-grained Soundscape Control for Augmented Hearing"
   authors: "<b>Seunghyun Oh</b>, Malek Itani, Aseem Gauri, Shyamnath Gollakota"
   venue: "MobiSys 2026"
