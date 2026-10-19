@@ -23,7 +23,7 @@ On an embedded device for generating speech from the microphone, the most import
 <br><br> 
 The first research, named tiny lstm, shows almost similar performance in the model, not in the constraint. And the second research, called Clear buds, shows the entire open source from PCB to iOS and tiny devices implementation. However, those research needs to be more fitting with the product having a real-time device using a microphone and its receiver, and bose's research shows only the result. So, I started to build the open source and the guide to implementing the ML model to the tiny device, especially for speech enhancement as a personal project.
 <br><br>
-This project is currently an on-going project, which is on the modification of the training model, and will complete by 2023. The details of this project is on the below lists.
+The details of this project are in the lists below.
 
 **Applications**
 - Dataset for clean and noisy sound
