@@ -5,7 +5,7 @@
   venue: "arXiv preprint"
   links:
     - { label: paper, url: "https://arxiv.org/abs/2610.07506" }
-    - { label: site,  url: "/jarvis/" }
+    - { label: site,  url: "https://jarvis.cs.washington.edu/" }
 - year: "2026"
   title: "Trigger Sound Suppression for Misophonia"
   authors: "Vaishnavi Vidyasagar, Jasmine Zhang, Mahima Uliyar, <b>Seunghyun Oh</b>, Emily Catherine Gates, Mark Zachary Rosenthal, Shyamnath Gollakota"
