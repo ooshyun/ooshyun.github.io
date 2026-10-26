@@ -38,7 +38,7 @@ permalink: /about-ko.html
       <a href="mailto:seunghyun.daniel.oh@gmail.com" title="이메일"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/ooshyun" title="깃허브"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/seunghyun-oh-106815174/" title="링크드인"><i class="fab fa-linkedin"></i></a>
-      <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf %}" title="이력서"><i class="fas fa-file-pdf"></i></a>
+      <a href="{% link assets/pdf/cv/Seunghyun_Oh_CV.pdf %}" title="이력서"><i class="fas fa-file-pdf"></i></a>
     </div>
   </div>
   <div class="about__text">

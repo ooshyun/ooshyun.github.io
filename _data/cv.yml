@@ -1,7 +1,7 @@
 # CV page content (cv.html). Education / papers / work experience are reused from background.yml, papers.yml.
 # Source: assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf (2025) + history.md
 
-pdf: "/assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf"
+pdf: "/assets/pdf/cv/Seunghyun_Oh_CV.pdf"
 
 interests_en: "On-device AI, audio and speech processing, wearable computing, real-time signal processing, model compression and optimization"
 interests_ko: "온디바이스 AI, 오디오·음성 신호처리, 웨어러블 컴퓨팅, 실시간 신호처리, 모델 경량화 및 최적화"

@@ -37,7 +37,7 @@ ref: about
       <a href="mailto:seunghyun.daniel.oh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/ooshyun" title="Github"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/seunghyun-oh-106815174/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="{% link assets/pdf/cv/CV_Seunghyun Oh_2025_ENG.pdf %}" title="CV"><i class="fas fa-file-pdf"></i></a>
+      <a href="{% link assets/pdf/cv/Seunghyun_Oh_CV.pdf %}" title="CV"><i class="fas fa-file-pdf"></i></a>
     </div>
   </div>
   <div class="about__text">
